@@ -125,7 +125,7 @@ const styles = StyleSheet.create({
     color: '#009245',
     paddingHorizontal: 20,
     marginTop: 5,
-    fontSize:13,
+    fontSize:12,
   },
   remember: {
     marginTop: 28,
