@@ -40,13 +40,13 @@ const Welcome = () => {
         <PhoneCnicEmailInput
           title="Phone/cnic/email id"
           placeholder="Enter phone/cnic/email id"
-          placeholdertextcolor="#DBD8D8"
+         
           maxLength={13}
         />
         <PasswordContainer
           title={'Password'}
           placeholder="Enter your password"
-          placeholdertextcolor="#DBD8D8"
+          
         />
 
         <Text style={styles.passwordtext}>Forgot Password</Text>
@@ -55,14 +55,6 @@ const Welcome = () => {
       <TouchableOpacity style={styles.signin}>
         <Text style={styles.buttontext}>Sign In</Text>
       </TouchableOpacity>
-      {/* <View style={styles.accountregister}>
-        <Text style={styles.account}>
-          Don't have an account?
-          <TouchableOpacity onPress={handleRegister}>
-            <Text style={styles.register} marginTop={5}>Register</Text>
-          </TouchableOpacity>
-        </Text>
-     </View> */}
       <View style={styles.accountstyle}>
         <Text style={styles.account}> Don't have an account?</Text>
         <TouchableOpacity onPress={handleRegister}>
@@ -132,7 +124,8 @@ const styles = StyleSheet.create({
   passwordtext: {
     color: '#009245',
     paddingHorizontal: 20,
-    marginTop: 2,
+    marginTop: 5,
+    fontSize:13,
   },
   remember: {
     marginTop: 28,

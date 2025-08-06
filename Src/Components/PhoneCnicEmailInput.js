@@ -9,10 +9,11 @@ const PhoneCnicEmailInput = props => {
       <TextInput
         style={styles.input}
         placeholder={props?.placeholder}
-        placeholderTextColor={props?.placeholder}
+        // placeholderTextColor={props?.placeholder}
         maxLength={props?.maxLength}
         fontSize={11}
         keyboardType="numeric"
+          placeholderTextColor={"#DBD8D8"}
       />
     </View>
   );
@@ -35,9 +36,9 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: '#D9D9D9',
     fontFamily: Font.medium,
-    fontSize: 13,
-    color: '#000000',
     borderRadius: 8,
     paddingHorizontal: 5,
+   
+    
   },
 });
