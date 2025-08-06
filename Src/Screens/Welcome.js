@@ -30,11 +30,9 @@ const Welcome = () => {
           style={styles.icon}
         />
 
-        <View style={styles.center}>
-          <Text style={styles.heading}>Welcome Back!</Text>
-        </View>
+        <Text style={styles.heading}>Welcome Back!</Text>
 
-        {/* <View style={{ width: 37 }}></View> */}
+        <View style={{ width: 39 }}></View>
       </View>
 
       <Text style={styles.signintext}> Sign In</Text>
@@ -57,13 +55,21 @@ const Welcome = () => {
       <TouchableOpacity style={styles.signin}>
         <Text style={styles.buttontext}>Sign In</Text>
       </TouchableOpacity>
-      <View style={styles.accountregister}>
+      {/* <View style={styles.accountregister}>
         <Text style={styles.account}>
-          Don't have an account?{' '}
+          Don't have an account?
           <TouchableOpacity onPress={handleRegister}>
-            <Text style={styles.register}>Register</Text>
+            <Text style={styles.register} marginTop={5}>Register</Text>
           </TouchableOpacity>
         </Text>
+     </View> */}
+      <View style={styles.accountstyle}>
+        <Text style={styles.account}> Don't have an account?</Text>
+        <TouchableOpacity onPress={handleRegister}>
+          <Text style={styles.register} >
+            Register
+          </Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -71,17 +77,18 @@ const Welcome = () => {
 
 export default Welcome;
 const styles = StyleSheet.create({
-  heading: {
-
-    // marginTop:30,
-    fontFamily: Font.bold,
-    // fontSize: 17,
-    marginTop: 50,
-    // flexDirection:"row",
-    flexDirection:"row",
+  header: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingHorizontal: 11,
+    marginTop: 20,
   },
-  center:{
-    flexDirection:"row",
+
+  heading: {
+    fontFamily: Font.bold,
+    fontSize: 18,
+    color: '#000',
+    marginTop: 35,
   },
   phone: {
     borderWidth: 1,
@@ -114,13 +121,10 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#FFFFFF',
   },
-  accountregister: {
-    marginTop: 10,
-  },
 
   signintext: {
     color: '#009245',
-    paddingHorizontal: 19,
+    paddingHorizontal: 15,
     marginTop: 14,
     fontFamily: Font.semiBold,
     fontSize: 16,
@@ -137,16 +141,24 @@ const styles = StyleSheet.create({
     fontSize: 11,
     color: '#464444',
   },
-  account: {
-    textAlign: 'center',
-    fontFamily: Font.medium,
-    fontSize: 10,
-    color: '#727171',
+  accountstyle:{
+    flexDirection:"row",
+    justifyContent:'center',
+    marginTop: 10,
+    fontSize:10,
+  },
+  account:{
+   fontSize:8,
+   fontFamily:Font.medium,
+   color:"#727171",
   },
   register: {
-    color: '#009245',
-    fontFamily: Font.bold,
-    fontSize: 10,
-    textAlign: 'center',
+ color: '#009245',
+  fontFamily: Font.bold,
+  fontSize: 8,
+  marginLeft: 4,
+  marginTop:-1,
+  
   }
-})
+  
+});
