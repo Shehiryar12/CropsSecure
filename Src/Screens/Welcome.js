@@ -10,9 +10,15 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { Font } from '../Constant/Font';
 import PhoneCnicEmailInput from '../Components/PhoneCnicEmailInput';
 import PasswordContainer from '../Components/PasswordContainer';
+import { useNavigation } from '@react-navigation/native';
 
 const Welcome = () => {
   const [pass, setPass] = useState(true);
+  const navigation = useNavigation();
+
+  const handleRegister = () => {
+    navigation.navigate('AccountScreen');
+  };
 
   return (
     <View>
@@ -28,13 +34,22 @@ const Welcome = () => {
           <Text style={styles.heading}>Welcome Back!</Text>
         </View>
 
-        <View style={{ width: 37 }}></View>
+        {/* <View style={{ width: 37 }}></View> */}
       </View>
 
       <Text style={styles.signintext}> Sign In</Text>
       <View>
-        <PhoneCnicEmailInput title="Phone/cnic/email id"  placeholder="Enter phone/cnic/email id"  placeholdertextcolor="#DBD8D8"  maxLength={13} />
-        <PasswordContainer title={'Password'} placeholder="Enter your password" placeholdertextcolor="#DBD8D8" />
+        <PhoneCnicEmailInput
+          title="Phone/cnic/email id"
+          placeholder="Enter phone/cnic/email id"
+          placeholdertextcolor="#DBD8D8"
+          maxLength={13}
+        />
+        <PasswordContainer
+          title={'Password'}
+          placeholder="Enter your password"
+          placeholdertextcolor="#DBD8D8"
+        />
 
         <Text style={styles.passwordtext}>Forgot Password</Text>
         <Text style={styles.remember}>Remember Me</Text>
@@ -44,7 +59,10 @@ const Welcome = () => {
       </TouchableOpacity>
       <View style={styles.accountregister}>
         <Text style={styles.account}>
-          Don't have an account? <Text style={styles.register}>Register</Text>
+          Don't have an account?{' '}
+          <TouchableOpacity onPress={handleRegister}>
+            <Text style={styles.register}>Register</Text>
+          </TouchableOpacity>
         </Text>
       </View>
     </View>
@@ -52,39 +70,34 @@ const Welcome = () => {
 };
 
 export default Welcome;
-
 const styles = StyleSheet.create({
-  header: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
-  icon: {
-    paddingHorizontal: 10,
-    marginTop: 10,
-  },
   heading: {
-    fontSize: 17,
+
+    // marginTop:30,
+    fontFamily: Font.bold,
+    // fontSize: 17,
     marginTop: 50,
+    // flexDirection:"row",
+    flexDirection:"row",
+  },
+  center:{
+    flexDirection:"row",
   },
   phone: {
     borderWidth: 1,
+    marginHorizontal: 14,
     marginHorizontal: 21,
     borderColor: '#DBD8D8',
     borderRadius: 8,
     marginTop: 10,
-    height: 45,
-    paddingHorizontal: 10,
-  },
-  passwordContainer: {
-    flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
     borderWidth: 1,
+    marginHorizontal: 16,
     marginHorizontal: 21,
     borderRadius: 8,
     borderColor: '#DBD8D8',
     height: 45,
-    paddingHorizontal: 10,
   },
   passwordicon: {
     color: '#DBD8D8',
@@ -135,5 +148,5 @@ const styles = StyleSheet.create({
     fontFamily: Font.bold,
     fontSize: 10,
     textAlign: 'center',
-  },
-});
+  }
+})

@@ -1,15 +1,13 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-
-import Welcome from './Src/Screens/Welcome'
-
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import AppNavigator from './Src/navigaton/AppNavigator';
 
 const App = () => {
   return (
-  <Welcome/>
-  )
-}
+    <NavigationContainer>
+      <AppNavigator />
+    </NavigationContainer>
+  );
+};
 
-export default App
-
-const styles = StyleSheet.create({})
+export default App;
