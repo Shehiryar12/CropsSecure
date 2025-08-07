@@ -1,12 +1,16 @@
-import { StyleSheet, Text, TextInput, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 import React from 'react';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { Font } from '../Constant/Font';
 import Account from '../Components/Account';
+import PasswordInput from '../Components/Passwordinput';
 
 const AccountScreen = () => {
   return (
+
+  
     <View>
+     <ScrollView>  
       <View style={styles.header}>
         <MaterialIcons
           name="keyboard-arrow-left"
@@ -51,6 +55,7 @@ const AccountScreen = () => {
         placeholder="Enter your phone number"
         placeholderTextColor="#DBD8D8"
          borderColor="#DBD8D8"
+           maxLength={11}
       />
        <Account
         title="DOB"
@@ -58,12 +63,9 @@ const AccountScreen = () => {
         placeholderTextColor="#DBD8D8"
          borderColor="#DBD8D8"
       />
-          <Account
-        title="Password"
-        placeholder="Enter your phone number"
-        placeholderTextColor="#DBD8D8"
-         borderColor="#DBD8D8"
-      />
+      <PasswordInput title="Password" placeholder="Enter your password" placeholderTextColor="#DBD8D8"  />
+      <PasswordInput title="Confirm Password" placeholder="Confirm your password" placeholderTextColor="#DBD8D8"  />
+    </ScrollView>
     </View>
   );
 };

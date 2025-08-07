@@ -45,8 +45,7 @@ const Welcome = () => {
         />
         <PasswordContainer
           title={'Password'}
-          placeholder="Enter your password"
-          
+          placeholder="Enter your password"    
         />
 
         <Text style={styles.passwordtext}>Forgot Password</Text>
