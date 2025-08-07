@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
     color: '#009245',
     paddingHorizontal: 15,
     marginTop: 14,
-    fontFamily: Font.semiBold,
+    // fontFamily: Font.semiBold,
     fontSize: 16,
   },
   passwordtext: {
