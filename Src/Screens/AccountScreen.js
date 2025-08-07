@@ -52,6 +52,18 @@ const AccountScreen = () => {
         placeholderTextColor="#DBD8D8"
          borderColor="#DBD8D8"
       />
+       <Account
+        title="DOB"
+        placeholder="Your DOB"
+        placeholderTextColor="#DBD8D8"
+         borderColor="#DBD8D8"
+      />
+          <Account
+        title="Password"
+        placeholder="Enter your phone number"
+        placeholderTextColor="#DBD8D8"
+         borderColor="#DBD8D8"
+      />
     </View>
   );
 };
