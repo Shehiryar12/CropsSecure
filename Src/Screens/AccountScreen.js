@@ -4,6 +4,7 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { Font } from '../Constant/Font';
 import Account from '../Components/Account';
 import PasswordInput from '../Components/Passwordinput';
+import Dob from '../Components/Dob';
 
 const AccountScreen = () => {
   return (
@@ -57,12 +58,16 @@ const AccountScreen = () => {
          borderColor="#DBD8D8"
            maxLength={11}
       />
-       <Account
+       {/* <Account
         title="DOB"
         placeholder="Your DOB"
         placeholderTextColor="#DBD8D8"
          borderColor="#DBD8D8"
-      />
+      /> */}
+
+    
+
+      <Dob title="DOB " placeholder="Your DOB" placeholderTextColor="#DBD8D8" borderColor="#DBD8D8"/>
       <PasswordInput title="Password" placeholder="Enter your password" placeholderTextColor="#DBD8D8"  />
       <PasswordInput title="Confirm Password" placeholder="Confirm your password" placeholderTextColor="#DBD8D8"  />
     </ScrollView>
