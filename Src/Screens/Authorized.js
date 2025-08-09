@@ -62,6 +62,10 @@ const Authorized = () => {
          borderColor="#DBD8D8"
            maxLength={11}
       />
+
+         <Dob title="DOB " placeholder="Your DOB" placeholderTextColor="#DBD8D8" borderColor="#DBD8D8"/>
+      <PasswordInput title="Password" placeholder="Enter your password" placeholderTextColor="#DBD8D8"  />
+      <PasswordInput title="Confirm Password" placeholder="Confirm your password" placeholderTextColor="#DBD8D8"  />
     
 
    
