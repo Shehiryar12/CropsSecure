@@ -1,8 +1,11 @@
 import { StyleSheet, Text, TextInput, View } from 'react-native'
 import React from 'react'
 import { Font } from '../Constant/Font'
+import { useNavigation } from '@react-navigation/native';
 
 const AuthorizedAccount = props => {
+
+    // const navigation = useNavigation();  
   return (
       <View style={styles.NameContainer}>
           <Text style={styles.namestyle}>{props?.title}</Text>

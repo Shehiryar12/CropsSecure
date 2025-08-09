@@ -71,7 +71,7 @@ const AccountScreen = () => {
       <Dob title="DOB " placeholder="Your DOB" placeholderTextColor="#DBD8D8" borderColor="#DBD8D8"/>
       <PasswordInput title="Password" placeholder="Enter your password" placeholderTextColor="#DBD8D8"  />
       <PasswordInput title="Confirm Password" placeholder="Confirm your password" placeholderTextColor="#DBD8D8"  />
-      <Endtext title="By selecting checkbox l agree to Crop Secure's Terms of Service, and Privacy Policy." buttontext="Sign up" />
+      <Endtext title="By selecting checkbox l agree to Crop Secure's Terms of Service, and Privacy Policy." buttontext="Sign up"  accounttext="Already have an account?"/>
     </ScrollView>
     </View>
   );

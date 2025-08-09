@@ -14,8 +14,15 @@ const Endtext = props => {
       </TouchableOpacity>
 
       <Text style={styles.accounttext}>
-        Already have an account? {props?.accounttext}
-        <Text style={styles.logintext} onPress={()=>navigation.navigate('Welcome')}>Login</Text>
+         {props?.accounttext}
+        <Text
+          style={styles.logintext}
+          onPress={() => navigation.navigate('Welcome')}
+        >
+          Login
+        </Text>
+
+       
       </Text>
     </View>
   );
