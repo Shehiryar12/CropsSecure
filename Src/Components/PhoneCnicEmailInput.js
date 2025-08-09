@@ -37,7 +37,8 @@ const styles = StyleSheet.create({
     borderBottomColor: '#D9D9D9',
     fontFamily: Font.medium,
     borderRadius: 8,
-    paddingHorizontal: 5,
+    paddingHorizontal:17,
+    
    
     
   },

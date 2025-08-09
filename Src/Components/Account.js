@@ -1,9 +1,8 @@
-import { StyleSheet, Text, TextInput, View } from 'react-native';
+import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import React from 'react';
 import { Font } from '../Constant/Font';
 
 const Account = props => {
-  //  const [pass, setPass] = useState(true); 
   return (
     <View style={styles.NameContainer}>
       <Text style={styles.namestyle}>{props?.title}</Text>
@@ -14,6 +13,8 @@ const Account = props => {
         borderColor={props?.borderColor}
         maxLength={props?.maxLength}
         />
+
+   
     </View>
   );
 };
@@ -22,8 +23,9 @@ export default Account;
 
 const styles = StyleSheet.create({
   NameContainer: {
-    paddingHorizontal: 22,
+    paddingHorizontal: 21,
     marginTop: 18,
+    // marginHorizontal:10,
   },
   namestyle: {
     fontFamily: Font.medium,
@@ -32,5 +34,6 @@ const styles = StyleSheet.create({
   textinput: {
     borderWidth: 1,
     borderRadius: 8,
+    paddingHorizontal:8,
   },
 });

@@ -24,8 +24,12 @@ const PasswordInput = (props) => {
             color="gray"
           />
         </TouchableOpacity>
+
+      
       </View>
     </View>
+    
+  
   );
 };
 
@@ -42,14 +46,16 @@ const styles = StyleSheet.create({
     // color: '#000',
     fontFamily:Font.medium,
      color:"#646464",
+     
   },
   Box: {
     flexDirection: 'row',
     alignItems: 'center',
     borderWidth: 1,
     borderRadius: 8,
-    paddingHorizontal: 10,
+    // paddingHorizontal: 1,
     borderColor:"#DBD8D8",
+     paddingHorizontal:6,
     
    
   },
@@ -57,6 +63,7 @@ const styles = StyleSheet.create({
     flex: 1,
     height: 40,
     // borderRadius:8,
+    // paddingHorizontal:-12,
     
   },
 });

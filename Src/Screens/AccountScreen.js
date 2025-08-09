@@ -5,6 +5,7 @@ import { Font } from '../Constant/Font';
 import Account from '../Components/Account';
 import PasswordInput from '../Components/Passwordinput';
 import Dob from '../Components/Dob';
+import Endtext from '../Components/Endtext';
 
 const AccountScreen = () => {
   return (
@@ -70,6 +71,7 @@ const AccountScreen = () => {
       <Dob title="DOB " placeholder="Your DOB" placeholderTextColor="#DBD8D8" borderColor="#DBD8D8"/>
       <PasswordInput title="Password" placeholder="Enter your password" placeholderTextColor="#DBD8D8"  />
       <PasswordInput title="Confirm Password" placeholder="Confirm your password" placeholderTextColor="#DBD8D8"  />
+      <Endtext title="By selecting checkbox l agree to Crop Secure's Terms of Service, and Privacy Policy."/>
     </ScrollView>
     </View>
   );
