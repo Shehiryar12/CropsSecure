@@ -6,73 +6,90 @@ import Account from '../Components/Account';
 import PasswordInput from '../Components/Passwordinput';
 import Dob from '../Components/Dob';
 import Endtext from '../Components/Endtext';
+import { useNavigation } from '@react-navigation/native';
 
 const AccountScreen = () => {
+  const navigation = useNavigation();
+
   return (
-
-  
     <View>
-     <ScrollView>  
-      <View style={styles.header}>
-        <MaterialIcons
-          name="keyboard-arrow-left"
-          size={24}
-          color="#000000"
-          style={styles.icon}
+      <ScrollView>
+        <View style={styles.header}>
+          <MaterialIcons
+            name="keyboard-arrow-left"
+            size={24}
+            color="#000000"
+            style={styles.icon}
+          />
+
+          <Text style={styles.heading}>Create Account</Text>
+
+          <View style={{ width: 25 }}></View>
+        </View>
+        <Text style={styles.signintext}> Sign In</Text>
+
+        <Account
+          title="Name"
+          placeholder="Enter your name"
+          placeholderTextColor="#DBD8D8"
+          borderColor="green"
         />
-
-        <Text style={styles.heading}>Create Account</Text>
-
-        <View style={{ width: 25 }}></View>
-      </View>
-      <Text style={styles.signintext}> Sign In</Text>
-
-      <Account
-        title="Name"
-        placeholder="Enter your name"
-        placeholderTextColor="#DBD8D8"
-        borderColor="green"
-      />
-      <Account
-        title="Father’s Name"
-        placeholder="Enter your father’s name"
-        placeholderTextColor="#DBD8D8"
-        borderColor="#DBD8D8"
-      />
-      <Account
-        title="CNIC"
-        placeholder="Enter your CNIC"
-        placeholderTextColor="#DBD8D8"
-         borderColor="#DBD8D8"
-         maxLength={11}
-      />
-      <Account
-        title="Email"
-        placeholder="Enter your email"
-        placeholderTextColor="#DBD8D8"
-         borderColor="#DBD8D8"
-      />
-      <Account
-        title="Phone Number"
-        placeholder="Enter your phone number"
-        placeholderTextColor="#DBD8D8"
-         borderColor="#DBD8D8"
-           maxLength={11}
-      />
-       {/* <Account
+        <Account
+          title="Father’s Name"
+          placeholder="Enter your father’s name"
+          placeholderTextColor="#DBD8D8"
+          borderColor="#DBD8D8"
+        />
+        <Account
+          title="CNIC"
+          placeholder="Enter your CNIC"
+          placeholderTextColor="#DBD8D8"
+          borderColor="#DBD8D8"
+          maxLength={11}
+        />
+        <Account
+          title="Email"
+          placeholder="Enter your email"
+          placeholderTextColor="#DBD8D8"
+          borderColor="#DBD8D8"
+        />
+        <Account
+          title="Phone Number"
+          placeholder="Enter your phone number"
+          placeholderTextColor="#DBD8D8"
+          borderColor="#DBD8D8"
+          maxLength={11}
+        />
+        {/* <Account
         title="DOB"
         placeholder="Your DOB"
         placeholderTextColor="#DBD8D8"
          borderColor="#DBD8D8"
       /> */}
 
-    
-
-      <Dob title="DOB " placeholder="Your DOB" placeholderTextColor="#DBD8D8" borderColor="#DBD8D8"/>
-      <PasswordInput title="Password" placeholder="Enter your password" placeholderTextColor="#DBD8D8"  />
-      <PasswordInput title="Confirm Password" placeholder="Confirm your password" placeholderTextColor="#DBD8D8"  />
-      <Endtext title="By selecting checkbox l agree to Crop Secure's Terms of Service, and Privacy Policy." buttontext="Sign up"  accounttext="Already have an account?"/>
-    </ScrollView>
+        <Dob
+          title="DOB "
+          placeholder="Your DOB"
+          placeholderTextColor="#DBD8D8"
+          borderColor="#DBD8D8"
+        />
+        <PasswordInput
+          title="Password"
+          placeholder="Enter your password"
+          placeholderTextColor="#DBD8D8"
+        />
+        <PasswordInput
+          title="Confirm Password"
+          placeholder="Confirm your password"
+          placeholderTextColor="#DBD8D8"
+        />
+        <Endtext
+          title="By selecting checkbox l agree to Crop Secure's Terms of Service, and Privacy Policy."
+          buttontext="Sign up"
+          accounttext="Already have an account? "
+          onPress={()=>navigation.navigate('Authorized')}
+        />
+      </ScrollView>
     </View>
   );
 };

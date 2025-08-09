@@ -26,6 +26,8 @@ const Authorized = () => {
           <View style={{ width: 25 }}></View>
         </View>
 
+         <Text style={styles.Authorizedtext}>Register as Authorized Dealer</Text>
+
         <AuthorizedAccount
           title="Name"
           placeholder="Enter your name"
@@ -82,6 +84,7 @@ const Authorized = () => {
   buttontext="Create Account"
   accounttext="Already have an account? "
 />
+
       </ScrollView>
     </View>
   );
@@ -120,4 +123,11 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     // borderColor:"#009245"
   },
+
+  //   signintext: {
+  //   paddingHorizontal: 18,
+  //   color: '#009245',
+  //   marginTop: 14,
+  //   fontSize: 15,
+  // },
 });

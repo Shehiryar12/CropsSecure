@@ -24,6 +24,14 @@ const Endtext = props => {
 
        
       </Text>
+
+      {/* <Text style={styles.authorized}>Register as a Authorized Dealer</Text> */}
+
+        <TouchableOpacity onPress={() => navigation.navigate('Authorized')}>
+        <Text style={styles.authorized}>Register as a Authorized Dealer</Text>
+      </TouchableOpacity>
+
+     
     </View>
   );
 };
@@ -60,4 +68,12 @@ const styles = StyleSheet.create({
   logintext: {
     color: 'green',
   },
+  authorized:{
+    textAlign:"center",
+    // fontSize:14,
+    fontSize:12,
+    marginTop:40,
+    color:"#006838"
+  }
+  
 });
