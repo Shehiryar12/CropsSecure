@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import Welcome from '../Screens/Welcome'
 import AccountScreen from '../Screens/AccountScreen'
 import { Font } from '../Constant/Font'
+import Authorized from '../Screens/Authorized'
 
 
 
@@ -15,6 +16,7 @@ const Stack=createNativeStackNavigator()
     <Stack.Navigator>
       <Stack.Screen  name="Welcome" component={Welcome} options={{ headerShown: false }}/>
        <Stack.Screen name="AccountScreen"component={AccountScreen} options={{ headerShown: false }}/>
+       <Stack.Screen name="Authorized" component={Authorized}/>
     </Stack.Navigator>
   )
 }

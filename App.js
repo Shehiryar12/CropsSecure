@@ -1,12 +1,14 @@
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import AppNavigator from './Src/navigaton/AppNavigator';
+
+import Authorized from './Src/Screens/Authorized';
 
 const App = () => {
   return (
-    <NavigationContainer>
-      <AppNavigator />
-    </NavigationContainer>
+    // <NavigationContainer>
+    //   {/* <AppNavigator /> */}
+    // </NavigationContainer>
+
+    <Authorized/>
   );
 };
 
