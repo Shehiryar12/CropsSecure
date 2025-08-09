@@ -1,18 +1,21 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React from 'react';
 import { Font } from '../Constant/Font';
+import { useNavigation } from '@react-navigation/native';
 
 const Endtext = props => {
+  const navigation = useNavigation();
   return (
     <View>
       <Text style={styles.textstyle}>{props?.title}</Text>
 
       <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttontext}>Sign Up{props?.buttontext}</Text>
+        <Text style={styles.buttontext}>{props?.buttontext}</Text>
       </TouchableOpacity>
 
       <Text style={styles.accounttext}>
-        Already have an account? <Text style={styles.logintext}>Login</Text>
+        Already have an account? {props?.accounttext}
+        <Text style={styles.logintext} onPress={()=>navigation.navigate('Welcome')}>Login</Text>
       </Text>
     </View>
   );
@@ -47,7 +50,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 10,
   },
-  logintext:{
-    color:"green",
-  }
+  logintext: {
+    color: 'green',
+  },
 });
