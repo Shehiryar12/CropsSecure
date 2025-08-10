@@ -1,5 +1,6 @@
 import { Image, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
+import { Font } from '../Constant/Font';
 
 const OwnershipComponent = (props) => {
   return (
@@ -66,6 +67,9 @@ const styles = StyleSheet.create({
   landtext: {
     marginBottom: 5,
     marginTop:10,
+    // backgroundColor:'red',
+    fontFamily:Font.bold,
+    fontSize:12
   },
   landtexttwo: {
     fontSize: 10,

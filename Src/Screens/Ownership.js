@@ -2,6 +2,7 @@ import { StyleSheet, View, Text } from 'react-native';
 import React from 'react';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import OwnershipComponent from '../Components/OwnershipComponent';
+import { Font } from '../Constant/Font';
 
 const Ownership = () => {
   return (
@@ -44,5 +45,6 @@ const styles = StyleSheet.create({
   },
   LandStyling: {
     marginRight: 20,
+    fontFamily:Font.bold,
   },
 });
