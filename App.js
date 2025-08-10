@@ -6,6 +6,7 @@ import AppNavigator from './Src/navigaton/AppNavigator';
 import ForgotPassword from './Src/Screens/ForgotPassword';
 import Reset from './Src/Components/Reset';
 import ResetPassword from './Src/Screens/ResetPassword';
+import FarmerRecord from './Src/Screens/FarmerRecord';
 
 const App = () => {
   return (
@@ -14,7 +15,9 @@ const App = () => {
     // </NavigationContainer>
 
     // <ForgotPassword/>
-   <ResetPassword/>
+  //  <ResetPassword/>
+
+  <FarmerRecord/>
   );
 };
 

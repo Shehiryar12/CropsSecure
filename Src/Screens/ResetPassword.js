@@ -23,8 +23,8 @@ const ResetPassword = () => {
          placeholderTextColor="#DBD8D8"
       />
 
-         <TouchableOpacity style={styles.OTP}>
-                     <Text style={styles.otpstyle}>Send OTP</Text>
+         <TouchableOpacity style={styles.confirmbutton}>
+                     <Text style={styles.confirm}>Confirm</Text>
                    </TouchableOpacity>
     </View>
   );
@@ -33,7 +33,7 @@ const ResetPassword = () => {
 export default ResetPassword;
 
 const styles = StyleSheet.create({
-    OTP: {
+    confirmbutton: {
     backgroundColor: '#009245',
     // marginTop,
     marginHorizontal:25,
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     // paddingHorizontal:20,
   },
-    otpstyle: {
+    confirm: {
     textAlign: 'center',
     marginVertical: 10,
     color: 'white',
