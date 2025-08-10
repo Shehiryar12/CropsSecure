@@ -25,9 +25,9 @@ const OwnershipComponent = (props) => {
          
               <View style={styles.totalContainer}>
                 <Text style={styles.totalarea}>
-                  Total Area: <Text style={styles.Acre}>10 Acres</Text>
+                  Total Area: <Text style={styles.Acre}>{props.Acres}</Text>
                 </Text>
-                <Text style={styles.certificate}>View Certificate</Text>
+                <Text style={styles.certificate}>{props.certificate}</Text>
               </View>
             </View>
           </View>

@@ -22,12 +22,16 @@ const Ownership = () => {
       <OwnershipComponent
         title="Land Area Ownership"
         define="Chak 45, Toba Tek Singh, Faisalabad, Punjab, Pakistan"
+        Acres="10 Acres" 
+        certificate="View Certificate"
       />
 
     
       <OwnershipComponent
         title="Land Area Ownership"
         define="Mouza Kot Samaba, Rahim Yar Khan, Punjab, Pakistan."
+        Acres="10 Acres" 
+          certificate="View Certificate"
       />
     </View>
   );
