@@ -4,6 +4,8 @@ import Authorized from './Src/Screens/Authorized';
 import { NavigationContainer } from '@react-navigation/native';
 import AppNavigator from './Src/navigaton/AppNavigator';
 import ForgotPassword from './Src/Screens/ForgotPassword';
+import Reset from './Src/Components/Reset';
+import ResetPassword from './Src/Screens/ResetPassword';
 
 const App = () => {
   return (
@@ -11,7 +13,8 @@ const App = () => {
     //   <AppNavigator />
     // </NavigationContainer>
 
-    <ForgotPassword/>
+    // <ForgotPassword/>
+   <ResetPassword/>
   );
 };
 
