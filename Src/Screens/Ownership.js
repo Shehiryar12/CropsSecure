@@ -17,13 +17,13 @@ const Ownership = () => {
         <View></View>
       </View>
 
-      {/* First Box */}
+    
       <OwnershipComponent
         title="Land Area Ownership"
         define="Chak 45, Toba Tek Singh, Faisalabad, Punjab, Pakistan"
       />
 
-      {/* Second Box without heading */}
+    
       <OwnershipComponent
         title="Land Area Ownership"
         define="Mouza Kot Samaba, Rahim Yar Khan, Punjab, Pakistan."

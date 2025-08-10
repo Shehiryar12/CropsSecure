@@ -4,7 +4,7 @@ import React from 'react';
 const OwnershipComponent = (props) => {
   return (
     <View style={styles.container}>
-      {/* Box Section */}
+     
       <View style={styles.boxed}>
         <View style={styles.box}>
           <View style={{ flexDirection: 'row', alignItems: 'center' }}>
@@ -39,21 +39,25 @@ const OwnershipComponent = (props) => {
 export default OwnershipComponent;
 
 const styles = StyleSheet.create({
-  container: {},
+  container: {
+    // marginTop:20,
+  },
   boxed: {
-    marginTop: 20,
+
+    // marginTop: 20,
   },
   box: {
     width: 320,
-    height: 110,
+    height: 100,
     backgroundColor: 'lightgrey',
     marginHorizontal: 20,
     borderRadius: 8,
     paddingVertical: 5,
+    marginTop:20,
   },
   landimage: {
-    width: 80,
-    height: 80,
+    width: 70,
+    height: 70,
     borderRadius: 8,
     marginLeft: 15,
     marginTop: 10,
@@ -61,6 +65,7 @@ const styles = StyleSheet.create({
   },
   landtext: {
     marginBottom: 5,
+    marginTop:10,
   },
   landtexttwo: {
     fontSize: 10,
