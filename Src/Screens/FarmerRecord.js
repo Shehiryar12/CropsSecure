@@ -2,6 +2,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 import Icon from 'react-native-vector-icons/Feather';
 import IconEntypo from 'react-native-vector-icons/Entypo';
+import FarmerComponent from '../Components/FarmerComponent';
 
 const FarmerRecord = () => {
   return (
@@ -27,6 +28,8 @@ const FarmerRecord = () => {
           <Text style={styles.innertexttwo}>24*</Text>
         </View>
       </View>
+      <FarmerComponent />
+      
     </View>
   );
 };
