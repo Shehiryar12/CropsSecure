@@ -97,15 +97,15 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     paddingHorizontal: 8,
   },
-  OTP:{
-    backgroundColor:"#009245",
+  OTP: {
+    backgroundColor: '#009245',
     // marginTop,
-    marginTop:90,
-    borderRadius:8,
+    marginTop: 90,
+    borderRadius: 8,
   },
-  otpstyle:{
-     textAlign:"center",
-    marginVertical:10, 
-    color:"white",
-  }
+  otpstyle: {
+    textAlign: 'center',
+    marginVertical: 10,
+    color: 'white',
+  },
 });

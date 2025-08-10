@@ -16,6 +16,7 @@ const PasswordInput = (props) => {
           placeholder= {props?.placeholder}
           placeholderTextColor={props?.placeholderTextColor}
           secureTextEntry={show}
+        
         />
         <TouchableOpacity onPress={() => setShow(!show)}>
           <MaterialIcons

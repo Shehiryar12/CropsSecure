@@ -1,4 +1,4 @@
-import { StyleSheet, Text, TextInput, View } from 'react-native';
+import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import React from 'react';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { Font } from '../Constant/Font';
@@ -19,24 +19,16 @@ const Reset = props => {
 
       <View>
         <Text style={styles.define}>{props?.define}</Text>
-
-        <View>
-          <Text>{props.passwordtext}</Text>
-
-              <TextInput
-                      style={styles.textinput}
-                      placeholder="Enter your email"
-                      placeholderTextColor="#DBD8D8"
-                      borderColor="#DBD8D8"
-                      keyboardType="email-address"
-                    />
-        </View>
+      
       </View>
+
+         
     </View>
   );
 };
 
 export default Reset;
+
 
 const styles = StyleSheet.create({
   header: {
