@@ -77,4 +77,8 @@ const styles = StyleSheet.create({
    innertexttwo: {
     color: 'white',
   },
+  textmonday:{
+    fontSize: 8,
+    marginTop: 4,
+  }
 });
