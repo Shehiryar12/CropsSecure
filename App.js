@@ -7,6 +7,7 @@ import ForgotPassword from './Src/Screens/ForgotPassword';
 import Reset from './Src/Components/Reset';
 import ResetPassword from './Src/Screens/ResetPassword';
 import FarmerRecord from './Src/Screens/FarmerRecord';
+import Ownership from './Src/Screens/Ownership';
 
 const App = () => {
   return (
@@ -17,7 +18,7 @@ const App = () => {
     // <ForgotPassword/>
   //  <ResetPassword/>
 
-  <FarmerRecord/>
+  <Ownership/>
   );
 };
 
