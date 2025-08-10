@@ -10,7 +10,7 @@ const FarmerComponent = props => {
           style={styles.imageone}
         />
         {/* <Image source={require("../Screens/imageone.png")} style={styles.imageone}/> */}
-        <Text style={{ fontSize: 10, marginTop: 8 }}>LAND RECORD</Text>
+        <Text style={styles.textstyle}>{props.Land}</Text>
       </View>
 
       <View style={styles.boxone}>
@@ -18,9 +18,7 @@ const FarmerComponent = props => {
           source={require('../Screens/imagetwo.png')}
           style={styles.imageone}
         />
-        <Text style={{ fontSize: 9, marginTop: 8 }}>
-          LAND OWNERSHIP DETAILS
-        </Text>
+        <Text style={styles.textstyle}>{props.Details}</Text>
       </View>
 
       <View style={styles.boxone}>
@@ -28,39 +26,31 @@ const FarmerComponent = props => {
           source={require('../Screens/imagethree.jpg')}
           style={styles.imageone}
         />
-        <Text style={{ fontSize: 9, marginTop: 8 }}>
-         CROP TO INSURE
-        </Text>
+        <Text style={styles.textstyle}>{props.Insure}</Text>
       </View>
 
-       <View style={styles.boxone}>
+      <View style={styles.boxone}>
         <Image
           source={require('../Screens/imagefour.png')}
           style={styles.imageone}
         />
-        <Text style={{ fontSize: 9, marginTop: 8 }}>
-         CROP TO INSURE
-        </Text>
+        <Text style={styles.textstyle}>{props.Compensation}</Text>
       </View>
 
-        <View style={styles.boxone}>
+      <View style={styles.boxone}>
         <Image
           source={require('../Screens/imagefive.png')}
           style={styles.imageone}
         />
-        <Text style={{ fontSize: 9, marginTop: 8 }}>
-         CROP TO INSURE
-        </Text>
+        <Text style={styles.textstyle}>{props.Assessment}</Text>
       </View>
 
-       <View style={styles.boxone}>
+      <View style={styles.boxone}>
         <Image
           source={require('../Screens/imagesix.jpg')}
           style={styles.imageone}
         />
-        <Text style={{ fontSize: 9, marginTop: 8 }}>
-         CROP TO INSURE
-        </Text>
+        <Text style={{textAlign:"center",fontSize:9,marginTop:15}}>{props.Registration}</Text>
       </View>
     </View>
   );
@@ -70,11 +60,11 @@ export default FarmerComponent;
 
 const styles = StyleSheet.create({
   rowContainer: {
-    flexDirection: 'row', // images ko side by side karega
+    flexDirection: 'row', 
     // marginLeft: 17,
     // marginTop: 20
     paddingHorizontal: 11,
-    flexWrap: 'wrap', 
+    flexWrap: 'wrap',    
   },
 
   boxone: {
@@ -95,5 +85,9 @@ const styles = StyleSheet.create({
   imageone: {
     width: 60,
     height: 60,
+  },
+  textstyle: {
+    fontSize: 9,
+    marginTop: 8,
   },
 });

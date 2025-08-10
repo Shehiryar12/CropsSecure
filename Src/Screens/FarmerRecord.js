@@ -7,17 +7,17 @@ import FarmerComponent from '../Components/FarmerComponent';
 const FarmerRecord = () => {
   return (
     <View style={styles.container}>
-      <View   style={styles.inner}>
+      <View style={styles.inner}>
         <Icon name="menu" size={20} color="green" style={styles.iconstyle} />
 
-          <View style={styles.innertwo}>
+        <View style={styles.innertwo}>
           <Text> 04 APR 24 </Text>
           <Text style={styles.textmonday}> MONDAY </Text>
           <IconEntypo name="calendar" color="black" size={18} />
         </View>
       </View>
 
-          <View style={styles.box}>
+      <View style={styles.box}>
         <View style={styles.box1}>
           <Text style={styles.innertext}>Farmer</Text>
           <Text style={styles.innertext}>26km/h</Text>
@@ -28,8 +28,14 @@ const FarmerRecord = () => {
           <Text style={styles.innertexttwo}>24*</Text>
         </View>
       </View>
-      <FarmerComponent />
-      
+      <FarmerComponent
+        Land="LAND RECORD"
+        Details="LAND OWNERSHIP DETAILS"
+        Insure="CROP TO INSURE"
+        Compensation="LOSS COMPENSATION"
+        Assessment=" LOSS ASSESSMENT"
+        Registration="AUTHORIZED DEALERSHIP REGISTRATION"
+      />
     </View>
   );
 };
@@ -37,17 +43,17 @@ const FarmerRecord = () => {
 export default FarmerRecord;
 
 const styles = StyleSheet.create({
-      container: {
+  container: {
     backgroundColor: '#F0F7F8',
     flex: 1,
   },
-    inner: {
+  inner: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginHorizontal: 12,
     marginVertical: 12,
   },
-    innertwo: {
+  innertwo: {
     flexDirection: 'row',
     backgroundColor: 'white',
     borderRadius: 7,
@@ -61,27 +67,27 @@ const styles = StyleSheet.create({
     height: 70,
     borderRadius: 10,
   },
-    box1: {
+  box1: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginHorizontal: 15,
     borderRadius: 10,
   },
-    box2: {
+  box2: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginHorizontal: 21,
   },
-    innertext: {
+  innertext: {
     color: 'white',
     marginVertical: 5,
     marginHorizontal: 8,
   },
-   innertexttwo: {
+  innertexttwo: {
     color: 'white',
   },
-  textmonday:{
+  textmonday: {
     fontSize: 8,
     marginTop: 4,
-  }
+  },
 });
