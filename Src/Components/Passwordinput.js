@@ -1,10 +1,16 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, TextInput, View, TouchableOpacity } from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
+  TouchableOpacity,
+} from 'react-native';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { Font } from '../Constant/Font';
 
-const PasswordInput = (props) => {
-  const [show, setShow] = useState(true); 
+const PasswordInput = props => {
+  const [show, setShow] = useState(true);
 
   return (
     <View style={styles.container}>
@@ -13,10 +19,9 @@ const PasswordInput = (props) => {
       <View style={styles.Box}>
         <TextInput
           style={styles.textinput}
-          placeholder= {props?.placeholder}
+          placeholder={props?.placeholder}
           placeholderTextColor={props?.placeholderTextColor}
           secureTextEntry={show}
-        
         />
         <TouchableOpacity onPress={() => setShow(!show)}>
           <MaterialIcons
@@ -25,12 +30,8 @@ const PasswordInput = (props) => {
             color="gray"
           />
         </TouchableOpacity>
-
-      
       </View>
     </View>
-    
-  
   );
 };
 
@@ -38,33 +39,23 @@ export default PasswordInput;
 
 const styles = StyleSheet.create({
   container: {
-    paddingHorizontal: 22,
     marginTop: 18,
   },
   header: {
     marginBottom: 5,
-    // fontSize: 16,
-    // color: '#000',
-    fontFamily:Font.medium,
-     color:"#646464",
-     
+    fontFamily: Font.medium,
+    color: '#646464',
   },
   Box: {
     flexDirection: 'row',
     alignItems: 'center',
     borderWidth: 1,
     borderRadius: 8,
-    // paddingHorizontal: 1,
-    borderColor:"#DBD8D8",
-     paddingHorizontal:6,
-    
-   
+    borderColor: '#DBD8D8',
+    paddingHorizontal: 6,
   },
   textinput: {
     flex: 1,
     height: 40,
-    // borderRadius:8,
-    // paddingHorizontal:-12,
-    
   },
 });

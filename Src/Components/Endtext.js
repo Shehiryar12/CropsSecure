@@ -1,10 +1,12 @@
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import React from 'react';
+import { StyleSheet, Text, TouchableOpacity, View, CheckBox } from 'react-native';
+import React, { useState } from 'react';
 import { Font } from '../Constant/Font';
 import { useNavigation } from '@react-navigation/native';
 
 const Endtext = props => {
   const navigation = useNavigation();
+  const [isSelected, setSelection] = useState(false);
+
   return (
     <View>
       <Text style={styles.textstyle}>{props?.title}</Text>
@@ -13,25 +15,25 @@ const Endtext = props => {
         <Text style={styles.buttontext}>{props?.buttontext}</Text>
       </TouchableOpacity>
 
-      <Text style={styles.accounttext}>
-         {props?.accounttext}
-        <Text
-          style={styles.logintext}
-          onPress={() => navigation.navigate('Welcome')}
-        >
-          Login
-        </Text>
+      <View style={styles.accountWrap}>
+        <Text style={styles.accountText}>{props?.accounttext}</Text>
+        <TouchableOpacity onPress={() => navigation.navigate('Welcome')}>
+          <Text style={styles.loginText}>Login</Text>
+        </TouchableOpacity>
+      </View>
 
-       
-      </Text>
-
-      {/* <Text style={styles.authorized}>Register as a Authorized Dealer</Text> */}
-
+    
+      <View style={styles.authWrap}>
+        <CheckBox
+          value={isSelected}
+          onValueChange={setSelection}
+        />
         <TouchableOpacity onPress={() => navigation.navigate('Authorized')}>
-        <Text style={styles.authorized}>Register as a Authorized Dealer</Text>
-      </TouchableOpacity>
-
-     
+          <Text style={styles.authorized}>
+            Register as an authorized dealer
+          </Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
@@ -40,40 +42,50 @@ export default Endtext;
 
 const styles = StyleSheet.create({
   textstyle: {
-    paddingHorizontal: 40,
+    paddingHorizontal: 0,
+    marginTop: 18,
+    paddingLeft: 15,
     fontSize: 9,
     fontFamily: Font.medium,
-    marginTop: 18,
-    // flexWrap:'wrap',
   },
-
   button: {
     backgroundColor: '#009245',
-    // paddingHorizontal:10,
     marginHorizontal: 25,
-    // marginHorizontal:10,
     borderRadius: 8,
     marginTop: 34,
-    // paddingVertical:10,
   },
   buttontext: {
     textAlign: 'center',
     paddingVertical: 13,
     color: 'white',
   },
-  accounttext: {
-    textAlign: 'center',
+  accountWrap: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'row',
+    marginTop: 8,
+  },
+  accountText: {
     fontSize: 10,
+    fontFamily: Font.medium,
+    textAlign: 'center',
   },
-  logintext: {
+  loginText: {
+    fontSize: 10,
+    fontFamily: Font.bold,
     color: 'green',
+    textAlign: 'center',
+    marginLeft: 1,
   },
-  authorized:{
-    textAlign:"center",
-    // fontSize:14,
-    fontSize:12,
-    marginTop:40,
-    color:"#006838"
-  }
-  
+  authWrap: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginTop: 50,
+    paddingLeft: 15,
+  },
+  authorized: {
+    fontSize: 12,
+    marginLeft: 5,
+    fontFamily: Font.medium,
+  },
 });

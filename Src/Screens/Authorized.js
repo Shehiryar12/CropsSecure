@@ -1,5 +1,11 @@
-import { ScrollView, StyleSheet, Text,View } from 'react-native';
-import React from 'react';
+import {
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+} from 'react-native';
+import React, { useState } from 'react';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { Font } from '../Constant/Font';
 
@@ -9,32 +15,28 @@ import Endtext from '../Components/Endtext';
 import AuthorizedAccount from '../Components/AuthorizedAccount';
 
 const Authorized = () => {
-  
+  const [isChecked, setIsChecked] = useState(false);
+
   return (
-    <View>
+    <View style={{ flex: 1, backgroundColor: '#fff' }}>
       <ScrollView>
+        {/* Header */}
         <View style={styles.header}>
-          <MaterialIcons
-            name="keyboard-arrow-left"
-            size={24}
-            color="#000000"
-            style={styles.icon}
-          />
-
+          <MaterialIcons name="keyboard-arrow-left" size={24} color="#000000" />
           <Text style={styles.heading}>Create Account</Text>
-
-          <View style={{ width: 25 }}></View>
+          <View style={{ width: 25 }} />
         </View>
 
-         <Text style={styles.Authorizedtext}>Register as Authorized Dealer</Text>
+        {/* Sub Heading */}
+        <Text style={styles.Authorizedtext}>Register as Authorized Dealer</Text>
 
+        {/* Form Fields */}
         <AuthorizedAccount
           title="Name"
           placeholder="Enter your name"
           placeholderTextColor="#DBD8D8"
           borderColor="green"
         />
-
         <AuthorizedAccount
           title="Father’s Name"
           placeholder="Enter your father’s name"
@@ -63,7 +65,7 @@ const Authorized = () => {
         />
 
         <Dob
-          title="DOB "
+          title="DOB"
           placeholder="Your DOB"
           placeholderTextColor="#DBD8D8"
           borderColor="#DBD8D8"
@@ -78,13 +80,32 @@ const Authorized = () => {
           placeholder="Confirm your password"
           placeholderTextColor="#DBD8D8"
         />
-        
-      <Endtext
-  title="By selecting checkbox I agree to Crop Secure's Terms of Service, and Privacy Policy."
-  buttontext="Create Account"
-  accounttext="Already have an account? "
-/>
 
+        {/* Terms + Button + Account Text */}
+        <Endtext
+          title={
+            <View style={styles.checkboxContainer}>
+              <TouchableOpacity onPress={() => setIsChecked(!isChecked)}>
+                <MaterialIcons
+                  name={isChecked ? 'check-box' : 'check-box-outline-blank'}
+                  size={16}
+                  color="black"
+                  marginTop={3}
+                  marginLeft={8}
+                  borderColor="#727171"
+                  backgroundColor="white"
+                />
+              </TouchableOpacity>
+              <Text style={styles.checkboxText}>
+                By selecting checkbox I agree to Crop Secure's{' '}
+                <Text style={styles.linkText}>Terms of Service</Text> and{' '}
+                <Text style={styles.linkText}>Privacy Policy</Text>
+              </Text>
+            </View>
+          }
+          buttontext="Sign Up"
+          accounttext="Already have an account? "
+        />
       </ScrollView>
     </View>
   );
@@ -101,7 +122,6 @@ const styles = StyleSheet.create({
   },
   heading: {
     fontFamily: Font.bold,
-    // fontSize: 18,
     color: '#000',
     marginTop: 45,
   },
@@ -111,23 +131,20 @@ const styles = StyleSheet.create({
     marginTop: 14,
     fontSize: 15,
   },
-  NameContainer: {
-    paddingHorizontal: 22,
-    marginTop: 18,
+  checkboxContainer: {
+    flexDirection: 'row',
+    width: 290,
   },
-  namestyle: {
-    fontFamily: Font.medium,
+  checkboxText: {
+    fontSize: 11,
+    lineHeight: 16,
+    flexShrink: 1,
+    marginLeft: 4,
+    marginTop: 2,
   },
-  textinput: {
-    borderWidth: 1,
-    borderRadius: 8,
-    // borderColor:"#009245"
+  linkText: {
+    color: 'blue',
+    textDecorationLine: 'underline',
+    fontSize: 11,
   },
-
-  //   signintext: {
-  //   paddingHorizontal: 18,
-  //   color: '#009245',
-  //   marginTop: 14,
-  //   fontSize: 15,
-  // },
 });

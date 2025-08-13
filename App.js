@@ -8,6 +8,10 @@ import Reset from './Src/Components/Reset';
 import ResetPassword from './Src/Screens/ResetPassword';
 import FarmerRecord from './Src/Screens/FarmerRecord';
 import Ownership from './Src/Screens/Ownership';
+import Account from './Src/Components/Account';
+import AccountScreen from './Src/Screens/AccountScreen';
+import FarmerComponent from './Src/Components/FarmerComponent';
+import Welcome from './Src/Screens/Welcome';
 
 const App = () => {
   return (
@@ -15,10 +19,9 @@ const App = () => {
     //   <AppNavigator />
     // </NavigationContainer>
 
-    // <ForgotPassword/>
-  //  <ResetPassword/>
+ <FarmerRecord/>
 
-  <Ownership/>
+    
   );
 };
 

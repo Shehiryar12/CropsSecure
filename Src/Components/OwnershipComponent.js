@@ -10,7 +10,7 @@ const OwnershipComponent = (props) => {
         <View style={styles.box}>
           <View style={{ flexDirection: 'row', alignItems: 'center' }}>
             <Image
-              source={require('../Screens/landimage.jpg')}
+              source={require('../Assets/Images/imagefive.png')}
               style={styles.landimage}
             />
             <View style={{ flexDirection: 'column', flex: 1 }}>

@@ -1,39 +1,54 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { Image, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 import Icon from 'react-native-vector-icons/Feather';
 import IconEntypo from 'react-native-vector-icons/Entypo';
 import FarmerComponent from '../Components/FarmerComponent';
+import { Font } from '../Constant/Font';
 
 const FarmerRecord = () => {
   return (
     <View style={styles.container}>
-      <View style={styles.inner}>
-        <Icon name="menu" size={20} color="green" style={styles.iconstyle} />
+   <View style={styles.upperportion}> 
+      <View style={styles.header}>
+        <Icon name="menu" size={24} color="green" marginLeft={8} />
 
-        <View style={styles.innertwo}>
-          <Text> 04 APR 24 </Text>
-          <Text style={styles.textmonday}> MONDAY </Text>
-          <IconEntypo name="calendar" color="black" size={18} />
+        <View style={styles.dateContainer}>
+          <Text style={styles.dateText}>04 APR 24</Text>
+          <Text style={styles.dayText}>MONDAY</Text>
+          <IconEntypo name="calendar" color="black" size={16} />
         </View>
+   </View>       
       </View>
 
       <View style={styles.box}>
-        <View style={styles.box1}>
-          <Text style={styles.innertext}>Farmer</Text>
-          <Text style={styles.innertext}>26km/h</Text>
+        <View style={styles.boxRow}>
+          <Text style={styles.boxText}>Farmer</Text>
+          <Text style={styles.boxText}>26 km/h</Text>
         </View>
 
-        <View style={styles.box2}>
-          <Text style={styles.innertexttwo}>ARSHAD ALI</Text>
-          <Text style={styles.innertexttwo}>24*</Text>
+        {/* Bottom Row */}
+        <View style={styles.boxRow}>
+          {/* Name */}
+          <Text style={styles.boxTextLarge}>ARSHAD ALI</Text>
+
+          {/* Temperature + Cloud Icon */}
+          <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+            <Text style={styles.boxTextLarge}>24°</Text>
+            <Image
+              source={require('../Assets/Images/Clouds.png')}
+              style={styles.cloudImage}
+            />
+          </View>
         </View>
       </View>
+
+      {/* Farmer Component */}
       <FarmerComponent
         Land="LAND RECORD"
         Details="LAND OWNERSHIP DETAILS"
         Insure="CROP TO INSURE"
         Compensation="LOSS COMPENSATION"
-        Assessment=" LOSS ASSESSMENT"
+        Assessment="LOSS ASSESSMENT"
         Registration="AUTHORIZED DEALERSHIP REGISTRATION"
       />
     </View>
@@ -43,51 +58,75 @@ const FarmerRecord = () => {
 export default FarmerRecord;
 
 const styles = StyleSheet.create({
+
+  upperportion:{
+           
+  },
   container: {
     backgroundColor: '#F0F7F8',
     flex: 1,
+    // paddingHorizontal: 22,
+    paddingTop: 30,
+    paddingHorizontal: 10,
   },
-  inner: {
+  header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginHorizontal: 12,
-    marginVertical: 12,
+    alignItems: 'center',
+    marginBottom: 15,
+    // backgroundColor:"red",
+    paddingHorizontal:0,
   },
-  innertwo: {
+  dateContainer: {
     flexDirection: 'row',
     backgroundColor: 'white',
-    borderRadius: 7,
-    marginVertical: 5,
+    borderRadius: 15,
+    paddingHorizontal: 16,
+    paddingVertical: 5,
+    alignItems: 'center',
     elevation: 5,
+    marginRight: 8,
+    width:130,
+  },
+  dateText: {
+    fontSize: 10,
+    marginRight: 6,
+    fontFamily: Font.bold,
+    // marginTop:5,
+  },
+  dayText: {
+    fontSize: 7,
+    color: '#555',
+    marginRight: 5,
   },
   box: {
     backgroundColor: 'green',
-    marginHorizontal: 20,
-    marginTop: 10,
-    height: 70,
-    borderRadius: 10,
-  },
-  box1: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginHorizontal: 15,
-    borderRadius: 10,
-  },
-  box2: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginHorizontal: 21,
-  },
-  innertext: {
-    color: 'white',
-    marginVertical: 5,
     marginHorizontal: 8,
+    marginTop: 10,
+    borderRadius: 15,
+    paddingVertical: 12,
+    paddingHorizontal: 15,
+    height:80,
   },
-  innertexttwo: {
+  boxRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 8,
+  },
+  boxText: {
     color: 'white',
+    fontSize: 14,
   },
-  textmonday: {
-    fontSize: 8,
-    marginTop: 4,
+  boxTextLarge: {
+    color: 'white',
+    fontSize: 18,
+    marginRight: 4,
+  },
+  cloudImage: {
+    width: 28,
+    height: 28,
+    marginLeft: 5,
+    resizeMode: 'contain',
   },
 });
