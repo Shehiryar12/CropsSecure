@@ -21,6 +21,7 @@ const LandComponenttwo = props => {
           // paddingHorizontal: 7,
                     // 
                     marginHorizontal:7,
+                    paddingVertical:4,
         }}
       >
         <TextInput
@@ -29,7 +30,8 @@ const LandComponenttwo = props => {
           borderColor={props?.borderColor}
            style={{
             flex: 1,
-            color: props?.textColor,   
+            color: props?.textColor,  
+            fontSize:12, 
           
           }}
         />
