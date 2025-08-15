@@ -1,6 +1,8 @@
 import { StyleSheet, Text, TextInput, View } from 'react-native';
 import React from 'react';
 import { Font } from '../Constant/Font';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+
 
 const PhoneCnicEmailInput = props => {
   return (
