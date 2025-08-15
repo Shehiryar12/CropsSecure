@@ -1,4 +1,4 @@
-import { SafeAreaView, View, Text, StyleSheet } from 'react-native';
+import { SafeAreaView, View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import React from 'react';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { Font } from '../Constant/Font';
@@ -25,14 +25,30 @@ const LandData = () => {
         borderColor="green"
       />
 
-      <LandComponenttwo label="Tehsil Name" placeholder="Enter tehsil name"  placeholderTextColor="#DBD8D8"/>
-      <LandComponenttwo label="UC" placeholder="Enter UC name"  placeholderTextColor="#DBD8D8"/>
-      <LandComponenttwo label="Village Name" placeholder="Enter village name"  placeholderTextColor="#DBD8D8"/>
+      <LandComponenttwo
+        label="Tehsil Name"
+        placeholder="Enter tehsil name"
+        placeholderTextColor="#DBD8D8"
+      />
+      <LandComponenttwo
+        label="UC"
+        placeholder="Enter UC name"
+        placeholderTextColor="#DBD8D8"
+      />
+      <LandComponenttwo
+        label="Village Name"
+        placeholder="Enter village name"
+        placeholderTextColor="#DBD8D8"
+      />
       <LandComponenttwo
         label="Other (for more information)"
         placeholder="Enter other info"
-         placeholderTextColor="#DBD8D8"
+        placeholderTextColor="#DBD8D8"
       />
+
+      <TouchableOpacity style={styles.button}>
+        <Text style={styles.buttonText}>Save</Text>
+      </TouchableOpacity>
     </SafeAreaView>
   );
 };
@@ -42,7 +58,6 @@ export default LandData;
 const styles = StyleSheet.create({
   container: {
     margin: 16,
-  
   },
   heading: {
     flexDirection: 'row',
@@ -55,4 +70,17 @@ const styles = StyleSheet.create({
     fontSize: 16,
     marginLeft: 14,
   },
+  button:{
+     backgroundColor: '#00A651',
+    paddingVertical: 14,
+    borderRadius: 8,
+    marginHorizontal: 8,
+    marginTop: 57,
+    alignItems: 'center',
+  },
+  buttonText:{
+       fontFamily:Font.medium,
+       fontSize:13,
+       color:"white",
+  }
 });
