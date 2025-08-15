@@ -1,45 +1,49 @@
-import { StyleSheet, TextInput, View } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, TextInput, View } from 'react-native';
 import React from 'react';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import { Font } from '../Constant/Font';
 
-const LandComponent = (props) => {
+const LandComponenttwo = ({ name, placeholder }) => {
   return (
-    <View style={styles.container}>
+    <SafeAreaView>
    
-      <TextInput
-        placeholder={props?.placeholder}
-        style={styles.input}
-        placeholderTextColor="#888"
-      />
+      <Text style={styles.name}>{name}</Text>
 
-      <MaterialIcons 
-        name={"keyboard-arrow-right"} 
-        size={24} 
-        color="#555" 
-        style={styles.icon}
-      />
-    </View>
+      
+      <View style={styles.inputContainer}>
+        <TextInput
+          placeholder={props?.placeholder}
+          style={styles.input}
+          placeholderTextColor={props?.placeholderTextColor}
+        />
+      </View>
+    </SafeAreaView>
   );
 };
 
-export default LandComponent;
+export default LandComponenttwo;
 
 const styles = StyleSheet.create({
-  container: {
+  inputContainer: {
     flexDirection: 'row',
     alignItems: 'center',
     borderWidth: 1,
-    borderColor: '#ccc',
+    borderColor: '#009245',
     borderRadius: 8,
-    paddingHorizontal: 10,
-    height: 50,
+    marginTop: 10,
+    marginHorizontal: 16,
+    paddingRight: 5,
   },
   input: {
-    flex: 1, // takes remaining space
-    fontSize: 16,
-    color: '#000',
+    flex: 1,
+    fontSize: 14,
+    paddingVertical: 13,
+    paddingHorizontal: 10,
   },
-  icon: {
-    marginLeft: 8,
+  name: {
+    marginLeft: 16,
+    marginTop: 16,
+    fontFamily: Font.medium,
+    fontSize: 14,
   },
 });
