@@ -7,7 +7,7 @@ const LandComponenttwo = props => {
   return (
     <View style={{ marginTop: 20 }}>
       <Text
-        style={{ fontFamily: Font.medium, marginBottom: 5, color: '#646464', }}
+        style={{ fontFamily: Font.medium, marginBottom: 5, color: '#646464',marginHorizontal:7, }}
       >
         {props?.label}
       </Text>
@@ -16,25 +16,24 @@ const LandComponenttwo = props => {
           flexDirection: 'row',
           alignItems: 'center',
           borderWidth: 1,
-          borderColor: '#DBD8D8',
+          borderColor: props?.borderColor || '#DBD8D8', // ye line add karo
           borderRadius: 8,
-          paddingHorizontal: 7,
-          // backgroundColor: '#fff',
+          // paddingHorizontal: 7,
+                    // 
+                    marginHorizontal:7,
         }}
       >
         <TextInput
           placeholder={props?.placeholder}
           placeholderTextColor={props?.placeholderTextColor}
+          borderColor={props?.borderColor}
            style={{
             flex: 1,
-            color: props?.textColor,
-            borderColor:props?.borderColor,
-            // marginHorizontal:10,
-           
-           
+            color: props?.textColor,   
+          
           }}
         />
-        <MaterialIcons name="keyboard-arrow-down" size={24} color="#888" />
+        <MaterialIcons name="keyboard-arrow-down" size={24} color="#DBD8D8" />
       </View>
     </View>
   );
