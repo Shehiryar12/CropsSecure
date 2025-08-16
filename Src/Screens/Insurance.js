@@ -1,4 +1,4 @@
-import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React from 'react';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { Font } from '../Constant/Font';
@@ -51,13 +51,28 @@ const Insurance = () => {
 
         <View style={styles.prices}>
           <Text style={{ fontFamily: Font.bold, fontSize: 11 }}>Premium</Text>
-          <Text style={{ fontFamily: Font.bold, fontSize: 11, }}>Rs. <Text style={{color:"grey"}}>24000</Text></Text>
+          <Text style={{ fontFamily: Font.bold, fontSize: 11 }}>
+            Rs. <Text style={{ color: 'grey' }}>24000</Text>
+          </Text>
         </View>
 
-         <View style={styles.prices}>
+        <View style={styles.pricestwo}>
           <Text style={{ fontFamily: Font.bold, fontSize: 11 }}>Tax</Text>
-          <Text style={{ fontFamily: Font.bold, fontSize: 11, }}>Rs.<Text style={{color:"grey"}}>6000</Text></Text>
+          <Text style={{ fontFamily: Font.bold, fontSize: 11 }}>
+            Rs.<Text style={{ color: 'grey' }}>6000</Text>
+          </Text>
         </View>
+
+        <View style={styles.dottedcontainertwo}></View>   
+
+        <View style={styles.totalprice}>
+          <Text style={{ fontFamily: Font.bold, fontSize: 11 }}>Total</Text>
+          <Text style={{ fontFamily: Font.bold, fontSize: 11, }}>Rs.30000</Text>
+        </View>
+
+        <TouchableOpacity style={styles.buttonstyle}>
+            <Text style={styles.buttontext}>Pay</Text>
+        </TouchableOpacity>
       </View>
     </SafeAreaView>
   );
@@ -95,15 +110,50 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderStyle: 'dashed',
     marginHorizontal: 22,
-    marginTop: 13,
+    marginTop: 16,
     borderBottomColor: '#646464',
   },
   prices: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginHorizontal: 22,
-    marginTop: 13,
-    // fontSize:10,
+    marginTop: 14,
+    fontSize: 10,
     alignItems: 'center',
   },
+  pricestwo: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginHorizontal: 22,
+    marginTop: 6,
+  },
+    dottedcontainertwo: {
+    borderBottomColor: 'black',
+    borderBottomWidth: 1,
+    borderStyle: 'dashed',
+    marginHorizontal: 22,
+    marginTop: 14,
+   
+  },
+  totalprice:{
+       flexDirection: 'row',
+       justifyContent: 'space-between',
+         alignItems: 'center',
+          marginHorizontal: 22,
+          marginTop:7,
+  },
+  buttonstyle:{
+    backgroundColor:"green",
+    paddingVertical:11,
+    borderRadius:12,
+    marginHorizontal:20,
+    marginTop:80,
+
+  },
+  buttontext:{
+      color:"#FFFFFF",
+      textAlign:'center',
+      fontFamily:Font.medium,
+  }
 });
