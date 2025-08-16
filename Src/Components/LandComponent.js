@@ -6,10 +6,8 @@ import { Font } from '../Constant/Font';
 const LandComponenttwo = ({ name, placeholder }) => {
   return (
     <SafeAreaView>
-   
       <Text style={styles.name}>{name}</Text>
 
-      
       <View style={styles.inputContainer}>
         <TextInput
           placeholder={props?.placeholder}
