@@ -4,7 +4,7 @@ import { Font } from '../Constant/Font';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 
 
-const Assessmentwo = props => {
+const Assessmenthree = props => {
   return (
     <View>
       <Text style={styles.heading}>{props?.title}</Text>
@@ -24,13 +24,13 @@ const Assessmentwo = props => {
                     fontFamily:Font.medium,
                   }}
                 />
-                <AntDesign name="calendar" size={20} color="#DBD8D8" />
+              
               </View>
     </View>
   );
 };
 
-export default Assessmentwo;
+export default Assessmenthree;
 
 const styles = StyleSheet.create({
   heading: {

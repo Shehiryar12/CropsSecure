@@ -4,6 +4,7 @@ import { Font } from '../Constant/Font';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import AssessmentComponent from '../Components/AssessmentComponent';
 import Assessmentwo from '../Components/Assessmentwo';
+import Assessmenthree from '../Components/Assessmentthree';
 
 const Assessment = () => {
   return (
@@ -19,25 +20,25 @@ const Assessment = () => {
         placeholder="Select Crop Type"
         placeholderTextColor="#DBD8D8"
       />
-      {/* <AssessmentComponent
-        label="Loss Date"
+
+      <Assessmentwo
+        title="Loss Date"
         placeholder="Select Loss Date"
-        placeholderTextColor="#DBD8D8"
-      /> */}
-
-      <Assessmentwo title="Loss Date" />
-
-      {/* <AssessmentComponent
-        label="Area Affected (in acres)"
-        placeholder="Enter effected area"
         placeholderTextColor="#DBD8D8"
       />
 
-      <AssessmentComponent
+      <Assessmenthree title="Area Affected (in acres)"
+        placeholder="Enter effected area"
+        placeholderTextColor="#DBD8D8"/>
+
+       <AssessmentComponent
         label="Loss Type"
         placeholder="Select loss type"
         placeholderTextColor="#DBD8D8"
-      /> */}
+      /> 
+
+      
+     
     </SafeAreaView>
   );
 };

@@ -21,7 +21,8 @@ const AssessmentComponent = props => {
             style={{
               flex: 1,
               color: props?.textColor,
-              fontSize: 12,
+              fontSize: 13,
+              fontFamily:Font.medium,
             }}
           />
           <MaterialIcons name="keyboard-arrow-down" size={24} color="#DBD8D8" />
@@ -55,8 +56,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     borderWidth: 1,
-    borderRadius: 8,
-    paddingVertical: 4,
+    borderRadius: 10,
+     paddingVertical: 3,
     marginHorizontal: 20,
+    paddingHorizontal:8,
+    fontFamily:Font.medium,
   },
 });
