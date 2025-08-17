@@ -1,4 +1,4 @@
-import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React from 'react';
 import { Font } from '../Constant/Font';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
@@ -40,6 +40,10 @@ const Assessment = () => {
         placeholder="Select loss type"
         placeholderTextColor="#DBD8D8"
       />
+
+      <TouchableOpacity style={styles.buttonstyle}>
+        <Text style={styles.buttontext}>Calculate Loss</Text>
+      </TouchableOpacity>
     </SafeAreaView>
   );
 };
@@ -59,4 +63,20 @@ const styles = StyleSheet.create({
     fontFamily: Font.bold,
     fontSize: 15,
   },
+  buttonstyle:{
+    backgroundColor:"#009245",
+     marginHorizontal: 20,
+       borderRadius: 10,
+        paddingVertical: 3,
+        //  paddingHorizontal:8,
+        marginTop:160,
+    
+  },
+  buttontext:{
+             textAlign:'center',
+             paddingVertical:10,
+             color:'white',
+             fontFamily:Font.medium,
+             
+  }
 });
