@@ -6,7 +6,7 @@ import Assessment from './Src/Screens/Assessment';
 
 const App = () => {
   return (
-  <Assessment/>
+ <Assessment/>
 )
 };
 

@@ -9,7 +9,7 @@ import React from 'react';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { Font } from '../Constant/Font';
 import AreaComponent from '../Components/AreaComponent';
-import AreaInput from './AreaInput';
+import AreaInput from '../Components/AreaInput';
 
 const Area = (props) => {
   return (

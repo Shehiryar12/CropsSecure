@@ -17,6 +17,7 @@ const Assessmentwo = props => {
                 <TextInput
                   placeholder={props?.placeholder}
                   placeholderTextColor={props?.placeholderTextColor}
+                   keyboardType={props?.keyboardType}
                   style={{
                     flex: 1,
                     color: props?.textColor,

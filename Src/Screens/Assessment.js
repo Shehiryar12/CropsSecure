@@ -25,20 +25,21 @@ const Assessment = () => {
         title="Loss Date"
         placeholder="Select Loss Date"
         placeholderTextColor="#DBD8D8"
+        keyboardType="numeric"
       />
 
-      <Assessmenthree title="Area Affected (in acres)"
+      <Assessmenthree
+        title="Area Affected (in acres)"
         placeholder="Enter effected area"
-        placeholderTextColor="#DBD8D8"/>
+        placeholderTextColor="#DBD8D8"
+          keyboardType="numeric"
+      />
 
-       <AssessmentComponent
+      <AssessmentComponent
         label="Loss Type"
         placeholder="Select loss type"
         placeholderTextColor="#DBD8D8"
-      /> 
-
-      
-     
+      />
     </SafeAreaView>
   );
 };
