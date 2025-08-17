@@ -20,11 +20,13 @@ const AreaComponent = props => {
             ]}
           >
             <TextInput
-              style={styles.input}
+              style={[styles.input, { width: props?.inputWidth }]}
               placeholder={props?.placeholder}
               placeholderTextColor={props?.placeholderTextColor}
               borderRadius={props?.borderRadius}
               fontSize={props?.fontSize}
+             
+              
             />
             <MaterialIcons
               name="keyboard-arrow-down"
@@ -48,7 +50,7 @@ const styles = StyleSheet.create({
      color: '#646464',
      fontSize: 13,
      marginLeft: 22,
-     width: 100,
+   
    },   
   box: {
     flexDirection: 'row',
@@ -56,7 +58,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 12,
     paddingVertical: 3,
-    paddingHorizontal: 2,
+  
     marginHorizontal: 20,
   },
    input: {
