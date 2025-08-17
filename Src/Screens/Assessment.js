@@ -1,4 +1,10 @@
-import { SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import {
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import React from 'react';
 import { Font } from '../Constant/Font';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
@@ -32,7 +38,7 @@ const Assessment = () => {
         title="Area Affected (in acres)"
         placeholder="Enter effected area"
         placeholderTextColor="#DBD8D8"
-          keyboardType="numeric"
+        keyboardType="numeric"
       />
 
       <AssessmentComponent
@@ -63,20 +69,18 @@ const styles = StyleSheet.create({
     fontFamily: Font.bold,
     fontSize: 15,
   },
-  buttonstyle:{
-    backgroundColor:"#009245",
-     marginHorizontal: 20,
-       borderRadius: 10,
-        paddingVertical: 3,
-        //  paddingHorizontal:8,
-        marginTop:160,
-    
+  buttonstyle: {
+    backgroundColor: '#009245',
+    marginHorizontal: 20,
+    borderRadius: 10,
+    paddingVertical: 3,
+    //  paddingHorizontal:8,
+    marginTop: 160,
   },
-  buttontext:{
-             textAlign:'center',
-             paddingVertical:10,
-             color:'white',
-             fontFamily:Font.medium,
-             
-  }
+  buttontext: {
+    textAlign: 'center',
+    paddingVertical: 10,
+    color: 'white',
+    fontFamily: Font.medium,
+  },
 });
