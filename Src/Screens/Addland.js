@@ -8,6 +8,8 @@ import AreaInput from '../Components/AreaInput';
 import Acre from '../Components/Acre';
 import AccountScreen from './AccountScreen';
 import AreaUnit from '../Components/AreaUnit';
+import Select from '../Components/Select';
+import { TouchableOpacity } from 'react-native';
 
 const Addland = () => {
   return (
@@ -36,7 +38,7 @@ const Addland = () => {
 
       <View style={{ flexDirection: 'row' }}>
         <Acre label="Area" placeholder="Enter your land area" />
-        <AreaUnit label="Area Unit" placeholder="Acre"  keyboardType="numeric" />
+        <AreaUnit label="Area Unit" placeholder="Acre" keyboardType="numeric" />
       </View>
 
       <View style={styles.status}>
@@ -48,13 +50,15 @@ const Addland = () => {
             marginTop: 10,
           }}
         >
-          Upload Land Ownership Certification
-        </Text>   
+             Upload Land Ownership Certification
+        </Text>
       </View>
 
-      <View>
+    <Select title="Select"/>
 
-      </View>
+    <TouchableOpacity style={styles.buttoncontainer}>
+        <Text style={styles.btntext}>Save</Text>
+    </TouchableOpacity>
     </SafeAreaView>
   );
 };
@@ -90,6 +94,19 @@ const styles = StyleSheet.create({
     fontSize: 12,
   },
   status: {
-    marginLeft: 18,
+    marginLeft: 21,
+ 
   },
+  buttoncontainer:{
+    backgroundColor:"#009245",
+    marginHorizontal:19,
+    borderRadius:8,
+    marginTop:120,
+    paddingVertical:10,
+  },
+  btntext:{
+        color:"white",
+        textAlign:"center",
+        fontFamily:Font.medium,
+  }
 });
