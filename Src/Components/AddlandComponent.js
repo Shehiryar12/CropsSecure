@@ -22,7 +22,6 @@ const AddlandComponent = props => {
         <TextInput
           style={styles.input}
           placeholder={props?.placeholder}
-        //    placeholder="wkfn"
           placeholderTextColor="grey"
         />
         <MaterialIcons name="location-on" size={21} color="#DBD8D8" />

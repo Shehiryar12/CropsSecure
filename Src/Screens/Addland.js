@@ -28,12 +28,32 @@ const Addland = () => {
         </Text>
       </View>
       <View>
-        <AddlandComponent label="Location" placeholder="Enter your land location" />
+        <AddlandComponent
+          label="Location"
+          placeholder="Enter your land location"
+        />
       </View>
 
       <View style={{ flexDirection: 'row' }}>
         <Acre label="Area" placeholder="Enter your land area" />
-        <AreaUnit label="Area Unit" value="Acre" />
+        <AreaUnit label="Area Unit" placeholder="Acre"  keyboardType="numeric" />
+      </View>
+
+      <View style={styles.status}>
+        <Text
+          style={{
+            fontFamily: Font.medium,
+            fontSize: 14,
+            color: '#646464',
+            marginTop: 10,
+          }}
+        >
+          Upload Land Ownership Certification
+        </Text>   
+      </View>
+
+      <View>
+
       </View>
     </SafeAreaView>
   );
@@ -47,7 +67,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
 
     marginTop: 14,
-    marginLeft: 12,
+    marginLeft: 11,
   },
   heading: {
     fontFamily: Font.bold,
@@ -68,5 +88,8 @@ const styles = StyleSheet.create({
     color: '#464444',
     marginTop: 22,
     fontSize: 12,
+  },
+  status: {
+    marginLeft: 18,
   },
 });

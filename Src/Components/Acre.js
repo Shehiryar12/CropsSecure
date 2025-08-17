@@ -13,14 +13,14 @@ const Acre = props => {
           borderRadius: 8,
           marginHorizontal: 18,
           paddingHorizontal: 8,
-      width:190,
+            width:190,
 
         }}
       >
         <TextInput
           style={styles.input}
           placeholder={props?.placeholder}
-          placeholderTextColor="grey"
+          placeholderTextColor="#DBD8D8"
         />
       </View>
     </View>

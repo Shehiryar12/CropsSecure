@@ -1,8 +1,7 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, TextInput, View } from 'react-native';
 import React from 'react';
 import { Font } from '../Constant/Font';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-
 
 const AreaUnit = props => {
   return (
@@ -15,19 +14,22 @@ const AreaUnit = props => {
           borderRadius: 8,
           marginHorizontal: 40,
           paddingHorizontal: 8,
-          justifyContent: 'center',
-          height: 45,
-          width:120,
-          flexDirection:'row',
-          justifyContent: 'space-between', 
-          alignItems:'center',
+
+          justifyContent: 'space-between',
+          height: 47,
+          width: 120,
+          flexDirection: 'row',
+
+          alignItems: 'center',
         }}
       >
-        <Text style={{ fontFamily: Font.medium, fontSize: 12, color: 'grey' }}>
-          {props?.value}
-        </Text>
-                <MaterialIcons name="keyboard-arrow-down" size={21} color="#DBD8D8" />
-        
+        <TextInput
+          placeholder={props?.placeholder}
+          keyboardType={props?.keyboardType}
+          style={{ fontFamily: Font.medium,  flex: 1 }}
+          placeholderTextColor={'#DBD8D8'}
+        />
+        <MaterialIcons name="keyboard-arrow-down" size={21} color="#DBD8D8" />
       </View>
     </View>
   );
@@ -40,6 +42,6 @@ const styles = StyleSheet.create({
     fontFamily: Font.medium,
     marginTop: 27,
     color: '#646464',
-    marginHorizontal:42,
+    marginHorizontal: 42,
   },
 });
