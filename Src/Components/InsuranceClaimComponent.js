@@ -43,6 +43,9 @@ const InsuranceClaimComponent = props => {
             source={require('../Assets/Images/cropImg1.png')}
             style={styles.imagestyle}
           />
+          <View style={styles.box}>
+            <Image source={require("../Assets/Images/addIcon.png")} style={{width:30,height:30}}/>
+          </View>
         </View>
       </View>
     </SafeAreaView>
@@ -84,4 +87,13 @@ const styles = StyleSheet.create({
     marginHorizontal: 4,
     marginTop: 5,
   },
+  box:{
+    width:90,
+    height:85,
+    marginTop:5,
+    borderWidth:1,
+    borderRadius:8,
+    alignItems:"center",
+    justifyContent:'center',
+  }
 });
