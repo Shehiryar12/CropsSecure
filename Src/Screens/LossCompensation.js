@@ -4,6 +4,7 @@ import { SafeAreaView } from 'react-native';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { Font } from '../Constant/Font';
 import LossCompensationComponent from '../Components/LossCompensationComponent';
+import LossCompensationComponenttwo from '../Components/LossComponsationComponenttwo';
 
 const LossCompensation = () => {
   return (
@@ -18,6 +19,13 @@ const LossCompensation = () => {
         title="Tobacco"
         date="25 Dec, 2024"
         description="Tobacco mosaic virus and Satellite Tobacco Mosaic Virus "
+        effectedarea="Effected Area:"
+      />
+
+        <LossCompensationComponenttwo
+        title="Wheat"
+        date="25 Dec, 2024"
+        description="Powdery mildew occurs"
         effectedarea="Effected Area:"
       />
     </SafeAreaView>

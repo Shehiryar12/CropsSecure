@@ -3,12 +3,12 @@ import React from 'react';
 import { Font } from '../Constant/Font';
 import { fonts } from '@rneui/base';
 
-const LossCompensationComponent = props => {
+const LossCompensationComponenttwo = props => {
   return (
     <View style={styles.container}>
       <View style={styles.innerconatiner}>
         <Image
-          source={require('../Assets/Images/cropImg3.png')}
+          source={require('../Assets/Images/cropImg2.png')}
           style={styles.imagestyle}
         />
         <View style={styles.textContainer}>
@@ -25,7 +25,7 @@ const LossCompensationComponent = props => {
   );
 };
 
-export default LossCompensationComponent;
+export default LossCompensationComponenttwo;
 
 const styles = StyleSheet.create({
   container: {},
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     marginTop: 50,
     backgroundColor: 'lightgrey',
     marginHorizontal: 21,
-    height: 105,
+    height: 110,
     borderRadius: 8,
     flexDirection: 'row',
   },
@@ -70,13 +70,14 @@ const styles = StyleSheet.create({
      borderColor:'#707070',
      borderStyle:'dashed',
      width:200,
-
-    marginTop:4,
+    //  marginTop:5,
+    marginTop:19,
   },
   areastyle:{
     color:"#006838", 
     fontFamily:Font.medium,
     fontSize:8,
-    marginTop:3
+        marginTop:4,
+
   }
 });
