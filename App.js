@@ -6,10 +6,11 @@ import Assessment from './Src/Screens/Assessment';
 import Addland from './Src/Screens/Addland';
 import LossCompensation from './Src/Screens/LossCompensation';
 import Receipt from './Src/Screens/Receipt';
+import InsuranceClaim from './Src/Screens/InsuranceClaim';
 
 const App = () => {
   return (
-         <Receipt/>
+         <InsuranceClaim/>
 )
 };
 
