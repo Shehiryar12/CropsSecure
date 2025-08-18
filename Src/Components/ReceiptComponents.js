@@ -38,7 +38,7 @@ const ReceiptComponents = props => {
 
         <View style={styles.header}>
         <Text style={{color:"#DBD8D8",fontSize:10,width:150,fontFamily:Font.medium}}>{props?.claimamount}</Text>
-        {/* <Text style={{fontSize:10,color:"#FFFFFF",width:37,fontFamily:Font.medium}}>2</Text> */}
+     
         <Text style={{fontSize:10,color:"#FFFFFF",fontFamily:Font.medium,}}>{props?.claimprice}</Text>
       </View>
 
