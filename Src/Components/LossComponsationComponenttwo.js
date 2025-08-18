@@ -30,7 +30,7 @@ export default LossCompensationComponenttwo;
 const styles = StyleSheet.create({
   container: {},
   innerconatiner: {
-    marginTop: 50,
+    marginTop: 20,
     backgroundColor: 'lightgrey',
     marginHorizontal: 21,
     height: 110,
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
   },
   imagestyle: {
     width: 75,
-    height: 72,
+    height: 70,
     borderRadius: 8,
     marginLeft: 12,
     marginTop: 15,
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
      borderStyle:'dashed',
      width:200,
     //  marginTop:5,
-    marginTop:19,
+    marginTop:16,
   },
   areastyle:{
     color:"#006838", 
