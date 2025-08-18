@@ -5,10 +5,11 @@ import Area from './Src/Screens/Area';
 import Assessment from './Src/Screens/Assessment';
 import Addland from './Src/Screens/Addland';
 import LossCompensation from './Src/Screens/LossCompensation';
+import Receipt from './Src/Screens/Receipt';
 
 const App = () => {
   return (
-            <LossCompensation/>
+         <Receipt/>
 )
 };
 
