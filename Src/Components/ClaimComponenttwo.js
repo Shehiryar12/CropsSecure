@@ -9,17 +9,14 @@ import React from 'react';
 import { Font } from '../Constant/Font';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
-const ClaimComponent = props => {
+const ClaimComponenttwo = props => {
   return (
     <SafeAreaView>
-      {/* <Text>{props?.title}</Text> */}
-
       <View style={styles.box}>
         <View style={styles.innercontainer}>
           <Text style={styles.tobaccostyle}>{props?.title}</Text>
-          <Text style={styles.Processingstyle}>{props?.processing}</Text>
+          <Text style={styles.settledstyle}>{props?.settled}</Text>
         </View>
-
         <View style={styles.description}>
           <Text style={styles.descriptiontext}>{props?.description}</Text>
         </View>
@@ -34,23 +31,23 @@ const ClaimComponent = props => {
             />
             <Text style={styles.buttontext}>{props?.contact}</Text>
           </TouchableOpacity>
-          <Text
-            style={{
-              fontSize: 9,
-              color: '#646464',
-              fontFamily: Font.medium,
-              marginTop: 20,
-            }}
-          >
-            {props?.date}
-          </Text>
+
+          <TouchableOpacity style={styles.buttonstyletwo}>
+            <MaterialIcons
+              name="payment"
+              size={12}
+              color="#006838"
+              marginLeft={6}
+            />
+            <Text style={styles.buttontext}>{props?.payment}</Text>
+          </TouchableOpacity>
         </View>
       </View>
     </SafeAreaView>
   );
 };
 
-export default ClaimComponent;
+export default ClaimComponenttwo;
 
 const styles = StyleSheet.create({
   box: {
@@ -70,8 +67,8 @@ const styles = StyleSheet.create({
   tobaccostyle: {
     fontFamily: Font.bold,
   },
-  Processingstyle: {
-    color: '#F39E1E',
+  settledstyle: {
+    color: '#006838',
     fontSize: 10,
     marginTop: 2,
     fontFamily: Font.medium,
@@ -79,33 +76,43 @@ const styles = StyleSheet.create({
   descriptiontext: {
     color: '#646464',
     fontSize: 9,
-    width: 170,
+    width: 150,
     marginLeft: 17,
     marginTop: 2,
     fontFamily: Font.medium,
   },
-  
   buttonstyle: {
     width: 93,
     height: 26,
-    // borderRadius: 244,
     borderRadius:14,
     borderWidth: 1,
     borderColor: 'grey',
     marginTop: 20,
     flexDirection: 'row',
     alignItems: 'center',
+   
+  },
+
+  buttonstyletwo: {
+    width: 96,
+    height: 26,
+   borderRadius:14,
+    // borderRadius: 244,
+    borderColor: 'grey',
+    marginTop: 20,
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginLeft: 9,
+    backgroundColor: "#d3d3d3",
+  },
+  endingContainer: {
+    flexDirection: 'row',
+    paddingHorizontal: 16,
   },
   buttontext: {
     color: '#006838',
     fontSize: 9,
-    marginLeft: 5,
+    marginLeft: 4,
     fontFamily: Font.medium,
-  },
-  endingContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    paddingHorizontal: 16,
   },
 });
