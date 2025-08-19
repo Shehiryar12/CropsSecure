@@ -8,10 +8,13 @@ import LossCompensation from './Src/Screens/LossCompensation';
 import Receipt from './Src/Screens/Receipt';
 import InsuranceClaim from './Src/Screens/InsuranceClaim';
 import MyClaims from './Src/Screens/MyClaims';
+import Purchasing from './Src/Screens/Purchasing';
 
 const App = () => {
   return (
-       <MyClaims/>
+      <Purchasing/>
+     
+
 )
 };
 
