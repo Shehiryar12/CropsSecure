@@ -5,6 +5,7 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { Font } from '../Constant/Font';
 import LossCompensationComponent from '../Components/LossCompensationComponent';
 import LossCompensationComponenttwo from '../Components/LossComponsationComponenttwo';
+import { wp } from '../Constant/Responsive';
 
 const LossCompensation = () => {
   return (
@@ -12,7 +13,7 @@ const LossCompensation = () => {
       <View style={styles.header}>
         <MaterialIcons name="keyboard-arrow-left" size={23} color="black" />
         <Text style={styles.heading}>Loss Compensation</Text>
-        <View style={{ width: 34 }}></View>
+        <View style={{ width: wp(8) }}></View>
       </View>
 
       <LossCompensationComponent

@@ -10,15 +10,19 @@ import AccountScreen from './AccountScreen';
 import AreaUnit from '../Components/AreaUnit';
 import Select from '../Components/Select';
 import { TouchableOpacity } from 'react-native';
+import { wp } from '../Constant/Responsive';
+import Header from '../Components/Header';
 
 const Addland = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.header}>
+      {/* <View style={styles.header}>
         <MaterialIcons name="keyboard-arrow-left" size={23} color="black" />
         <Text style={styles.heading}>Add Land</Text>
-        <View style={{ width: 40 }}></View>
-      </View>
+        <View style={{ width: wp('10%') }}></View>
+      </View> */}
+
+      <Header />
 
       <View style={styles.box}>
         <Image
@@ -50,15 +54,15 @@ const Addland = () => {
             marginTop: 10,
           }}
         >
-             Upload Land Ownership Certification
+          Upload Land Ownership Certification
         </Text>
       </View>
 
-    <Select title="Select"/>
+      <Select title="Select" />
 
-    <TouchableOpacity style={styles.buttoncontainer}>
+      <TouchableOpacity style={styles.buttoncontainer}>
         <Text style={styles.btntext}>Save</Text>
-    </TouchableOpacity>
+      </TouchableOpacity>
     </SafeAreaView>
   );
 };
@@ -78,13 +82,14 @@ const styles = StyleSheet.create({
     fontSize: 15,
   },
   box: {
-    width: 325,
-    backgroundColor: 'lightgrey',
-    marginHorizontal: 19,
+    width: '90%',
+    backgroundColor: '#DBD8D8',
+    // marginHorizontal: 10,
+    marginLeft:20,
     marginTop: 24,
     alignItems: 'center',
     justifyContent: 'center',
-    height: 155,
+    height:'25%',
     borderRadius: 8,
   },
   textstyle: {
@@ -95,18 +100,17 @@ const styles = StyleSheet.create({
   },
   status: {
     marginLeft: 21,
- 
   },
-  buttoncontainer:{
-    backgroundColor:"#009245",
-    marginHorizontal:19,
-    borderRadius:8,
-    marginTop:120,
-    paddingVertical:10,
+  buttoncontainer: {
+    backgroundColor: '#009245',
+    marginHorizontal: 19,
+    borderRadius: 8,
+    marginTop: 120,
+    paddingVertical: 10,
   },
-  btntext:{
-        color:"white",
-        textAlign:"center",
-        fontFamily:Font.medium,
-  }
+  btntext: {
+    color: 'white',
+    textAlign: 'center',
+    fontFamily: Font.medium,
+  },
 });

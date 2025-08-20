@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
   input: {
     fontSize: 12,
     paddingVertical: 13,
-    color: '#DBD8D8',
+    // color: '#DBD8D8',
     fontFamily: Font.medium,
   },
 });

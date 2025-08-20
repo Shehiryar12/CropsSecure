@@ -11,6 +11,7 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import AssessmentComponent from '../Components/AssessmentComponent';
 import Assessmentwo from '../Components/Assessmentwo';
 import Assessmenthree from '../Components/Assessmentthree';
+import { wp } from '../Constant/Responsive';
 
 const Assessment = () => {
   return (
@@ -18,7 +19,7 @@ const Assessment = () => {
       <View style={styles.header}>
         <MaterialIcons name="keyboard-arrow-left" size={23} color="black" />
         <Text style={styles.heading}>Loss Assessment</Text>
-        <View style={{ width: 34 }}></View>
+        <View style={{ width: wp(9) }}></View>
       </View>
 
       <AssessmentComponent

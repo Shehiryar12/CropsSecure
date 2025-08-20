@@ -4,20 +4,22 @@ import Icon from 'react-native-vector-icons/Feather';
 import IconEntypo from 'react-native-vector-icons/Entypo';
 import FarmerComponent from '../Components/FarmerComponent';
 import { Font } from '../Constant/Font';
+import { useNavigation } from '@react-navigation/native';
 
 const FarmerRecord = () => {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
-   <View style={styles.upperportion}> 
-      <View style={styles.header}>
-        <Icon name="menu" size={24} color="green" marginLeft={8} />
+      <View style={styles.upperportion}>
+        <View style={styles.header}>
+          <Icon name="menu" size={24} color="green" marginLeft={8} />
 
-        <View style={styles.dateContainer}>
-          <Text style={styles.dateText}>04 APR 24</Text>
-          <Text style={styles.dayText}>MONDAY</Text>
-          <IconEntypo name="calendar" color="black" size={16} />
+          <View style={styles.dateContainer}>
+            <Text style={styles.dateText}>04 APR 24</Text>
+            <Text style={styles.dayText}>MONDAY</Text>
+            <IconEntypo name="calendar" color="black" size={16} />
+          </View>
         </View>
-   </View>       
       </View>
 
       <View style={styles.box}>
@@ -44,8 +46,11 @@ const FarmerRecord = () => {
 
       {/* Farmer Component */}
       <FarmerComponent
-        Land="LAND RECORD"
+       Land={() => navigation.navigate('LandData')}
+        LandTitle="LAND RECORD"
         Details="LAND OWNERSHIP DETAILS"
+        DetailOnPress={() => navigation.navigate('Ownership')}
+
         Insure="CROP TO INSURE"
         Compensation="LOSS COMPENSATION"
         Assessment="LOSS ASSESSMENT"
@@ -58,10 +63,7 @@ const FarmerRecord = () => {
 export default FarmerRecord;
 
 const styles = StyleSheet.create({
-
-  upperportion:{
-           
-  },
+  upperportion: {},
   container: {
     backgroundColor: '#F0F7F8',
     flex: 1,
@@ -75,7 +77,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 15,
     // backgroundColor:"red",
-    paddingHorizontal:0,
+    paddingHorizontal: 0,
   },
   dateContainer: {
     flexDirection: 'row',
@@ -86,7 +88,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     elevation: 5,
     marginRight: 8,
-    width:130,
+    width: 130,
   },
   dateText: {
     fontSize: 10,
@@ -106,7 +108,7 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     paddingVertical: 12,
     paddingHorizontal: 15,
-    height:80,
+    height: 80,
   },
   boxRow: {
     flexDirection: 'row',

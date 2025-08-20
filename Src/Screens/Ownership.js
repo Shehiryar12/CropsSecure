@@ -3,15 +3,16 @@ import React from 'react';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import OwnershipComponent from '../Components/OwnershipComponent';
 import { Font } from '../Constant/Font';
+import { wp, hp } from '../Constant/Responsive';
 
 const Ownership = () => {
   return (
     <View>
-      {/* Heading */}
+    
       <View style={styles.heading}>
         <MaterialIcons
           name="keyboard-arrow-left"
-          size={27}
+          size={wp(7)}
           style={styles.arrowstyling}
         />
         <Text style={styles.LandStyling}>Land Area Ownership</Text>
@@ -41,12 +42,13 @@ const styles = StyleSheet.create({
   heading: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginTop: 25,
-    paddingHorizontal: 10,
+    marginTop: hp(2.2),
+    paddingHorizontal: wp(4.5),
     alignItems: 'center',
   },
   LandStyling: {
-    marginRight: 20,
+    marginRight: wp(5),
     fontFamily: Font.bold,
+    fontSize: wp(4),
   },
 });

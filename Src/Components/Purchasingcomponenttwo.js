@@ -10,7 +10,7 @@ const PurchasingComponenttwo = (props) => {
                 <View style={styles.boxone}>
                   <View style={styles.imageContainer}>
                     <Image
-                      source={require('../Assets/Images/medicen2.png')}
+                      source={require('../Assets/Images/medicen1.png')}
                       style={styles.imageonestyle}
                     />
                   </View>
@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   imageonestyle: {
-    width: 40,
+    width: 66,
     height: 112,
   },
   title: {

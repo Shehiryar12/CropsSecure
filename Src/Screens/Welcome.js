@@ -1,9 +1,4 @@
-import {
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React, { useState } from 'react';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { Font } from '../Constant/Font';
@@ -18,10 +13,11 @@ const Welcome = () => {
   const handleRegister = () => {
     navigation.navigate('AccountScreen');
   };
-
+  const signIn = () => {
+    navigation.navigate('FarmerRecord');
+  };
   return (
     <View>
-  
       <View style={styles.header}>
         <MaterialIcons
           name="keyboard-arrow-left"
@@ -33,10 +29,8 @@ const Welcome = () => {
         <View style={{ width: 39 }} />
       </View>
 
-   
       <Text style={styles.signintext}>Sign In</Text>
 
- 
       <View>
         <PhoneCnicEmailInput
           title="Phone/cnic/email id"
@@ -65,14 +59,14 @@ const Welcome = () => {
       </View>
 
       {/* Sign In Button */}
-      <TouchableOpacity style={styles.signin}>
+      <TouchableOpacity style={styles.signin} onPress={() => signIn()}>
         <Text style={styles.buttontext}>Sign In</Text>
       </TouchableOpacity>
 
       {/* Register */}
       <View style={styles.accountstyle}>
         <Text style={styles.account}>Don't have an account?</Text>
-        <TouchableOpacity onPress={handleRegister}>
+        <TouchableOpacity onPress={()=>handleRegister()}>
           <Text style={styles.register}>Register</Text>
         </TouchableOpacity>
       </View>
@@ -117,18 +111,18 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     marginTop: 5,
     fontSize: 12,
-    textDecorationLine:"underline",
+    textDecorationLine: 'underline',
   },
   rememberContainer: {
     flexDirection: 'row',
     alignItems: 'center',
     marginTop: 28,
     marginLeft: 20,
-   },
+  },
   remember: {
     fontFamily: Font.medium,
     fontSize: 10,
-    marginLeft: 5, 
+    marginLeft: 5,
   },
   accountstyle: {
     flexDirection: 'row',
@@ -150,10 +144,4 @@ const styles = StyleSheet.create({
   },
 });
 
-
-
-
-
-
-
-//use check box by using use state 
+//use check box by using use state

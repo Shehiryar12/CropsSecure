@@ -9,11 +9,12 @@ import Receipt from './Src/Screens/Receipt';
 import InsuranceClaim from './Src/Screens/InsuranceClaim';
 import MyClaims from './Src/Screens/MyClaims';
 import Purchasing from './Src/Screens/Purchasing';
+import AppNavigator from './Src/navigaton/AppNavigator';
 
 const App = () => {
   return (
-      <Purchasing/>
-     
+     <AppNavigator />
+
 
 )
 };

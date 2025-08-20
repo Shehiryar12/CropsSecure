@@ -1,11 +1,11 @@
 import { Image, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 import { Font } from '../Constant/Font';
+import { wp, hp } from '../Constant/Responsive';
 
 const OwnershipComponent = (props) => {
   return (
     <View style={styles.container}>
-     
       <View style={styles.boxed}>
         <View style={styles.box}>
           <View style={{ flexDirection: 'row', alignItems: 'center' }}>
@@ -14,15 +14,11 @@ const OwnershipComponent = (props) => {
               style={styles.landimage}
             />
             <View style={{ flexDirection: 'column', flex: 1 }}>
-              <Text style={styles.landtext}>
-                {props.title}
-              </Text>
+              <Text style={styles.landtext}>{props.title}</Text>
               <Text style={styles.landtexttwo}>{props.define}</Text>
 
-           
               <View style={styles.dotline}></View>
 
-         
               <View style={styles.totalContainer}>
                 <Text style={styles.totalarea}>
                   Total Area: <Text style={styles.Acre}>{props.Acres}</Text>
@@ -40,63 +36,57 @@ const OwnershipComponent = (props) => {
 export default OwnershipComponent;
 
 const styles = StyleSheet.create({
-  container: {
-    // marginTop:20,
-  },
-  boxed: {
-
-    // marginTop: 20,
-  },
+  container: {},
+  boxed: {},
   box: {
-    width: 320,
-    height: 100,
+    width: wp(85),
+    height: hp(13),
     backgroundColor: 'lightgrey',
-    marginHorizontal: 20,
-    borderRadius: 8,
-    paddingVertical: 5,
-    marginTop:20,
+    marginHorizontal: wp(8),
+    borderRadius: wp(2),
+    paddingVertical: hp(0.6),
+    marginTop: hp(2.5),
   },
   landimage: {
-    width: 70,
-    height: 70,
-    borderRadius: 8,
-    marginLeft: 15,
-    marginTop: 10,
-    marginRight: 10,
+    width: wp(18),
+    height: wp(18),
+    borderRadius: wp(2),
+    marginLeft: wp(4),
+    marginTop: hp(1.3),
+    marginRight: wp(2.5),
   },
   landtext: {
-    marginBottom: 5,
-    marginTop:10,
-    // backgroundColor:'red',
-    fontFamily:Font.bold,
-    fontSize:12
+    marginBottom: hp(0.6),
+    marginTop: hp(1.2),
+    fontFamily: Font.bold,
+    fontSize: wp(3),
   },
   landtexttwo: {
-    fontSize: 10,
+    fontSize: wp(2.6),
     color: '#646464',
   },
   dotline: {
     borderBottomWidth: 1,
     borderBottomColor: '#BDBDBD',
     borderStyle: 'dotted',
-    marginTop: 5,
-    width: 210,
+    marginTop: hp(0.6),
+    width: wp(55),
   },
   totalContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginTop: 5,
+    marginTop: hp(0.6),
   },
   totalarea: {
-    fontSize: 8,
+    fontSize: wp(2.2),
     color: 'green',
   },
   Acre: {
     color: 'black',
   },
   certificate: {
-    fontSize: 8,
-    marginRight: 17,
+    fontSize: wp(2.2),
+    marginRight: wp(4.5),
   },
 });

@@ -10,6 +10,7 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { Font } from '../Constant/Font';
 import AreaComponent from '../Components/AreaComponent';
 import AreaInput from '../Components/AreaInput';
+import { wp } from '../Constant/Responsive';
 
 const Area = (props) => {
   return (
@@ -17,7 +18,7 @@ const Area = (props) => {
       <View style={styles.header}>
         <MaterialIcons name="keyboard-arrow-left" size={23} color="black" />
         <Text style={styles.heading}>Crop To Insure</Text>
-        <View style={{ width: 34 }}></View>
+        <View style={{ width:wp(10) }}></View>
       </View>
 
       <AreaComponent

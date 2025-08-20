@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
   textinputname: {
     marginTop: 20,
     fontFamily: Font.medium,
-    color: '#646464',
+    // color: '#646464',
     fontSize: 13,
     marginLeft: 22,
   },

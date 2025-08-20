@@ -17,12 +17,13 @@ const AddlandComponent = props => {
           borderRadius: 8,
           marginHorizontal: 18,
           paddingHorizontal: 8,
+        
         }}
       >
         <TextInput
           style={styles.input}
           placeholder={props?.placeholder}
-          placeholderTextColor="grey"
+           placeholderTextColor="#DBD8D8"
         />
         <MaterialIcons name="location-on" size={21} color="#DBD8D8" />
       </View>
@@ -37,14 +38,14 @@ const styles = StyleSheet.create({
     fontFamily: Font.medium,
     marginLeft: 19,
     marginTop: 27,
-    color: '#646464',
+    color:'#646464',
   },
   input: {
-    flex: 1, // take all available space
+    flex: 1,
     fontSize: 12,
     paddingVertical: 13,
-    flexDirection: 'row',
-    color: '#DBD8D8',
+    // flexDirection: 'row',
     fontFamily: Font.medium,
+  
   },
 });

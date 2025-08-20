@@ -3,8 +3,10 @@ import React from 'react';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { Font } from '../Constant/Font';
 import LandComponenttwo from '../Components/LandComponenttwo';
+import { hp, wp } from '../Constant/Responsive';
 
 const LandData = () => {
+  
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.heading}>
@@ -12,10 +14,10 @@ const LandData = () => {
           name="keyboard-arrow-left"
           size={23}
           color="black"
-          paddingHorizontal={-7}
         />
         <Text style={styles.status}>Land Record</Text>
-        <View style={{ width: 45 }}></View>
+        <View style={{width:wp(7)}}></View>
+        
       </View>
 
       <LandComponenttwo
@@ -57,25 +59,26 @@ export default LandData;
 
 const styles = StyleSheet.create({
   container: {
-    margin: 16,
+    flex:1,
+    paddingHorizontal:wp(5)
   },
   heading: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginTop: 5,
+    // marginTop: 5,
+      marginTop: 15,
   },
   status: {
     fontFamily: Font.bold,
     fontSize: 16,
-    marginLeft: 14,
   },
   button:{
      backgroundColor: '#00A651',
-    paddingVertical: 14,
-    borderRadius: 8,
-    marginHorizontal: 8,
-    marginTop: 57,
+    paddingVertical: hp(1.7), // 14 px ≈ 1.7% height
+    borderRadius: wp(2),      // 8 px ≈ wp(2)
+    marginHorizontal: wp(2),  // 8 px ≈ wp(2)
+    marginTop: hp(7),         // 57 px ≈ 7% height
     alignItems: 'center',
   },
   buttonText:{
