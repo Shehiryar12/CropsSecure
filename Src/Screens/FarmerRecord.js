@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { Image, SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 import Icon from 'react-native-vector-icons/Feather';
 import IconEntypo from 'react-native-vector-icons/Entypo';
@@ -9,6 +9,7 @@ import { useNavigation } from '@react-navigation/native';
 const FarmerRecord = () => {
   const navigation = useNavigation();
   return (
+
     <View style={styles.container}>
       <View style={styles.upperportion}>
         <View style={styles.header}>
@@ -33,7 +34,7 @@ const FarmerRecord = () => {
           {/* Name */}
           <Text style={styles.boxTextLarge}>ARSHAD ALI</Text>
 
-          {/* Temperature + Cloud Icon */}
+         
           <View style={{ flexDirection: 'row', alignItems: 'center' }}>
             <Text style={styles.boxTextLarge}>24°</Text>
             <Image
@@ -44,7 +45,7 @@ const FarmerRecord = () => {
         </View>
       </View>
 
-      {/* Farmer Component */}
+     
       <FarmerComponent
        Land={() => navigation.navigate('LandData')}
         LandTitle="LAND RECORD"
@@ -57,6 +58,7 @@ const FarmerRecord = () => {
         Registration="AUTHORIZED DEALERSHIP REGISTRATION"
       />
     </View>
+   
   );
 };
 

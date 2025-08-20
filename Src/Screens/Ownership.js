@@ -1,4 +1,4 @@
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, SafeAreaView } from 'react-native';
 import React from 'react';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import OwnershipComponent from '../Components/OwnershipComponent';
@@ -7,8 +7,7 @@ import { wp, hp } from '../Constant/Responsive';
 
 const Ownership = () => {
   return (
-    <View>
-    
+    <SafeAreaView style={styles.container}>
       <View style={styles.heading}>
         <MaterialIcons
           name="keyboard-arrow-left"
@@ -18,6 +17,8 @@ const Ownership = () => {
         <Text style={styles.LandStyling}>Land Area Ownership</Text>
         <View></View>
       </View>
+        <View style={styles.boxContainer}>
+
 
       <OwnershipComponent
         title="Land Area Ownership"
@@ -32,13 +33,21 @@ const Ownership = () => {
         Acres="10 Acres"
         certificate="View Certificate"
       />
-    </View>
+       </View>
+
+      
+    </SafeAreaView>
   );
 };
 
 export default Ownership;
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: 'white',
+    paddingTop:4,
+  },
   heading: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -51,4 +60,7 @@ const styles = StyleSheet.create({
     fontFamily: Font.bold,
     fontSize: wp(4),
   },
+  boxContainer:{
+     marginTop: hp(4) 
+  }
 });

@@ -11,7 +11,7 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 const ClaimComponenttwo = props => {
   return (
-    <SafeAreaView>
+   
       <View style={styles.box}>
         <View style={styles.innercontainer}>
           <Text style={styles.tobaccostyle}>{props?.title}</Text>
@@ -41,9 +41,10 @@ const ClaimComponenttwo = props => {
             />
             <Text style={styles.buttontext}>{props?.payment}</Text>
           </TouchableOpacity>
+           <Text style={styles.dateText}>{props?.date}</Text>
         </View>
       </View>
-    </SafeAreaView>
+ 
   );
 };
 
@@ -53,7 +54,7 @@ const styles = StyleSheet.create({
   box: {
     width: 320,
     height: 127,
-    backgroundColor: '#e0e0e0',
+    backgroundColor: '#F6F6F6',
     marginLeft: 21,
     marginTop: 30,
     borderRadius: 4,
@@ -102,17 +103,30 @@ const styles = StyleSheet.create({
     marginTop: 20,
     flexDirection: 'row',
     alignItems: 'center',
-    marginLeft: 9,
+    // marginLeft: 9,
     backgroundColor: "#d3d3d3",
+    // marginRight:-2,
+    marginLeft:-30,
   },
   endingContainer: {
     flexDirection: 'row',
     paddingHorizontal: 16,
+      alignItems: 'center',
+      justifyContent: 'space-between',
+    
   },
   buttontext: {
     color: '#006838',
     fontSize: 9,
     marginLeft: 4,
     fontFamily: Font.medium,
+  },
+
+    dateText: {
+    fontSize: 9,
+    color: '#646464',
+    fontFamily: Font.medium,
+    marginTop: 20,
+    // alignItems:"center"
   },
 });

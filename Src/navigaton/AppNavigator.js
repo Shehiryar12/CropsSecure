@@ -67,6 +67,8 @@ const AppNavigator = () => {
           component={Assessment}
           options={{ headerShown: false }}
         />
+
+        
       </Stack.Navigator>
     </NavigationContainer>
   );

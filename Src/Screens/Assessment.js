@@ -11,15 +11,15 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import AssessmentComponent from '../Components/AssessmentComponent';
 import Assessmentwo from '../Components/Assessmentwo';
 import Assessmenthree from '../Components/Assessmentthree';
-import { wp } from '../Constant/Responsive';
+import { wp, hp } from '../Constant/Responsive';
 
 const Assessment = () => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
-        <MaterialIcons name="keyboard-arrow-left" size={23} color="black" />
+        <MaterialIcons name="keyboard-arrow-left" size={wp(6)} color="black" />
         <Text style={styles.heading}>Loss Assessment</Text>
-        <View style={{ width: wp(9) }}></View>
+        <View style={styles.space}></View>
       </View>
 
       <AssessmentComponent
@@ -58,28 +58,33 @@ const Assessment = () => {
 export default Assessment;
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-
-    marginTop: 14,
-    marginLeft: 12,
+    marginTop: hp(1.7),
+    marginLeft: wp(3),
   },
   heading: {
     fontFamily: Font.bold,
-    fontSize: 15,
+    fontSize: wp(4),
+  },
+  space: {
+    width: wp(9),
   },
   buttonstyle: {
     backgroundColor: '#009245',
-    marginHorizontal: 20,
-    borderRadius: 10,
-    paddingVertical: 3,
-    marginTop: 160,
+    marginHorizontal: wp(5),
+    borderRadius: wp(2.5),
+    paddingVertical: hp(0.4),
+    marginTop: hp(20),
   },
   buttontext: {
     textAlign: 'center',
-    paddingVertical: 10,
+    paddingVertical: hp(1.2),
     color: 'white',
     fontFamily: Font.medium,
   },

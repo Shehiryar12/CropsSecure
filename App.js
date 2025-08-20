@@ -10,12 +10,14 @@ import InsuranceClaim from './Src/Screens/InsuranceClaim';
 import MyClaims from './Src/Screens/MyClaims';
 import Purchasing from './Src/Screens/Purchasing';
 import AppNavigator from './Src/navigaton/AppNavigator';
+import Welcome from './Src/Screens/Welcome';
+import UnderReview from './Src/Screens/UnderReview';
+import CropsSecure from './Src/Screens/CropsSecure';
 
 const App = () => {
   return (
-     <AppNavigator />
-
-
+  // <CropsSecure/>
+<AppNavigator/>
 )
 };
 

@@ -11,9 +11,7 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 const ClaimComponent = props => {
   return (
-    <SafeAreaView>
-      {/* <Text>{props?.title}</Text> */}
-
+    <SafeAreaView style={styles.container}>
       <View style={styles.box}>
         <View style={styles.innercontainer}>
           <Text style={styles.tobaccostyle}>{props?.title}</Text>
@@ -30,20 +28,11 @@ const ClaimComponent = props => {
               name="phone-in-talk"
               size={12}
               color="#006838"
-              marginLeft={6}
+              style={styles.iconStyle}
             />
             <Text style={styles.buttontext}>{props?.contact}</Text>
           </TouchableOpacity>
-          <Text
-            style={{
-              fontSize: 9,
-              color: '#646464',
-              fontFamily: Font.medium,
-              marginTop: 20,
-            }}
-          >
-            {props?.date}
-          </Text>
+          <Text style={styles.dateText}>{props?.date}</Text>
         </View>
       </View>
     </SafeAreaView>
@@ -56,7 +45,7 @@ const styles = StyleSheet.create({
   box: {
     width: 320,
     height: 127,
-    backgroundColor: '#e0e0e0',
+    backgroundColor: '#F6F6F6',
     marginLeft: 21,
     marginTop: 30,
     borderRadius: 4,
@@ -76,6 +65,7 @@ const styles = StyleSheet.create({
     marginTop: 2,
     fontFamily: Font.medium,
   },
+  description: {},
   descriptiontext: {
     color: '#646464',
     fontSize: 9,
@@ -84,17 +74,24 @@ const styles = StyleSheet.create({
     marginTop: 2,
     fontFamily: Font.medium,
   },
-  
+  endingContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingHorizontal: 16,
+  },
   buttonstyle: {
     width: 93,
     height: 26,
-    // borderRadius: 244,
-    borderRadius:14,
+    borderRadius: 14,
     borderWidth: 1,
     borderColor: 'grey',
     marginTop: 20,
     flexDirection: 'row',
     alignItems: 'center',
+  },
+  iconStyle: {
+    marginLeft: 6,
   },
   buttontext: {
     color: '#006838',
@@ -102,10 +99,10 @@ const styles = StyleSheet.create({
     marginLeft: 5,
     fontFamily: Font.medium,
   },
-  endingContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    paddingHorizontal: 16,
+  dateText: {
+    fontSize: 9,
+    color: '#646464',
+    fontFamily: Font.medium,
+    marginTop: 20,
   },
 });

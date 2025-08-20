@@ -1,7 +1,7 @@
 import { Image, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 import { Font } from '../Constant/Font';
-import { fonts } from '@rneui/base';
+import { wp, hp } from '../Constant/Responsive';   
 
 const LossCompensationComponent = props => {
   return (
@@ -18,7 +18,10 @@ const LossCompensationComponent = props => {
             {props?.description}
           </Text>
           <View style={styles.dottedline}></View>
-          <Text style={styles.areastyle}>{props?.effectedarea}<Text style={{color:"#646464"}}> 2 Acres</Text></Text>
+          <Text style={styles.areastyle}>
+            {props?.effectedarea}
+            <Text style={styles.acreText}> 2 Acres</Text>
+          </Text>
         </View>
       </View>
     </View>
@@ -30,53 +33,55 @@ export default LossCompensationComponent;
 const styles = StyleSheet.create({
   container: {},
   innerconatiner: {
-    marginTop: 50,
-    backgroundColor: 'lightgrey',
-    marginHorizontal: 21,
-    height: 110,
-    borderRadius: 8,
+    marginTop: hp(6),           
+    backgroundColor:'#F6F6F6',
+    marginHorizontal: wp(5.5), 
+    height: hp(14),             
+    borderRadius: wp(2),        
     flexDirection: 'row',
   },
   imagestyle: {
-    width: 75,
-    height: 72,
-    borderRadius: 4,
-    marginLeft: 12,
-    marginTop: 15,
+    width: wp(19),              
+    height: hp(9),             
+    borderRadius: wp(2),       
+    marginLeft: wp(3),          
+    marginTop: hp(2),          
   },
   textContainer: {
-    marginLeft: 9,
-    marginTop:15,
+    marginLeft: wp(2.5),       
+    marginTop: hp(2),           
   },
   cropName: {
     fontFamily: Font.bold,
   },
   dateText: {
-    lineHeight: 8,
-    fontSize: 9,
+    lineHeight: hp(1),        
+    fontSize: wp(2.5),         
     color: '#646464',
-    fontFamily:Font.medium,
+    fontFamily: Font.medium,
   },
   description: {
-   
-    fontSize: 9,
-    marginTop:4,
+    fontSize: wp(2.5),         
+    marginTop: hp(0.5),        
     color: '#646464',
-    fontFamily:Font.medium,
-    width:170,
+    fontFamily: Font.medium,
+    width: wp(45),              
   },
-  dottedline:{
-     borderBottomWidth:1,
-     borderColor:'#707070',
-     borderStyle:'dashed',
-     width:200,
-
-    marginTop:4,
+  dottedline: {
+    borderBottomWidth: 1,
+    borderColor: '#707070',
+    borderStyle: 'dashed',
+    width: wp(55),               
+    marginTop: hp(0.5),       
   },
-  areastyle:{
-    color:"#006838", 
-    fontFamily:Font.medium,
-    fontSize:8,
-    marginTop:3
-  }
+  areastyle: {
+    color: '#006838',
+    fontFamily: Font.medium,
+    fontSize: wp(2.3),         
+    marginTop: hp(0.4),        
+  },
+  acreText: {
+    color: '#646464',
+    fontFamily: Font.medium,
+  },
 });

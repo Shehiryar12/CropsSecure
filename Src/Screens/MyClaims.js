@@ -5,14 +5,15 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import ClaimComponent from '../Components/ClaimComponent';
 import ClaimComponenttwo from '../Components/ClaimComponenttwo';
 import ClaimComponentthree from '../Components/ClaimComponentthree';
+import { wp, hp } from '../Constant/Responsive'; // optional for responsive
 
 const MyClaims = () => {
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.container}>
       <View style={styles.header}>
-        <MaterialIcons name="keyboard-arrow-left" size={23} color="black" />
+        <MaterialIcons name="keyboard-arrow-left" size={wp(6)} color="black" />
         <Text style={styles.heading}>My Claims</Text>
-        <View style={{ width: 37 }}></View>
+        <View style={styles.space}></View>
       </View>
 
       <ClaimComponent
@@ -46,14 +47,24 @@ const MyClaims = () => {
 export default MyClaims;
 
 const styles = StyleSheet.create({
+ 
+  container:{
+    flex:1,
+    backgroundColor:'white',
+  },
+
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginTop: 14,
-    marginLeft: 12,
+    marginTop: hp(2), 
+    marginLeft: wp(3),
+    alignItems: 'center',
   },
   heading: {
     fontFamily: Font.bold,
-    fontSize: 15,
+    fontSize: wp(4),
+  },
+  space: {
+    width: wp(9),
   },
 });

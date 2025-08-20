@@ -60,7 +60,7 @@ const FarmerComponent = props => {
       </TouchableOpacity>
 
    
-      <TouchableOpacity style={styles.boxone}>
+      <TouchableOpacity style={styles.boxone}  onPress={() => navigation.navigate('Ownership')}>
         <Image
           source={require('../Assets/Images/imageone.png')}
           style={styles.imageone}

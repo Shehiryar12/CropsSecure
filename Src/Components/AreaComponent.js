@@ -20,17 +20,18 @@ const AreaComponent = props => {
           ]}
         >
           <TextInput
-            style={[styles.input, { width: props?.inputWidth }]}
+            style={[
+              styles.input,
+              { width: props?.inputWidth, fontSize: props?.fontSize },
+            ]}
             placeholder={props?.placeholder}
             placeholderTextColor={props?.placeholderTextColor}
-            borderRadius={props?.borderRadius}
-            fontSize={props?.fontSize}
           />
           <MaterialIcons
             name="keyboard-arrow-down"
             size={wp(6)}
             color="#DBD8D8"
-            style={{ marginLeft: wp(2) }}
+            style={styles.icon}
           />
         </View>
       </View>
@@ -59,5 +60,8 @@ const styles = StyleSheet.create({
   input: {
     flex: 1,
     fontFamily: Font.medium,
+  },
+  icon: {
+    marginLeft: wp(2),
   },
 });

@@ -2,6 +2,7 @@ import { SafeAreaView, StyleSheet, Text, TextInput, View } from 'react-native';
 import React from 'react';
 import { Font } from '../Constant/Font';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import { wp, hp } from '../Constant/Responsive';
 
 const AssessmentComponent = props => {
   return (
@@ -12,20 +13,15 @@ const AssessmentComponent = props => {
         <View
           style={[
             styles.landstyle,
-            { borderColor: props?.borderColor || '#DBD8D8' },
+            props?.borderColor ? { borderColor: props.borderColor } : null,
           ]}
         >
           <TextInput
             placeholder={props?.placeholder}
             placeholderTextColor={props?.placeholderTextColor}
-            style={{
-              flex: 1,
-              color: props?.textColor,
-              fontSize: 13,
-              fontFamily:Font.medium,
-            }}
+            style={styles.textInput}
           />
-          <MaterialIcons name="keyboard-arrow-down" size={24} color="#DBD8D8" />
+          <MaterialIcons name="keyboard-arrow-down" size={wp(6)} color="#DBD8D8" />
         </View>
       </View>
     </SafeAreaView>
@@ -37,29 +33,26 @@ export default AssessmentComponent;
 const styles = StyleSheet.create({
   heading: {
     fontFamily: Font.medium,
-    marginBottom: 5,
+    marginBottom: hp(0.7),
     color: '#646464',
-    marginHorizontal: 8,
-    marginTop: 25,
-    marginLeft: 21,
+    marginHorizontal: wp(2),
+    marginTop: hp(3.2),
+    marginLeft: wp(5.5),
   },
-  box: {
-    flexDirection: 'row',
-    alignItems: 'center',
-
-    borderRadius: 8,
-    paddingVertical: 12,
-    marginHorizontal: 8,
-  },
-
   landstyle: {
     flexDirection: 'row',
     alignItems: 'center',
     borderWidth: 1,
-    borderRadius: 10,
-     paddingVertical: 3,
-    marginHorizontal: 20,
-    paddingHorizontal:8,
-    fontFamily:Font.medium,
+    borderColor: '#DBD8D8',
+    borderRadius: wp(2.5),
+    paddingVertical: hp(0.8),
+    marginHorizontal: wp(5),
+    paddingHorizontal: wp(2),
+  },
+  textInput: {
+    flex: 1,
+    color: '#000', 
+    fontSize: wp(3.2),
+    fontFamily: Font.medium,
   },
 });

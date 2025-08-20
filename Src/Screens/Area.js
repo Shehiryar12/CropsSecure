@@ -18,7 +18,7 @@ const Area = (props) => {
       <View style={styles.header}>
         <MaterialIcons name="keyboard-arrow-left" size={wp(6)} color="black" />
         <Text style={styles.heading}>Crop To Insure</Text>
-        <View style={{ width: wp(10) }}></View>
+        <View style={styles.headerRightSpace}></View>
       </View>
 
       <AreaComponent
@@ -30,8 +30,8 @@ const Area = (props) => {
         fontSize={wp(3)}
       />
 
-      <View style={{ flexDirection: 'row' }}>
-        <View style={{ flex: 1, marginRight: -wp(7) }}>
+      <View style={styles.row}>
+        <View style={styles.leftComponent}>
           <AreaComponent
             title="Area Unit"
             borderRadius={wp(3)}
@@ -42,7 +42,7 @@ const Area = (props) => {
           />
         </View>
 
-        <View style={{ flex: 1 }}>
+        <View style={styles.rightComponent}>
           <AreaInput
             title="Area"
             borderRadius={wp(3)}
@@ -62,93 +62,27 @@ const Area = (props) => {
       <View style={styles.dottedcontainertwo}></View>
 
       <View style={styles.status}>
-        <Text style={{ fontFamily: Font.medium, color: '#009245' }}>Crop</Text>
-        <Text style={{ fontFamily: Font.medium, color: '#009245' }}>Unit</Text>
-        <Text style={{ fontFamily: Font.medium, color: '#009245' }}>Area</Text>
+        <Text style={styles.statusTitle}>Crop</Text>
+        <Text style={styles.statusTitle}>Unit</Text>
+        <Text style={styles.statusTitle}>Area</Text>
       </View>
 
       <View style={styles.status}>
-        <Text
-          style={{
-            fontFamily: Font.medium,
-            color: '#646464',
-            fontSize: wp(3),
-          }}>
-          Cotton
-        </Text>
-        <Text
-          style={{
-            fontFamily: Font.medium,
-            color: '#646464',
-            marginRight: wp(5),
-            fontSize: wp(3),
-          }}>
-          Acre
-        </Text>
-        <Text
-          style={{
-            fontFamily: Font.medium,
-            color: '#646464',
-            fontSize: wp(3),
-          }}>
-          100
-        </Text>
+        <Text style={styles.statusValue}>Cotton</Text>
+        <Text style={[styles.statusValue, styles.unitMarginRight5]}>Acre</Text>
+        <Text style={styles.statusValue}>100</Text>
       </View>
 
       <View style={styles.status}>
-        <Text
-          style={{
-            fontFamily: Font.medium,
-            color: '#646464',
-            fontSize: wp(3),
-          }}>
-          Rice
-        </Text>
-        <Text
-          style={{
-            fontFamily: Font.medium,
-            color: '#646464',
-            marginRight: wp(2),
-            fontSize: wp(3),
-          }}>
-          Acre
-        </Text>
-        <Text
-          style={{
-            fontFamily: Font.medium,
-            color: '#646464',
-            fontSize: wp(3),
-          }}>
-          80
-        </Text>
+        <Text style={styles.statusValue}>Rice</Text>
+        <Text style={[styles.statusValue, styles.unitMarginRight2]}>Acre</Text>
+        <Text style={styles.statusValue}>80</Text>
       </View>
 
       <View style={styles.status}>
-        <Text
-          style={{
-            fontFamily: Font.medium,
-            color: '#646464',
-            fontSize: wp(3),
-          }}>
-          Wheat
-        </Text>
-        <Text
-          style={{
-            fontFamily: Font.medium,
-            color: '#646464',
-            marginRight: wp(6),
-            fontSize: wp(3),
-          }}>
-          Acre
-        </Text>
-        <Text
-          style={{
-            fontFamily: Font.medium,
-            color: '#646464',
-            fontSize: wp(3),
-          }}>
-          20
-        </Text>
+        <Text style={styles.statusValue}>Wheat</Text>
+        <Text style={[styles.statusValue, styles.unitMarginRight6]}>Acre</Text>
+        <Text style={styles.statusValue}>20</Text>
       </View>
 
       <TouchableOpacity style={styles.nextbutton}>
@@ -161,6 +95,9 @@ const Area = (props) => {
 export default Area;
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -168,9 +105,22 @@ const styles = StyleSheet.create({
     marginTop: hp(2),
     marginLeft: wp(3),
   },
+  headerRightSpace: {
+    width: wp(10),
+  },
   heading: {
     fontFamily: Font.bold,
     fontSize: wp(4),
+  },
+  row: {
+    flexDirection: 'row',
+  },
+  leftComponent: {
+    flex: 1,
+    marginRight: -wp(7),
+  },
+  rightComponent: {
+    flex: 1,
   },
   buttonstyle: {
     backgroundColor: '#009245',
@@ -198,6 +148,24 @@ const styles = StyleSheet.create({
     marginTop: hp(1.5),
     justifyContent: 'space-between',
     marginHorizontal: wp(6),
+  },
+  statusTitle: {
+    fontFamily: Font.medium,
+    color: '#009245',
+  },
+  statusValue: {
+    fontFamily: Font.medium,
+    color: '#646464',
+    fontSize: wp(3),
+  },
+  unitMarginRight5: {
+    marginRight: wp(5),
+  },
+  unitMarginRight2: {
+    marginRight: wp(2),
+  },
+  unitMarginRight6: {
+    marginRight: wp(6),
   },
   nextbutton: {
     backgroundColor: '#009245',

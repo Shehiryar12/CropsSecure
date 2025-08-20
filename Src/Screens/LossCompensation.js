@@ -5,13 +5,13 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { Font } from '../Constant/Font';
 import LossCompensationComponent from '../Components/LossCompensationComponent';
 import LossCompensationComponenttwo from '../Components/LossComponsationComponenttwo';
-import { wp } from '../Constant/Responsive';
+import { wp, hp } from '../Constant/Responsive'; 
 
 const LossCompensation = () => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
-        <MaterialIcons name="keyboard-arrow-left" size={23} color="black" />
+        <MaterialIcons name="keyboard-arrow-left" size={wp(6)} color="black" />
         <Text style={styles.heading}>Loss Compensation</Text>
         <View style={{ width: wp(8) }}></View>
       </View>
@@ -23,7 +23,7 @@ const LossCompensation = () => {
         effectedarea="Effected Area:"
       />
 
-        <LossCompensationComponenttwo
+      <LossCompensationComponenttwo
         title="Wheat"
         date="25 Dec, 2024"
         description="Powdery mildew occurs"
@@ -36,16 +36,20 @@ const LossCompensation = () => {
 export default LossCompensation;
 
 const styles = StyleSheet.create({
+
+  container:{
+            flex:1,
+            backgroundColor:'white',
+  },
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-
-    marginTop: 14,
-    marginLeft: 12,
+    marginTop: hp(1.8),   // 14 ki jagah hp
+    marginLeft: wp(3),    // 12 ki jagah wp
   },
   heading: {
     fontFamily: Font.bold,
-    fontSize: 15,
+    fontSize: wp(4),      // 15 ki jagah responsive wp
   },
 });

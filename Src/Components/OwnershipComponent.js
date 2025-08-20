@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
   box: {
     width: wp(85),
     height: hp(13),
-    backgroundColor: 'lightgrey',
+    backgroundColor: '#F6F6F6',
     marginHorizontal: wp(8),
     borderRadius: wp(2),
     paddingVertical: hp(0.6),
