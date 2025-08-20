@@ -42,10 +42,10 @@ const Welcome = () => {
           placeholder="Enter your password"
         />
 
-        {/* Forgot password */}
+       
         <Text style={styles.passwordtext}>Forgot Password</Text>
 
-        {/* Remember Me */}
+     
         <View style={styles.rememberContainer}>
           <TouchableOpacity onPress={() => setYes(!yes)}>
             <MaterialIcons
@@ -58,12 +58,11 @@ const Welcome = () => {
         </View>
       </View>
 
-      {/* Sign In Button */}
+  
       <TouchableOpacity style={styles.signin} onPress={() => signIn()}>
         <Text style={styles.buttontext}>Sign In</Text>
       </TouchableOpacity>
 
-      {/* Register */}
       <View style={styles.accountstyle}>
         <Text style={styles.account}>Don't have an account?</Text>
         <TouchableOpacity onPress={()=>handleRegister()}>

@@ -13,10 +13,10 @@ import AppNavigator from './Src/navigaton/AppNavigator';
 import Welcome from './Src/Screens/Welcome';
 import UnderReview from './Src/Screens/UnderReview';
 import CropsSecure from './Src/Screens/CropsSecure';
+import AccountScreen from './Src/Screens/AccountScreen';
 
 const App = () => {
   return (
-  // <CropsSecure/>
 <AppNavigator/>
 )
 };
