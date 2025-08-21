@@ -196,7 +196,6 @@
 // //   },
 // // });
 
-
 // import { StyleSheet, Text, View } from 'react-native';
 // import React from 'react';
 // import { Dropdown } from 'react-native-element-dropdown';
@@ -265,8 +264,6 @@
 //   },
 // });
 
-
-
 import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 import { Dropdown } from 'react-native-element-dropdown';
@@ -297,8 +294,8 @@ const DropdownComp = ({
         labelField={labelField}
         valueField={valueField}
         placeholder={placeholder}
-        value={value}        // 👈 link with state
-        onChange={onChange}  // 👈 update state on selection
+        value={value} //  link with state
+        onChange={onChange} // 👈 update state on selection
       />
     </View>
   );

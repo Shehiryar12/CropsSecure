@@ -15,6 +15,11 @@ import DropdownComp from '../Components/DropdownComp';
 
 const LandData = () => {
   const [district, setDistrict] = useState('');
+  const [tehsil, setTehsil] = useState('');
+  const [UC, setUC] = useState('');
+  const [VillageName, setVillageName] = useState('');
+  const [otherformoreinformation, setOtherformoreinformation] = useState('');
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.heading}>
@@ -25,49 +30,68 @@ const LandData = () => {
 
       <DropdownComp
         titleLabel={'District Name'}
-        data={districtNames} // array of options
+        data={districtNames}
         labelField="label"
         valueField="value"
         placeholder={'Enter district name'}
-        value={district} // 👈 selected value
-        onChange={item => setDistrict(item.value)} // 👈 selected value update
+        value={district}
+        onChange={item => setDistrict(item.value)}
         mainStyling={{ marginTop: hp(1.5) }}
         dropdown={{ marginTop: hp(1) }}
       />
- 
-     
 
-   <DropdownComp
-        titleLabel={'District Name'}
-        data={districtNames} // array of options
+      <DropdownComp
+        titleLabel={'Tehsil Name'}
+        data={districtNames}
         labelField="label"
         valueField="value"
-        placeholder={'Enter district name'}
-        value={district} // 👈 selected value
-        onChange={item => setDistrict(item.value)} // 👈 selected value update
+        placeholder={'Enter tehsil name'}
+        value={tehsil}
+        onChange={item => setTehsil(item.value)}
         mainStyling={{ marginTop: hp(1.5) }}
         dropdown={{ marginTop: hp(1) }}
       />
-      <LandComponenttwo
-        label="Tehsil Name"
-        placeholder="Enter tehsil name"
-        placeholderTextColor="#DBD8D8"
+
+  
+      <DropdownComp
+        titleLabel={'UC'}
+        data={districtNames}
+        labelField="label"
+        valueField="value"
+        placeholder={'Enter UC name'}
+        value={UC}
+        onChange={item => setUC(item.value)}
+        mainStyling={{ marginTop: hp(1.5) }}
+        dropdown={{ marginTop: hp(1) }}
       />
-      <LandComponenttwo
-        label="UC"
-        placeholder="Enter UC name"
-        placeholderTextColor="#DBD8D8"
+
+
+      <DropdownComp
+        titleLabel={'Village Name'}
+        data={districtNames}
+        labelField="label"
+        valueField="value"
+        placeholder={'Enter Village Name'}
+        value={VillageName}
+        onChange={item => setVillageName(item.value)}
+        mainStyling={{ marginTop: hp(1.5) }}
+        dropdown={{ marginTop: hp(1) }}
       />
-      <LandComponenttwo
-        label="Village Name"
-        placeholder="Enter village name"
-        placeholderTextColor="#DBD8D8"
+
+
+      <DropdownComp
+        titleLabel={'Other (for more information)'}
+        data={districtNames}
+        labelField="label"
+        valueField="value"
+        placeholder={'Enter other info'}
+        value={otherformoreinformation}
+        onChange={item => setOtherformoreinformation(item.value)}
+        mainStyling={{ marginTop: hp(1.5) }}
+        dropdown={{ marginTop: hp(1) }}
       />
-      <LandComponenttwo
-        label="Other (for more information)"
-        placeholder="Enter other info"
-        placeholderTextColor="#DBD8D8"
-      />
+
+ 
 
       <TouchableOpacity style={styles.button}>
         <Text style={styles.buttonText}>Save</Text>
@@ -90,7 +114,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-
     marginTop: 15,
   },
   status: {
