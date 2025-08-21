@@ -94,7 +94,7 @@ const AccountScreen = () => {
   );
 };
 
-export default AccountScreen;
+export default AccountScreen
 
 const styles = StyleSheet.create({
   header: {
@@ -127,4 +127,4 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     // borderColor:"#009245"
   },
-});
+})

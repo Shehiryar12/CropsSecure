@@ -14,10 +14,13 @@ import Welcome from './Src/Screens/Welcome';
 import UnderReview from './Src/Screens/UnderReview';
 import CropsSecure from './Src/Screens/CropsSecure';
 import AccountScreen from './Src/Screens/AccountScreen';
+import CheckBoxPractice from './Src/Screens/CheckBoxPractice';
+import Authorized from './Src/Screens/Authorized';
 
 const App = () => {
   return (
 <AppNavigator/>
+
 )
 };
 

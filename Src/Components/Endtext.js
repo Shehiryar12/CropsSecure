@@ -1,7 +1,8 @@
-import { StyleSheet, Text, TouchableOpacity, View, CheckBox } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React, { useState } from 'react';
 import { Font } from '../Constant/Font';
 import { useNavigation } from '@react-navigation/native';
+import CheckBox from '@react-native-community/checkbox';
 
 const Endtext = props => {
   const navigation = useNavigation();
@@ -11,7 +12,8 @@ const Endtext = props => {
     <View>
       <Text style={styles.textstyle}>{props?.title}</Text>
 
-      <TouchableOpacity style={styles.button}>
+      {/* Sign up button works with props.onPress */}
+      <TouchableOpacity style={styles.button} onPress={props.onPress}>
         <Text style={styles.buttontext}>{props?.buttontext}</Text>
       </TouchableOpacity>
 
@@ -22,7 +24,6 @@ const Endtext = props => {
         </TouchableOpacity>
       </View>
 
-    
       <View style={styles.authWrap}>
         <CheckBox
           value={isSelected}

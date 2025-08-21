@@ -14,8 +14,9 @@ import LossCompensation from '../Screens/LossCompensation';
 import Assessment from '../Screens/Assessment';
 import Area from '../Screens/Area';
 
+ const Stack = createNativeStackNavigator();
 const AppNavigator = () => {
-  const Stack = createNativeStackNavigator();
+ 
 
   return (
     <NavigationContainer>

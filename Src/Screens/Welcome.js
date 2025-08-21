@@ -12,6 +12,7 @@ const Welcome = () => {
 
   const handleRegister = () => {
     navigation.navigate('AccountScreen');
+    
   };
   const signIn = () => {
     navigation.navigate('FarmerRecord');
@@ -51,7 +52,8 @@ const Welcome = () => {
             <MaterialIcons
               name={yes ? 'check-box' : 'check-box-outline-blank'}
               size={18}
-              color="lightgrey"
+              color="green"
+              borderColor="lightgrey"
             />
           </TouchableOpacity>
           <Text style={styles.remember}>Remember Me</Text>
