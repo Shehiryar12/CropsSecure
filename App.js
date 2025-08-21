@@ -19,7 +19,7 @@ import Authorized from './Src/Screens/Authorized';
 
 const App = () => {
   return (
-<AppNavigator/>
+<LandData/>
 
 )
 };

@@ -5,13 +5,16 @@ import {
   StyleSheet,
   TouchableOpacity,
 } from 'react-native';
-import React from 'react';
+import React, { useState } from 'react';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { Font } from '../Constant/Font';
 import LandComponenttwo from '../Components/LandComponenttwo';
 import { hp, wp } from '../Constant/Responsive';
+import { districtNames } from '../Constant/DummyData';
+import DropdownComp from '../Components/DropdownComp';
 
 const LandData = () => {
+  const [district, setDistrict] = useState('');
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.heading}>
@@ -20,11 +23,16 @@ const LandData = () => {
         <View style={styles.space}></View>
       </View>
 
-      <LandComponenttwo
-        label="District Name"
-        placeholder="Enter district name"
-        placeholderTextColor="#DBD8D8"
-        borderColor="green"
+      <DropdownComp
+        titleLabel={'District Name'}
+        data={districtNames} // array of options
+        labelField="label"
+        valueField="value"
+        placeholder={'Enter district name'}
+        value={district} // 👈 selected value
+        onChange={item => setDistrict(item.value)} // 👈 selected value update
+        mainStyling={{ marginTop: hp(1.5) }}
+        dropdown={{ marginTop: hp(1) }}
       />
 
       <LandComponenttwo
@@ -62,14 +70,14 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: wp(5),
   },
-  space: { 
-    width: wp(7) 
+  space: {
+    width: wp(7),
   },
   heading: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-   
+
     marginTop: 15,
   },
   status: {
@@ -78,10 +86,10 @@ const styles = StyleSheet.create({
   },
   button: {
     backgroundColor: '#00A651',
-    paddingVertical: hp(1.7), 
+    paddingVertical: hp(1.7),
     borderRadius: wp(2),
     marginHorizontal: wp(2),
-    marginTop: hp(7), 
+    marginTop: hp(7),
     alignItems: 'center',
   },
   buttonText: {
