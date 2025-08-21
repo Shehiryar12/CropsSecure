@@ -294,8 +294,8 @@ const DropdownComp = ({
         labelField={labelField}
         valueField={valueField}
         placeholder={placeholder}
-        value={value} //  link with state
-        onChange={onChange} // 👈 update state on selection
+        value={value}
+        onChange={onChange}
       />
     </View>
   );

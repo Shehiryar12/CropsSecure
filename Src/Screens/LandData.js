@@ -52,7 +52,6 @@ const LandData = () => {
         dropdown={{ marginTop: hp(1) }}
       />
 
-  
       <DropdownComp
         titleLabel={'UC'}
         data={districtNames}
@@ -64,7 +63,6 @@ const LandData = () => {
         mainStyling={{ marginTop: hp(1.5) }}
         dropdown={{ marginTop: hp(1) }}
       />
-
 
       <DropdownComp
         titleLabel={'Village Name'}
@@ -78,7 +76,6 @@ const LandData = () => {
         dropdown={{ marginTop: hp(1) }}
       />
 
-
       <DropdownComp
         titleLabel={'Other (for more information)'}
         data={districtNames}
@@ -90,8 +87,6 @@ const LandData = () => {
         mainStyling={{ marginTop: hp(1.5) }}
         dropdown={{ marginTop: hp(1) }}
       />
-
- 
 
       <TouchableOpacity style={styles.button}>
         <Text style={styles.buttonText}>Save</Text>
