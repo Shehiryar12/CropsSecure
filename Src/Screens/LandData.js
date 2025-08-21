@@ -34,7 +34,20 @@ const LandData = () => {
         mainStyling={{ marginTop: hp(1.5) }}
         dropdown={{ marginTop: hp(1) }}
       />
+ 
+     
 
+   <DropdownComp
+        titleLabel={'District Name'}
+        data={districtNames} // array of options
+        labelField="label"
+        valueField="value"
+        placeholder={'Enter district name'}
+        value={district} // 👈 selected value
+        onChange={item => setDistrict(item.value)} // 👈 selected value update
+        mainStyling={{ marginTop: hp(1.5) }}
+        dropdown={{ marginTop: hp(1) }}
+      />
       <LandComponenttwo
         label="Tehsil Name"
         placeholder="Enter tehsil name"

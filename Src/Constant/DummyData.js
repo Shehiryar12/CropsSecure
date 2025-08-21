@@ -68,6 +68,12 @@ export const districtNames = [
   { value: 3, label: 'Bajaur' },
   { value: 4, label: 'Sheikhpura' },
   { value: 5, label: 'Sialkot' },
+  { value: 6, label: 'Lahore' },
+  { value: 7, label: 'Lahore' },
+  { value: 8, label: 'Lahore' },
+  { value: 9, label: 'Lahore' },
+  { value: 10, label: 'Lahore' },
+
 ];
 
 
