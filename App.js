@@ -29,10 +29,19 @@
 // export default App;
 
 import React from 'react';
-import LandData from './Src/Screens/LandData';
+import Sheet from './Src/Screens/Sheet';
+import Insurance from './Src/Screens/Insurance';
+import Insurancetwo from './Src/Screens/Insurancetwo';
 
 const App = () => {
-  return <LandData/>;
-};
+
+  return( 
+    // <Sheet/>
+    // <Insurance/>
+    <Insurancetwo/>
+    
+  )
+
+}
 
 export default App;

@@ -1,21 +1,20 @@
 import {
+  Image,
+  Modal,
   SafeAreaView,
   StyleSheet,
   Text,
   TouchableOpacity,
-  View,
-  Modal,
-  Image,
   TouchableWithoutFeedback,
+  View,
 } from 'react-native';
 import React, { useState } from 'react';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { Font } from '../Constant/Font';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import InsuranceComponent from '../Components/InsuranceComponent';
 
-const Insurance = () => {
-  const [sheetVisible, setSheetVisible] = useState(false);
-
+const Insurancetwo = () => {
+  const [sheetVisible, setSheetVisible] = useState(false); //is ko bana rahe hai pay button kai liye
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
@@ -80,7 +79,6 @@ const Insurance = () => {
           <Text style={{ fontFamily: Font.bold, fontSize: 11 }}>Rs.30000</Text>
         </View>
 
-        {/* Pay Button */}
         <TouchableOpacity
           style={styles.buttonstyle}
           onPress={() => setSheetVisible(true)}
@@ -88,44 +86,32 @@ const Insurance = () => {
           <Text style={styles.buttontext}>Pay</Text>
         </TouchableOpacity>
       </View>
-
-      {/* Bottom Sheet */}
-      <Modal
-        visible={sheetVisible}
-        transparent={true}
-        animationType="slide"
-        onRequestClose={() => setSheetVisible(false)}
-      >
-        {/* Overlay click to close */}
+      <Modal visible={sheetVisible} transparent={true} animationType="slide">
         <TouchableWithoutFeedback onPress={() => setSheetVisible(false)}>
-          <View style={styles.sheetOverlay}>
-            {/* Bottom sheet content */}
+          <View style={styles.sheetContainer}>
             <TouchableWithoutFeedback>
-              <View style={styles.bottomSheet}>
-                <Text style={styles.sheetTitle}>Choose Payment Option</Text>
-
-                <TouchableOpacity style={styles.optionButton}>
+              <View style={styles.bottomsheetstyle}>
+                <Text style={styles.title}>Choose Payment Option</Text>
+                <TouchableOpacity style={styles.sheetbutton}>
                   <Image
                     source={require('../Assets/Images/Jazzcashnewlogo.png')}
                     style={{ width: 20, height: 20, marginRight: 10 }}
                   />
-                  <Text style={styles.optionText}>JazzCash</Text>
+                  <Text style={styles.bottomtext}>JazzCash</Text>
                 </TouchableOpacity>
-
-                <TouchableOpacity style={styles.optionButton}>
+                <TouchableOpacity style={styles.sheetbutton}>
                   <Image
                     source={require('../Assets/Images/easypaisa.png')}
                     style={{ width: 20, height: 20, marginRight: 10 }}
                   />
-                  <Text style={styles.optionText}>EasyPaisa</Text>
+                  <Text style={styles.bottomtext}>Easy Paisa</Text>
                 </TouchableOpacity>
-
-                <TouchableOpacity style={styles.optionButton}>
+                <TouchableOpacity style={styles.sheetbutton}>
                   <Image
                     source={require('../Assets/Images/creditCard.png')}
                     style={{ width: 20, height: 20, marginRight: 10 }}
                   />
-                  <Text style={styles.optionText}>Debit/Credit Card</Text>
+                  <Text style={styles.bottomtext}>Debit/Credit Card</Text>
                 </TouchableOpacity>
               </View>
             </TouchableWithoutFeedback>
@@ -136,7 +122,7 @@ const Insurance = () => {
   );
 };
 
-export default Insurance;
+export default Insurancetwo;
 
 const styles = StyleSheet.create({
   container: { flex: 1 },
@@ -192,32 +178,43 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
     marginTop: 80,
   },
-  buttontext: { color: '#fff', textAlign: 'center', fontFamily: Font.medium },
-  sheetOverlay: {
+  buttontext: { 
+    color: '#fff', 
+    textAlign: 'center', 
+    fontFamily: Font.medium 
+},
+
+
+  sheetContainer: {
     flex: 1,
-    // backgroundColor: '',
     justifyContent: 'flex-end',
-  },
-  bottomSheet: {
+backgroundColor: 'rgba(0,0,0,0.5)'
+},
+  
+  bottomsheetstyle: {
     backgroundColor: 'white',
     padding: 20,
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
   },
-  sheetTitle: {
+  title: {
     fontFamily: Font.bold,
     fontSize: 13,
     marginBottom: 15,
     textAlign: 'center',
     color: '#646464',
+    marginTop: 2,
   },
-  optionButton: {
+  sheetbutton: {
     flexDirection: 'row',
-    padding: 12,
     borderWidth: 1,
-    borderColor: 'black',
     borderRadius: 10,
+    paddingTop: 16,
+    paddingBottom: 16,
+    paddingLeft: 10,
     marginTop: 10,
   },
-  optionText: { fontFamily: Font.medium, fontSize: 14, color: 'black' },
+  bottomtext: {
+    fontFamily: Font.medium,
+  },
 });
