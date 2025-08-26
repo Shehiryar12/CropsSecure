@@ -3,7 +3,6 @@ import React from 'react';
 import { Font } from '../Constant/Font';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
-
 const PhoneCnicEmailInput = props => {
   return (
     <View>
@@ -15,7 +14,9 @@ const PhoneCnicEmailInput = props => {
         maxLength={props?.maxLength}
         fontSize={11}
         keyboardType="numeric"
-          placeholderTextColor={"#DBD8D8"}
+        placeholderTextColor={'#DBD8D8'}
+          value={props?.value}               // ✅ controlled input
+        onChangeText={props?.onChangeText} // ✅ updates state
       />
     </View>
   );
@@ -39,9 +40,6 @@ const styles = StyleSheet.create({
     borderBottomColor: '#D9D9D9',
     fontFamily: Font.medium,
     borderRadius: 8,
-    paddingHorizontal:17,
-    
-   
-    
+    paddingHorizontal: 7,
   },
 });

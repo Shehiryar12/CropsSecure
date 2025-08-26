@@ -8,15 +8,34 @@ import { useNavigation } from '@react-navigation/native';
 
 const Welcome = () => {
   const [yes, setYes] = useState(false);
+  const [emailOrPhone, setemailOrPhone] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState({ email: '', password: '' });
+
   const navigation = useNavigation();
 
   const handleRegister = () => {
     navigation.navigate('AccountScreen');
-    
   };
+
   const signIn = () => {
-    navigation.navigate('FarmerRecord');
+    let emailError = '';
+    let passwordError = '';
+
+    if (emailOrPhone === '') {
+      emailError = '*Plase enter valid email/phone/cnic';
+    }
+    if (password.length < 6) {
+      passwordError = 'Password must be at least 6 characters';
+    }
+
+    setError({ email: emailError, password: passwordError });
+
+    if (!emailError && !passwordError) {
+      navigation.navigate('FarmerRecord');
+    }
   };
+
   return (
     <View>
       <View style={styles.header}>
@@ -37,16 +56,23 @@ const Welcome = () => {
           title="Phone/cnic/email id"
           placeholder="Enter phone/cnic/email id"
           maxLength={13}
+          value={emailOrPhone}
+          onChangeText={setemailOrPhone}
         />
+        {error.email ? (
+          <Text style={styles.errorText}>{error.email}</Text>
+        ) : null}
+
         <PasswordContainer
           title={'Password'}
           placeholder="Enter your password"
+          value={password}
+          onChangeText={setPassword}
         />
+        {error.password ? (
+          <Text style={styles.errorText}>{error.password}</Text>
+        ) : null}
 
-       
-        <Text style={styles.passwordtext}>Forgot Password</Text>
-
-     
         <View style={styles.rememberContainer}>
           <TouchableOpacity onPress={() => setYes(!yes)}>
             <MaterialIcons
@@ -60,14 +86,13 @@ const Welcome = () => {
         </View>
       </View>
 
-  
-      <TouchableOpacity style={styles.signin} onPress={() => signIn()}>
+      <TouchableOpacity style={styles.signin} onPress={signIn}>
         <Text style={styles.buttontext}>Sign In</Text>
       </TouchableOpacity>
 
       <View style={styles.accountstyle}>
         <Text style={styles.account}>Don't have an account?</Text>
-        <TouchableOpacity onPress={()=>handleRegister()}>
+        <TouchableOpacity onPress={handleRegister}>
           <Text style={styles.register}>Register</Text>
         </TouchableOpacity>
       </View>
@@ -107,13 +132,6 @@ const styles = StyleSheet.create({
     marginTop: 14,
     fontSize: 16,
   },
-  passwordtext: {
-    color: '#009245',
-    paddingHorizontal: 20,
-    marginTop: 5,
-    fontSize: 12,
-    textDecorationLine: 'underline',
-  },
   rememberContainer: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -143,6 +161,11 @@ const styles = StyleSheet.create({
     marginLeft: 4,
     marginTop: -1,
   },
+  errorText: {
+    color: 'red',
+    fontSize: 12,
+    marginLeft: 20,
+    marginTop: 5,
+    fontFamily: Font.medium,
+  },
 });
-
-//use check box by using use state

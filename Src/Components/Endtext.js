@@ -25,10 +25,7 @@ const Endtext = props => {
       </View>
 
       <View style={styles.authWrap}>
-        <CheckBox
-          value={isSelected}
-          onValueChange={setSelection}
-        />
+    
         <TouchableOpacity onPress={() => navigation.navigate('Authorized')}>
           <Text style={styles.authorized}>
             Register as an authorized dealer
@@ -43,11 +40,12 @@ export default Endtext;
 
 const styles = StyleSheet.create({
   textstyle: {
-    paddingHorizontal: 0,
+    paddingHorizontal: 10,
     marginTop: 18,
-    paddingLeft: 15,
+    paddingLeft: 35,
     fontSize: 9,
     fontFamily: Font.medium,
+    width:290,
   },
   button: {
     backgroundColor: '#009245',
@@ -79,14 +77,16 @@ const styles = StyleSheet.create({
     marginLeft: 1,
   },
   authWrap: {
-    flexDirection: 'row',
+    // flexDirection: 'row',
     alignItems: 'center',
     marginTop: 50,
-    paddingLeft: 15,
+   
   },
   authorized: {
     fontSize: 12,
     marginLeft: 5,
     fontFamily: Font.medium,
+    color:'green',
+    
   },
 });

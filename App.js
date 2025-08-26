@@ -32,14 +32,19 @@ import React from 'react';
 import Sheet from './Src/Screens/Sheet';
 import Insurance from './Src/Screens/Insurance';
 import Insurancetwo from './Src/Screens/Insurancetwo';
+import Welcome from './Src/Screens/Welcome';
+import AppNavigator from './Src/navigaton/AppNavigator';
+import Welcometwo from './Src/Screens/Welcometwo';
+import Reset from './Src/Components/Reset';
+import ForgotPassword from './Src/Screens/ForgotPassword';
+import ResetPassword from './Src/Screens/ResetPassword';
 
 const App = () => {
 
   return( 
-    // <Sheet/>
-    // <Insurance/>
-    <Insurancetwo/>
-    
+    // <ResetPassword/>
+
+    <AppNavigator/>
   )
 
 }

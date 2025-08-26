@@ -12,6 +12,8 @@ const Account = props => {
         placeholderTextColor={props?.placeholderTextColor}
         borderColor={props?.borderColor}
         maxLength={props?.maxLength}
+        value={props?.value}
+        onChangeText={props?.onChangeText}
         />
 
    

@@ -21,6 +21,8 @@ const PasswordContainer = props => {
         //   placeholderTextColor={props?.placeholder}
           secureTextEntry={pass}
           placeholderTextColor={"#DBD8D8"}
+           value={props?.value}               // ✅ controlled input
+        onChangeText={props?.onChangeText} // ✅ updates state
         />
         <TouchableOpacity onPress={() => setPass(!pass)}>
           <MaterialIcons

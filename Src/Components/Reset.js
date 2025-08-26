@@ -1,24 +1,20 @@
-import {
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import React from 'react';
 import { Font } from '../Constant/Font';
-import { Icon } from '@rneui/base';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 const Reset = (props) => {
   return (
-    <View>
+    <View style={styles.container}>
       <View style={styles.header}>
-        <Icon name="chevron-back" type="Ionicons" color="#fff" size={20}/>
+        <TouchableOpacity>
+          <MaterialIcons name="keyboard-arrow-left" size={24} color="#000000" />
+        </TouchableOpacity>
         <Text style={styles.heading}>{props?.title}</Text>
-        <View style={{ width: 20 }} />
+        <View style={{ width: 24 }} /> {/* Placeholder for spacing */}
       </View>
 
-      <View>
-        <Text style={styles.define}>{props?.define}</Text>
-      </View>
+      <Text style={styles.define}>{props?.define}</Text>
     </View>
   );
 };
@@ -26,23 +22,26 @@ const Reset = (props) => {
 export default Reset;
 
 const styles = StyleSheet.create({
+  container: {
+    // marginTop: 20,
+    alignItems: 'center', // Center content horizontally
+  },
   header: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
     alignItems: 'center',
-    marginTop: 20,
-    backgroundColor: 'blue',
+    justifyContent: 'space-between',
+    width: '90%',
   },
   heading: {
     fontFamily: Font.bold,
-    fontSize: 16,
-    color: '#fff',
+    fontSize: 18,
+    textAlign: 'center',
+    flex: 1,
   },
   define: {
-    marginTop: 11,
+    marginTop: 20,
     color: '#646464',
-    width: 280,
-    marginHorizontal: 35,
     textAlign: 'center',
+    paddingHorizontal: 20,
   },
 });

@@ -45,6 +45,7 @@ const styles = StyleSheet.create({
     marginBottom: 5,
     fontFamily: Font.medium,
     color: '#646464',
+    marginLeft:22,
   },
   Box: {
     flexDirection: 'row',
@@ -53,6 +54,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     borderColor: '#DBD8D8',
     paddingHorizontal: 6,
+    marginHorizontal:22,
   },
   textinput: {
     flex: 1,

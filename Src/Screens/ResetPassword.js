@@ -1,34 +1,30 @@
-import {
-  SafeAreaView,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import { SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React from 'react';
 import Reset from '../Components/Reset';
 import PasswordInput from '../Components/Passwordinput';
 
 const ResetPassword = () => {
   return (
-    <SafeAreaView style={{ flex: 1, marginHorizontal: 15,backgroundColor:'red' }}>
+    <SafeAreaView style={styles.container}>
       <Reset
         title="Reset Password"
-        define=" Enter your new password below to reset your account "
-        passwordtext="Password"
+        define="Enter your new password below to reset your account"
       />
+
       <PasswordInput
         title="Password"
         placeholder="Enter your password"
         placeholderTextColor="#DBD8D8"
+        style={styles.PasswordInput}
       />
       <PasswordInput
         title="Confirm Password"
         placeholder="Confirm your password"
         placeholderTextColor="#DBD8D8"
+         style={styles.PasswordInput}
       />
 
-      <TouchableOpacity style={styles.confirmbutton}>
+      <TouchableOpacity style={styles.confirmButton}>
         <Text style={styles.confirm}>Confirm</Text>
       </TouchableOpacity>
     </SafeAreaView>
@@ -38,11 +34,15 @@ const ResetPassword = () => {
 export default ResetPassword;
 
 const styles = StyleSheet.create({
-  confirmbutton: {
+  container: {
+    flex: 1,
+    // paddingHorizontal: 20,
+    // justifyContent: 'center', // Center all content vertically
+  },
+  confirmButton: {
     backgroundColor: '#009245',
-
     marginHorizontal: 25,
-    marginTop: 90,
+    marginTop: 30,
     borderRadius: 8,
   },
   confirm: {
