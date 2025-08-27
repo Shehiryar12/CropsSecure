@@ -16,72 +16,127 @@ import AuthorizedAccount from '../Components/AuthorizedAccount';
 
 const Authorized = () => {
   const [isChecked, setIsChecked] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [name, setName] = useState('');
+  const [fatherName, setFatherName] = useState('');
+  const [cnic, setCnic] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [dob, setDob] = useState('');
 
+  const handleSubmit = () => {
+    setSubmitted(true);
+  };
   return (
     <View style={{ flex: 1, backgroundColor: '#fff' }}>
       <ScrollView>
-        {/* Header */}
         <View style={styles.header}>
           <MaterialIcons name="keyboard-arrow-left" size={24} color="#000000" />
           <Text style={styles.heading}>Create Account</Text>
           <View style={{ width: 25 }} />
         </View>
 
-        {/* Sub Heading */}
         <Text style={styles.Authorizedtext}>Register as Authorized Dealer</Text>
-
-        {/* Form Fields */}
         <AuthorizedAccount
           title="Name"
           placeholder="Enter your name"
           placeholderTextColor="#DBD8D8"
-          borderColor="green"
+          borderColor="#DBD8D8"
+          value={name}
+          onChangeText={setName}
         />
+        {submitted && name === '' ? (
+          <Text style={styles.error}>Name is required</Text>
+        ) : null}
+
         <AuthorizedAccount
           title="Father’s Name"
           placeholder="Enter your father’s name"
           placeholderTextColor="#DBD8D8"
           borderColor="#DBD8D8"
+          value={fatherName}
+          onChangeText={setFatherName}
         />
+        {submitted && fatherName === '' ? (
+          <Text style={styles.error}>Father’s Name is required</Text>
+        ) : null}
+
+        {/* CNIC */}
         <AuthorizedAccount
           title="CNIC"
           placeholder="Enter your CNIC"
           placeholderTextColor="#DBD8D8"
           borderColor="#DBD8D8"
-          maxLength={11}
+          maxLength={13}
+          value={cnic}
+          onChangeText={setCnic}
         />
+        {submitted && cnic === '' ? (
+          <Text style={styles.error}>CNIC is required</Text>
+        ) : null}
+
+        {/* Email */}
         <AuthorizedAccount
           title="Email"
           placeholder="Enter your email"
           placeholderTextColor="#DBD8D8"
           borderColor="#DBD8D8"
+          value={email}
+          onChangeText={setEmail}
         />
+        {submitted && email === '' ? (
+          <Text style={styles.error}>Email is required</Text>
+        ) : null}
+
+        {/* Phone */}
         <AuthorizedAccount
           title="Phone Number"
           placeholder="Enter your phone number"
           placeholderTextColor="#DBD8D8"
           borderColor="#DBD8D8"
           maxLength={11}
+          value={phone}
+          onChangeText={setPhone}
         />
+        {submitted && phone === '' ? (
+          <Text style={styles.error}>Phone Number is required</Text>
+        ) : null}
 
+        {/* DOB */}
         <Dob
           title="DOB"
           placeholder="Your DOB"
           placeholderTextColor="#DBD8D8"
           borderColor="#DBD8D8"
+          value={dob}
+          onChangeText={setDob}
         />
+
+        {/* Password */}
         <PasswordInput
           title="Password"
           placeholder="Enter your password"
           placeholderTextColor="#DBD8D8"
+          value={password}
+          onChangeText={setPassword}
         />
+        {submitted && password === '' ? (
+          <Text style={styles.error}>Password is required</Text>
+        ) : null}
+
         <PasswordInput
           title="Confirm Password"
           placeholder="Confirm your password"
           placeholderTextColor="#DBD8D8"
+          value={confirmPassword}
+          onChangeText={setConfirmPassword}
         />
+        {submitted && confirmPassword === '' ? (
+          <Text style={styles.error}>Confirm Password is required</Text>
+        ) : null}
 
-        {/* Terms + Button + Account Text */}
         <Endtext
           title={
             <View style={styles.checkboxContainer}>
@@ -105,6 +160,7 @@ const Authorized = () => {
           }
           buttontext="Sign Up"
           accounttext="Already have an account? "
+          onPress={handleSubmit}
         />
       </ScrollView>
     </View>
@@ -133,18 +189,24 @@ const styles = StyleSheet.create({
   },
   checkboxContainer: {
     flexDirection: 'row',
-    width: 290,
+    
   },
   checkboxText: {
     fontSize: 11,
     lineHeight: 16,
-    flexShrink: 1,
-    marginLeft: 4,
     marginTop: 2,
+
+ 
   },
   linkText: {
     color: 'blue',
     textDecorationLine: 'underline',
     fontSize: 11,
+  },
+  error: {
+    color: 'red',
+    fontSize: 12,
+    marginLeft: 25,
+    marginTop: 2,
   },
 });

@@ -14,6 +14,8 @@ const Dob = (props) => {
           style={styles.textinput}
           placeholder={props?.placeholder}
           placeholderTextColor={props?.placeholderTextColor}
+           value={props?.value}   // 🔥 ye line add karo
+  onChangeText={props?.onChangeText}   // 🔥 ye line add karo
         />  
         <MaterialIcons 
           name="calendar-today" 

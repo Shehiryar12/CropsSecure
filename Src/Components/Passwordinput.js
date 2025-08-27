@@ -22,16 +22,18 @@ const PasswordInput = props => {
           placeholder={props?.placeholder}
           placeholderTextColor={props?.placeholderTextColor}
           secureTextEntry={show}
+           value={props?.value}   // 🔥 ye line add karo
+  onChangeText={props?.onChangeText}   // 🔥 ye line add karo
         />
         <TouchableOpacity onPress={() => setShow(!show)}>
           <MaterialIcons
             name={show ? 'visibility-off' : 'visibility'}
             size={20}
-            color="gray"
+            color="#DBD8D8"
           />
         </TouchableOpacity>
       </View>
-    </View>
+    </View>   
   );
 };
 
@@ -58,6 +60,7 @@ const styles = StyleSheet.create({
   },
   textinput: {
     flex: 1,
-    height: 40,
+    fontFamily:Font.medium,
+    fontSize:11,
   },
 });

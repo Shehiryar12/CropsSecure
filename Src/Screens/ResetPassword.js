@@ -2,6 +2,7 @@ import { SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-na
 import React from 'react';
 import Reset from '../Components/Reset';
 import PasswordInput from '../Components/Passwordinput';
+import { Font } from '../Constant/Font';
 
 const ResetPassword = () => {
   return (
@@ -36,8 +37,7 @@ export default ResetPassword;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // paddingHorizontal: 20,
-    // justifyContent: 'center', // Center all content vertically
+   
   },
   confirmButton: {
     backgroundColor: '#009245',
@@ -50,4 +50,5 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     color: 'white',
   },
+  
 });

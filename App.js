@@ -38,12 +38,16 @@ import Welcometwo from './Src/Screens/Welcometwo';
 import Reset from './Src/Components/Reset';
 import ForgotPassword from './Src/Screens/ForgotPassword';
 import ResetPassword from './Src/Screens/ResetPassword';
+import LandData from './Src/Screens/LandData';
+import Account from './Src/Components/Account';
+import AccountScreen from './Src/Screens/AccountScreen';
 
 const App = () => {
 
   return( 
-    // <ResetPassword/>
-
+    
+    // <AccountScreen/>
+    // <AccountScreen/>
     <AppNavigator/>
   )
 
