@@ -13,11 +13,10 @@ import Addland from '../Screens/Addland';
 import LossCompensation from '../Screens/LossCompensation';
 import Assessment from '../Screens/Assessment';
 import Area from '../Screens/Area';
+import ResetPassword from '../Screens/ResetPassword';
 
- const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator();
 const AppNavigator = () => {
- 
-
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Welcome">
@@ -42,7 +41,7 @@ const AppNavigator = () => {
           options={{ headerShown: false }}
         />
 
-          <Stack.Screen
+        <Stack.Screen
           name="LandData"
           component={LandData}
           options={{ headerShown: false }}
@@ -68,8 +67,12 @@ const AppNavigator = () => {
           component={Assessment}
           options={{ headerShown: false }}
         />
-
-        
+         <Stack.Screen
+    name="ResetPassword"
+    component={ResetPassword}
+    options={{ headerShown: false }}
+  />
+     
       </Stack.Navigator>
     </NavigationContainer>
   );

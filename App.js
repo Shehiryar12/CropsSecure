@@ -41,6 +41,8 @@ import ResetPassword from './Src/Screens/ResetPassword';
 import LandData from './Src/Screens/LandData';
 import Account from './Src/Components/Account';
 import AccountScreen from './Src/Screens/AccountScreen';
+import Purchasing from './Src/Screens/Purchasing';
+
 
 const App = () => {
 
@@ -49,6 +51,12 @@ const App = () => {
     // <AccountScreen/>
     // <AccountScreen/>
     <AppNavigator/>
+    // <ForgotPassword/>
+
+    // <ResetPassword/>
+  // <ForgotPassword/>
+  // <Purchasing/>
+ 
   )
 
 }
