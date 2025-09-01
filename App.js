@@ -29,36 +29,10 @@
 // export default App;
 
 import React from 'react';
-import Sheet from './Src/Screens/Sheet';
-import Insurance from './Src/Screens/Insurance';
-import Insurancetwo from './Src/Screens/Insurancetwo';
-import Welcome from './Src/Screens/Welcome';
 import AppNavigator from './Src/navigaton/AppNavigator';
-import Welcometwo from './Src/Screens/Welcometwo';
-import Reset from './Src/Components/Reset';
-import ForgotPassword from './Src/Screens/ForgotPassword';
-import ResetPassword from './Src/Screens/ResetPassword';
-import LandData from './Src/Screens/LandData';
-import Account from './Src/Components/Account';
-import AccountScreen from './Src/Screens/AccountScreen';
-import Purchasing from './Src/Screens/Purchasing';
-
-
 const App = () => {
-
   return( 
-    
-    // <AccountScreen/>
-    // <AccountScreen/>
-    <AppNavigator/>
-    // <ForgotPassword/>
-
-    // <ResetPassword/>
-  // <ForgotPassword/>
-  // <Purchasing/>
- 
+   <AppNavigator/>
   )
-
 }
-
 export default App;

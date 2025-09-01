@@ -8,10 +8,10 @@ const FarmerComponent = props => {
 
   return (
     <View style={styles.rowContainer}>
-      {/* First */}
+  
       <TouchableOpacity style={styles.boxone} onPress={props.Land}>
         <Image
-          source={require('../Assets/Images/imageone.png')}
+          source={require('../Assets/Images/landRecord.png')}
           style={styles.imageone}
         />
         <Text style={styles.textstyle} numberOfLines={2} ellipsizeMode="tail">
@@ -19,50 +19,53 @@ const FarmerComponent = props => {
         </Text>
       </TouchableOpacity>
 
-      {/* Second */}
       <TouchableOpacity style={styles.boxone} onPress={props?.DetailOnPress}>
         <Image
-          source={require('../Assets/Images/imagetwo.png')}
+          source={require('../Assets/Images/landOwner.png')}
           style={styles.imageone}
         />
         <Text style={styles.textstyle}>{props.Details}</Text>
       </TouchableOpacity>
 
-      {/* Third (Navigate to Addland - Crops) */}
       <TouchableOpacity
         style={styles.boxone}
         onPress={() => navigation.navigate('Area')}
       >
         <Image
-          source={require('../Assets/Images/imagethree.jpg')}
+          source={require('../Assets/Images/crops.png')}
           style={styles.imageone}
         />
         <Text style={styles.textstyle}>Crop to Insure</Text>
       </TouchableOpacity>
 
-      
-      <TouchableOpacity style={styles.boxone}  onPress={() => navigation.navigate('LossCompensation')}>
+      <TouchableOpacity
+        style={styles.boxone}
+        onPress={() => navigation.navigate('LossCompensation')}
+      >
         <Image
-          source={require('../Assets/Images/imagefour.png')}
+          source={require('../Assets/Images/lossCompensation.png')}
           style={styles.imageone}
-          
         />
         <Text style={styles.textstyle}>{props.Compensation}</Text>
       </TouchableOpacity>
 
-    
-      <TouchableOpacity style={styles.boxone}   onPress={() => navigation.navigate('Assessment')}>
+      <TouchableOpacity
+        style={styles.boxone}
+        onPress={() => navigation.navigate('Assessment')}
+      >
         <Image
-          source={require('../Assets/Images/imagefive.png')}
+          source={require('../Assets/Images/marketing.png')}
           style={styles.imageone}
         />
         <Text style={styles.textstyle}>{props.Assessment}</Text>
       </TouchableOpacity>
 
-   
-      <TouchableOpacity style={styles.boxone}  onPress={() => navigation.navigate('Ownership')}>
+      <TouchableOpacity
+        style={styles.boxone}
+        onPress={() => navigation.navigate('Ownership')}
+      >
         <Image
-          source={require('../Assets/Images/imageone.png')}
+          source={require('../Assets/Images/broker-dealer-icon.png')}
           style={styles.imageone}
         />
         <Text style={styles.textstyle}>{props?.Registration}</Text>
@@ -82,7 +85,7 @@ const styles = StyleSheet.create({
     marginTop: 25,
   },
   boxone: {
-    width: '45%',
+    width: '47%',
     height: 143,
     backgroundColor: 'white',
     marginBottom: 15,
@@ -96,6 +99,7 @@ const styles = StyleSheet.create({
   imageone: {
     width: 60,
     height: 60,
+    resizeMode: 'contain',
   },
   textstyle: {
     fontSize: 9,

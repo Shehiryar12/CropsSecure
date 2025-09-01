@@ -1,83 +1,37 @@
-import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { NavigationContainer } from '@react-navigation/native';
+
 import Welcome from '../Screens/Welcome';
 import AccountScreen from '../Screens/AccountScreen';
-import { Font } from '../Constant/Font';
 import Authorized from '../Screens/Authorized';
-import { NavigationContainer } from '@react-navigation/native';
 import FarmerRecord from '../Screens/FarmerRecord';
-import Ownership from '../Screens/Ownership';
-import LandData from '../Screens/LandData';
-import Addland from '../Screens/Addland';
-import LossCompensation from '../Screens/LossCompensation';
-import Assessment from '../Screens/Assessment';
-import Area from '../Screens/Area';
 import ResetPassword from '../Screens/ResetPassword';
+import LandData from '../Screens/LandData';
+import LossCompensation from '../Screens/LossCompensation';
+import Ownership from '../Screens/Ownership';
+import Assessment from '../Screens/Assessment';
 
 const Stack = createNativeStackNavigator();
 const AppNavigator = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Welcome">
-        <Stack.Screen
-          name="Welcome"
-          component={Welcome}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="AccountScreen"
-          component={AccountScreen}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="Authorized"
-          component={Authorized}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="FarmerRecord"
-          component={FarmerRecord}
-          options={{ headerShown: false }}
-        />
-
-        <Stack.Screen
-          name="LandData"
-          component={LandData}
-          options={{ headerShown: false }}
-        />
-
-        <Stack.Screen
-          name="Ownership"
-          component={Ownership}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="Area"
-          component={Area}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="LossCompensation"
-          component={LossCompensation}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="Assessment"
-          component={Assessment}
-          options={{ headerShown: false }}
-        />
-         <Stack.Screen
-    name="ResetPassword"
-    component={ResetPassword}
-    options={{ headerShown: false }}
-  />
-     
+      <Stack.Navigator
+        initialRouteName="Welcome"
+        screenOptions={{ headerShown: false }}
+      >
+        <Stack.Screen name="Welcome" component={Welcome} />
+        <Stack.Screen name="AccountScreen" component={AccountScreen} />
+        <Stack.Screen name="Authorized" component={Authorized} />
+        <Stack.Screen name="ResetPassword" component={ResetPassword} />
+        <Stack.Screen name="FarmerRecord" component={FarmerRecord} />
+        <Stack.Screen name="LandData" component={LandData} />
+        <Stack.Screen name="LossCompensation" component={LossCompensation} />
+        <Stack.Screen name="Ownership" component={Ownership} />
+        <Stack.Screen name="Assessment" component={Assessment} />
       </Stack.Navigator>
     </NavigationContainer>
   );
 };
 
 export default AppNavigator;
-
-const styles = StyleSheet.create({});
