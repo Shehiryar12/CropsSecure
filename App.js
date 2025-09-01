@@ -30,9 +30,10 @@
 
 import React from 'react';
 import AppNavigator from './Src/navigaton/AppNavigator';
+import Insurance from './Src/Screens/Insurance';
 const App = () => {
   return( 
-   <AppNavigator/>
+   <Insurance/>
   )
 }
 export default App;

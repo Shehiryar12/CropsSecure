@@ -11,6 +11,7 @@ import LandData from '../Screens/LandData';
 import LossCompensation from '../Screens/LossCompensation';
 import Ownership from '../Screens/Ownership';
 import Assessment from '../Screens/Assessment';
+import Area from '../Screens/Area';
 
 const Stack = createNativeStackNavigator();
 const AppNavigator = () => {
@@ -29,6 +30,7 @@ const AppNavigator = () => {
         <Stack.Screen name="LossCompensation" component={LossCompensation} />
         <Stack.Screen name="Ownership" component={Ownership} />
         <Stack.Screen name="Assessment" component={Assessment} />
+        <Stack.Screen name="Area" component={Area} />
       </Stack.Navigator>
     </NavigationContainer>
   );

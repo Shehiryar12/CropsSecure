@@ -80,8 +80,8 @@ const Insurance = () => {
           <Text style={{ fontFamily: Font.bold, fontSize: 11 }}>Rs.30000</Text>
         </View>
 
-        {/* Pay Button */}
-        <TouchableOpacity
+       
+        <TouchableOpacity                   //ye pay button
           style={styles.buttonstyle}
           onPress={() => setSheetVisible(true)}
         >
@@ -89,17 +89,17 @@ const Insurance = () => {
         </TouchableOpacity>
       </View>
 
-      {/* Bottom Sheet */}
+    
       <Modal
         visible={sheetVisible}
         transparent={true}
         animationType="slide"
         onRequestClose={() => setSheetVisible(false)}
       >
-        {/* Overlay click to close */}
+      
         <TouchableWithoutFeedback onPress={() => setSheetVisible(false)}>
           <View style={styles.sheetOverlay}>
-            {/* Bottom sheet content */}
+          
             <TouchableWithoutFeedback>
               <View style={styles.bottomSheet}>
                 <Text style={styles.sheetTitle}>Choose Payment Option</Text>
@@ -139,13 +139,14 @@ const Insurance = () => {
 export default Insurance;
 
 const styles = StyleSheet.create({
-  container: { flex: 1 },
+  container: { flex: 1,backgroundColor:"white" },
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     marginTop: 14,
     marginLeft: 12,
+    
   },
   heading: { fontFamily: Font.bold, fontSize: 15 },
   label: { fontFamily: Font.bold, color: 'black', marginTop: 12, fontSize: 11 },
@@ -195,14 +196,16 @@ const styles = StyleSheet.create({
   buttontext: { color: '#fff', textAlign: 'center', fontFamily: Font.medium },
   sheetOverlay: {
     flex: 1,
-    // backgroundColor: '',
+   backgroundColor: 'rgba(0,0,0,0.5)',
     justifyContent: 'flex-end',
+    
   },
   bottomSheet: {
     backgroundColor: 'white',
     padding: 20,
-    borderTopLeftRadius: 20,
-    borderTopRightRadius: 20,
+    borderTopLeftRadius: 30,
+    borderTopRightRadius: 30,
+    // border:10,
   },
   sheetTitle: {
     fontFamily: Font.bold,
