@@ -9,11 +9,11 @@ import { useNavigation } from '@react-navigation/native';
 const FarmerRecord = () => {
   const navigation = useNavigation();
   return (
-
-    <View style={styles.container}>
+  <View style={styles.container}> 
+    <View style={styles.innercontainer}>
       <View style={styles.upperportion}>
         <View style={styles.header}>
-          <Icon name="menu" size={24} color="green" marginLeft={8} />
+          <Icon name="menu" size={24} color="green" style={styles.menuIcon} />
 
           <View style={styles.dateContainer}>
             <Text style={styles.dateText}>04 APR 24</Text>
@@ -29,13 +29,10 @@ const FarmerRecord = () => {
           <Text style={styles.boxText}>26 km/h</Text>
         </View>
 
-        {/* Bottom Row */}
         <View style={styles.boxRow}>
-          {/* Name */}
           <Text style={styles.boxTextLarge}>ARSHAD ALI</Text>
 
-         
-          <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+          <View style={styles.tempContainer}>
             <Text style={styles.boxTextLarge}>24°</Text>
             <Image
               source={require('../Assets/Images/Clouds.png')}
@@ -45,31 +42,27 @@ const FarmerRecord = () => {
         </View>
       </View>
 
-     
       <FarmerComponent
-       Land={() => navigation.navigate('LandData')}
+        Land={() => navigation.navigate('LandData')}
         LandTitle="LAND RECORD"
         Details="LAND OWNERSHIP DETAILS"
         DetailOnPress={() => navigation.navigate('Ownership')}
-
         Insure="CROP TO INSURE"
         Compensation="LOSS COMPENSATION"
         Assessment="LOSS ASSESSMENT"
         Registration="AUTHORIZED DEALERSHIP REGISTRATION"
       />
     </View>
-   
+    </View> 
   );
 };
 
 export default FarmerRecord;
 
 const styles = StyleSheet.create({
-  upperportion: {},
-  container: {
+  innercontainer: {
     backgroundColor: '#F0F7F8',
     flex: 1,
-    // paddingHorizontal: 22,
     paddingTop: 30,
     paddingHorizontal: 10,
   },
@@ -78,8 +71,10 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     marginBottom: 15,
-    // backgroundColor:"red",
     paddingHorizontal: 0,
+  },
+  menuIcon: {
+    marginLeft: 8,
   },
   dateContainer: {
     flexDirection: 'row',
@@ -96,7 +91,6 @@ const styles = StyleSheet.create({
     fontSize: 10,
     marginRight: 6,
     fontFamily: Font.bold,
-    // marginTop:5,
   },
   dayText: {
     fontSize: 7,
@@ -126,6 +120,10 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 18,
     marginRight: 4,
+  },
+  tempContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
   },
   cloudImage: {
     width: 28,

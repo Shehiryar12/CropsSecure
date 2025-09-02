@@ -1,18 +1,19 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React, { useState } from 'react';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import { Font } from '../Constant/Font';
+import { Font, fontSize } from '../Constant/Font';
 import PhoneCnicEmailInput from '../Components/PhoneCnicEmailInput';
 import PasswordContainer from '../Components/PasswordContainer';
 import { useNavigation } from '@react-navigation/native';
+import { wp, hp } from '../Constant/Responsive';
 
 const Welcome = () => {
+  const navigation = useNavigation();
+
   const [yes, setYes] = useState(false);
   const [emailOrPhone, setemailOrPhone] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState({ email: '', password: '' });
-
-  const navigation = useNavigation();
 
   const handleRegister = () => {
     navigation.navigate('AccountScreen');
@@ -41,12 +42,12 @@ const Welcome = () => {
       <View style={styles.header}>
         <MaterialIcons
           name="keyboard-arrow-left"
-          size={24}
+          size={wp(6)}
           color="#000000"
           style={styles.icon}
         />
         <Text style={styles.heading}>Welcome Back!</Text>
-        <View style={{ width: 39 }} />
+        <View style={{ width: wp(10) }} />
       </View>
 
       <Text style={styles.signintext}>Sign In</Text>
@@ -77,7 +78,7 @@ const Welcome = () => {
           <TouchableOpacity onPress={() => setYes(!yes)}>
             <MaterialIcons
               name={yes ? 'check-box' : 'check-box-outline-blank'}
-              size={18}
+              size={wp(4.5)}
               color="green"
               borderColor="lightgrey"
             />
@@ -106,66 +107,68 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    paddingHorizontal: 11,
-    marginTop: 20,
+    paddingHorizontal: wp(3),
+    marginTop: hp(2.5),
   },
   heading: {
     fontFamily: Font.bold,
-    fontSize: 18,
+    fontSize: wp(4.5),
     color: '#000',
-    marginTop: 35,
+    marginTop: hp(4.5),
   },
   signin: {
     backgroundColor: '#009245',
-    marginTop: 65,
-    marginHorizontal: 20,
-    paddingVertical: 13,
-    borderRadius: 8,
+    marginTop: hp(8),
+    marginHorizontal: wp(5),
+    paddingVertical: hp(2),
+    borderRadius: wp(2),
   },
   buttontext: {
     textAlign: 'center',
     color: '#FFFFFF',
+    fontSize: wp(3.5),
+    fontFamily:Font.medium
   },
   signintext: {
     color: '#009245',
-    paddingHorizontal: 15,
-    marginTop: 14,
-    fontSize: 16,
+    paddingHorizontal: wp(4),
+    marginTop: hp(1.8),
+    fontSize: wp(4),
+    fontFamily:Font.bold,
   },
   rememberContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginTop: 28,
-    marginLeft: 20,
+    marginTop: hp(3.5),
+    marginLeft: wp(5),
   },
   remember: {
     fontFamily: Font.medium,
-    fontSize: 10,
-    marginLeft: 5,
+    fontSize: wp(2.5),
+    marginLeft: wp(1.2),
   },
   accountstyle: {
     flexDirection: 'row',
     justifyContent: 'center',
-    marginTop: 10,
-    fontSize: 10,
+    marginTop: hp(1.3),
   },
   account: {
-    fontSize: 8,
+    fontSize: wp(2.2),
     fontFamily: Font.medium,
     color: '#727171',
   },
   register: {
     color: '#009245',
     fontFamily: Font.bold,
-    fontSize: 8,
-    marginLeft: 4,
-    marginTop: -1,
+    fontSize: wp(2.2),
+    marginLeft: wp(1),
+    marginTop: hp(-0.2),
   },
   errorText: {
     color: 'red',
-    fontSize: 12,
-    marginLeft: 20,
-    marginTop: 5,
+    fontSize: wp(3),
+    marginLeft: wp(5),
+    marginTop: hp(0.6),
     fontFamily: Font.medium,
   },
 });

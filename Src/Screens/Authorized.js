@@ -13,6 +13,7 @@ import PasswordInput from '../Components/Passwordinput';
 import Dob from '../Components/Dob';
 import Endtext from '../Components/Endtext';
 import AuthorizedAccount from '../Components/AuthorizedAccount';
+import { wp, hp } from '../Constant/Responsive';
 
 const Authorized = () => {
   const [isChecked, setIsChecked] = useState(false);
@@ -35,7 +36,7 @@ const Authorized = () => {
         <View style={styles.header}>
           <MaterialIcons name="keyboard-arrow-left" size={24} color="#000000" />
           <Text style={styles.heading}>Create Account</Text>
-          <View style={{ width: 25 }} />
+          <View style={styles.space}></View>
         </View>
 
         <Text style={styles.Authorizedtext}>Register as Authorized Dealer</Text>
@@ -63,7 +64,6 @@ const Authorized = () => {
           <Text style={styles.error}>Father’s Name is required</Text>
         ) : null}
 
-        {/* CNIC */}
         <AuthorizedAccount
           title="CNIC"
           placeholder="Enter your CNIC"
@@ -77,7 +77,6 @@ const Authorized = () => {
           <Text style={styles.error}>CNIC is required</Text>
         ) : null}
 
-        {/* Email */}
         <AuthorizedAccount
           title="Email"
           placeholder="Enter your email"
@@ -90,7 +89,6 @@ const Authorized = () => {
           <Text style={styles.error}>Email is required</Text>
         ) : null}
 
-        {/* Phone */}
         <AuthorizedAccount
           title="Phone Number"
           placeholder="Enter your phone number"
@@ -104,7 +102,6 @@ const Authorized = () => {
           <Text style={styles.error}>Phone Number is required</Text>
         ) : null}
 
-        {/* DOB */}
         <Dob
           title="DOB"
           placeholder="Your DOB"
@@ -114,7 +111,6 @@ const Authorized = () => {
           onChangeText={setDob}
         />
 
-        {/* Password */}
         <PasswordInput
           title="Password"
           placeholder="Enter your password"
@@ -146,9 +142,9 @@ const Authorized = () => {
                   size={16}
                   color="black"
                   marginTop={3}
-                  marginLeft={8}
                   borderColor="#727171"
                   backgroundColor="white"
+                  marginLeft={-10}
                 />
               </TouchableOpacity>
               <Text style={styles.checkboxText}>
@@ -170,43 +166,45 @@ const Authorized = () => {
 export default Authorized;
 
 const styles = StyleSheet.create({
+  space: {
+    width: wp(10),
+  },
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    paddingHorizontal: 11,
-    marginTop: 12,
+    paddingHorizontal: wp('3%'),
+    marginTop: hp('1.5%'),
   },
   heading: {
     fontFamily: Font.bold,
     color: '#000',
-    marginTop: 45,
+    marginTop: hp('5%'),
+    fontSize: wp('4.5%'),
   },
   Authorizedtext: {
-    paddingHorizontal: 18,
+    paddingHorizontal: wp('4%'),
     color: '#009245',
-    marginTop: 14,
-    fontSize: 15,
+    marginTop: hp('1.8%'),
+    fontSize: wp('4%'),
   },
   checkboxContainer: {
     flexDirection: 'row',
-    
   },
   checkboxText: {
-    fontSize: 11,
-    lineHeight: 16,
-    marginTop: 2,
-
- 
+    fontSize: wp('3%'),
+    lineHeight: hp('2.2%'),
+    marginTop: hp('0.3%'),
+    width: wp(80),
   },
   linkText: {
     color: 'blue',
     textDecorationLine: 'underline',
-    fontSize: 11,
+    fontSize: wp('3%'),
   },
   error: {
     color: 'red',
-    fontSize: 12,
-    marginLeft: 25,
-    marginTop: 2,
+    fontSize: wp('3%'),
+    marginLeft: wp('6%'),
+    marginTop: hp('0.5%'),
   },
 });

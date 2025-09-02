@@ -32,6 +32,7 @@ const styles = StyleSheet.create({
     // alignItems: 'center',
     marginTop: 14,
     marginLeft: 12,
+    flex:1,
   },
   heading: {
     fontFamily: Font.bold,

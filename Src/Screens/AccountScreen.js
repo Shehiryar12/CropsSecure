@@ -7,11 +7,11 @@ import PasswordInput from '../Components/Passwordinput';
 import Dob from '../Components/Dob';
 import Endtext from '../Components/Endtext';
 import { useNavigation } from '@react-navigation/native';
+import { wp, hp } from '../Constant/Responsive';
 
 const AccountScreen = () => {
   const navigation = useNavigation();
 
-  // states
   const [name, setName] = useState('');
   const [fatherName, setFatherName] = useState('');
   const [cnic, setCnic] = useState('');
@@ -55,9 +55,9 @@ const AccountScreen = () => {
 
           <Text style={styles.heading}>Create Account</Text>
 
-          <View style={{ width: 25 }}></View>
+          <View style={styles.space}></View>
         </View>
-        <Text style={styles.signintext}> Sign In</Text>
+        <Text style={styles.signintext}> Sign up</Text>
 
         <Account
           title="Name"
@@ -65,12 +65,14 @@ const AccountScreen = () => {
           placeholderTextColor="#DBD8D8"
           borderColor="green"
           value={name}
-          onChangeText={(text) => {
+          onChangeText={text => {
             setName(text);
             setErrors({ ...errors, name: '' });
           }}
         />
-        {errors.name ? <Text style={{ color: 'red', marginLeft: 22 }}>{errors.name}</Text> : null}
+        {errors.name ? (
+          <Text style={styles.errorText}>{errors.name}</Text>
+        ) : null}
 
         <Account
           title="Father’s Name"
@@ -78,12 +80,14 @@ const AccountScreen = () => {
           placeholderTextColor="#DBD8D8"
           borderColor="#DBD8D8"
           value={fatherName}
-          onChangeText={(text) => {
+          onChangeText={text => {
             setFatherName(text);
             setErrors({ ...errors, fatherName: '' });
           }}
         />
-        {errors.fatherName ? <Text style={{ color: 'red', marginLeft: 22 }}>{errors.fatherName}</Text> : null}
+        {errors.fatherName ? (
+          <Text style={styles.errorText}>{errors.fatherName}</Text>
+        ) : null}
 
         <Account
           title="CNIC"
@@ -92,12 +96,14 @@ const AccountScreen = () => {
           borderColor="#DBD8D8"
           maxLength={11}
           value={cnic}
-          onChangeText={(text) => {
+          onChangeText={text => {
             setCnic(text);
             setErrors({ ...errors, cnic: '' });
           }}
         />
-        {errors.cnic ? <Text style={{ color: 'red', marginLeft: 22 }}>{errors.cnic}</Text> : null}
+        {errors.cnic ? (
+          <Text style={styles.errorText}>{errors.cnic}</Text>
+        ) : null}
 
         <Account
           title="Email"
@@ -105,12 +111,14 @@ const AccountScreen = () => {
           placeholderTextColor="#DBD8D8"
           borderColor="#DBD8D8"
           value={email}
-          onChangeText={(text) => {
+          onChangeText={text => {
             setEmail(text);
             setErrors({ ...errors, email: '' });
           }}
         />
-        {errors.email ? <Text style={{ color: 'red', marginLeft: 22 }}>{errors.email}</Text> : null}
+        {errors.email ? (
+          <Text style={styles.errorText}>{errors.email}</Text>
+        ) : null}
 
         <Account
           title="Phone Number"
@@ -119,12 +127,14 @@ const AccountScreen = () => {
           borderColor="#DBD8D8"
           maxLength={11}
           value={phone}
-          onChangeText={(text) => {
+          onChangeText={text => {
             setPhone(text);
             setErrors({ ...errors, phone: '' });
           }}
         />
-        {errors.phone ? <Text style={{ color: 'red', marginLeft: 22 }}>{errors.phone}</Text> : null}
+        {errors.phone ? (
+          <Text style={styles.errorText}>{errors.phone}</Text>
+        ) : null}
 
         <Dob
           title="DOB "
@@ -132,36 +142,40 @@ const AccountScreen = () => {
           placeholderTextColor="#DBD8D8"
           borderColor="#DBD8D8"
           value={dob}
-          onChangeText={(text) => {
+          onChangeText={text => {
             setDob(text);
             setErrors({ ...errors, dob: '' });
           }}
         />
-        {errors.dob ? <Text style={{ color: 'red', marginLeft: 22 }}>{errors.dob}</Text> : null}
+        {errors.dob ? <Text style={styles.errorText}>{errors.dob}</Text> : null}
 
         <PasswordInput
           title="Password"
           placeholder="Enter your password"
           placeholderTextColor="#DBD8D8"
           value={password}
-          onChangeText={(text) => {
+          onChangeText={text => {
             setPassword(text);
             setErrors({ ...errors, password: '' });
           }}
         />
-        {errors.password ? <Text style={{ color: 'red', marginLeft: 22 }}>{errors.password}</Text> : null}
+        {errors.password ? (
+          <Text style={styles.errorText}>{errors.password}</Text>
+        ) : null}
 
         <PasswordInput
           title="Confirm Password"
           placeholder="Confirm your password"
           placeholderTextColor="#DBD8D8"
           value={cpassword}
-          onChangeText={(text) => {
+          onChangeText={text => {
             setCpassword(text);
             setErrors({ ...errors, cpassword: '' });
           }}
         />
-        {errors.cpassword ? <Text style={{ color: 'red', marginLeft: 22 }}>{errors.cpassword}</Text> : null}
+        {errors.cpassword ? (
+          <Text style={styles.errorText}>{errors.cpassword}</Text>
+        ) : null}
 
         <Endtext
           title="By selecting checkbox l agree to Crop Secure's Terms of Service, and Privacy Policy."
@@ -177,32 +191,39 @@ const AccountScreen = () => {
 export default AccountScreen;
 
 const styles = StyleSheet.create({
+  space: {
+    width: wp(8),
+  },
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    paddingHorizontal: 11,
-    marginTop: 12,
+    paddingHorizontal: wp(3),
+    marginTop: hp(1),
   },
   heading: {
     fontFamily: Font.bold,
     color: '#000',
-    marginTop: 45,
+    marginTop: hp(7),
   },
   signintext: {
-    paddingHorizontal: 18,
+    paddingHorizontal: wp(5),
     color: '#009245',
-    marginTop: 14,
-    fontSize: 15,
+    marginTop: hp(2),
+    fontSize: wp(4),
   },
   NameContainer: {
-    paddingHorizontal: 22,
-    marginTop: 18,
+    paddingHorizontal: wp(10),
+    marginTop: hp(2.3),
   },
   namestyle: {
     fontFamily: Font.medium,
   },
   textinput: {
     borderWidth: 1,
-    borderRadius: 8,
+    borderRadius: wp(2),
+  },
+  errorText: {
+    color: 'red',
+    marginLeft: wp(5.8),
   },
 });

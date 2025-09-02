@@ -3,10 +3,11 @@ import React, { useState } from 'react';
 import Reset from '../Components/Reset';
 import PasswordInput from '../Components/Passwordinput';
 import { Font } from '../Constant/Font';
-import { useNavigation } from '@react-navigation/native';  // 👈 import
+import { useNavigation } from '@react-navigation/native';
+import { wp, hp } from '../Constant/Responsive';
 
 const ResetPassword = () => {
-  const navigation = useNavigation(); // 👈 navigation hook
+  const navigation = useNavigation();
 
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -27,10 +28,9 @@ const ResetPassword = () => {
       valid = false;
     }
 
-    // ✅ Agar dono valid hain to navigate
     if (valid) {
       console.log('Password reset successful!');
-     navigation.navigate('Welcome')
+      navigation.navigate('Welcome');
     }
   };
 
@@ -41,7 +41,6 @@ const ResetPassword = () => {
         define="Enter your new password below to reset your account"
       />
 
-      {/* Password Field */}
       <PasswordInput
         title="Password"
         placeholder="Enter your password"
@@ -54,7 +53,6 @@ const ResetPassword = () => {
       />
       {passwordError ? <Text style={styles.error}>{passwordError}</Text> : null}
 
-      {/* Confirm Password Field */}
       <PasswordInput
         title="Confirm Password"
         placeholder="Confirm your password"
@@ -69,7 +67,6 @@ const ResetPassword = () => {
         <Text style={styles.error}>{confirmPasswordError}</Text>
       ) : null}
 
-      {/* Confirm Button */}
       <TouchableOpacity style={styles.confirmButton} onPress={handleConfirm}>
         <Text style={styles.confirm}>Confirm</Text>
       </TouchableOpacity>
@@ -85,21 +82,22 @@ const styles = StyleSheet.create({
   },
   confirmButton: {
     backgroundColor: '#009245',
-    marginHorizontal: 25,
-    marginTop: 30,
-    borderRadius: 8,
+    marginHorizontal: wp('6%'),   
+    marginTop: hp('3%'),         
+    borderRadius: wp('2%'),      
   },
   confirm: {
     textAlign: 'center',
-    marginVertical: 10,
+    marginVertical: hp('1.5%'),   
     color: 'white',
     fontFamily: Font.medium,
+    fontSize: wp('4%'),         
   },
   error: {
-    marginLeft: 25,
-    marginTop: 5,
+    marginLeft: wp('6%'),
+    marginTop: hp('0.7%'),
     fontFamily: Font.medium,
     color: 'red',
-    fontSize: 12,
+    fontSize: wp('3%'),
   },
 });

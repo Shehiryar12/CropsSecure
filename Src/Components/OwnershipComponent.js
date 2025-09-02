@@ -10,7 +10,7 @@ const OwnershipComponent = (props) => {
         <View style={styles.box}>
           <View style={{ flexDirection: 'row', alignItems: 'center' }}>
             <Image
-              source={require('../Assets/Images/imagefive.png')}
+              source={require('../Assets/Images/cropImg4.png')}
               style={styles.landimage}
             />
             <View style={{ flexDirection: 'column', flex: 1 }}>
@@ -64,6 +64,7 @@ const styles = StyleSheet.create({
   landtexttwo: {
     fontSize: wp(2.6),
     color: '#646464',
+    width:160,
   },
   dotline: {
     borderBottomWidth: 1,

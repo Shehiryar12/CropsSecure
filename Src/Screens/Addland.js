@@ -1,38 +1,38 @@
-import { Image, SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import {
+  Image,
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+} from 'react-native';
 import React from 'react';
 import { Font } from '../Constant/Font';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import AddlandComponent from '../Components/AddlandComponent';
-import AreaComponent from '../Components/AreaComponent';
-import AreaInput from '../Components/AreaInput';
 import Acre from '../Components/Acre';
-import AccountScreen from './AccountScreen';
 import AreaUnit from '../Components/AreaUnit';
 import Select from '../Components/Select';
-import { TouchableOpacity } from 'react-native';
-import { wp } from '../Constant/Responsive';
+import { wp, hp } from '../Constant/Responsive';
 import Header from '../Components/Header';
 
 const Addland = () => {
   return (
     <SafeAreaView style={styles.container}>
-      {/* <View style={styles.header}>
-        <MaterialIcons name="keyboard-arrow-left" size={23} color="black" />
-        <Text style={styles.heading}>Add Land</Text>
-        <View style={{ width: wp('10%') }}></View>
-      </View> */}
-
+      {/* Header */}
       <Header />
 
+      {/* Upload Box */}
       <View style={styles.box}>
         <Image
           source={require('../Assets/Images/upload-file-icon.png')}
-          style={{ width: 60, height: 60 }}
+          style={styles.uploadIcon}
+          resizeMode="contain"
         />
         <Text style={styles.textstyle}>
           Upload Land Ownership Certification
         </Text>
       </View>
+
       <View>
         <AddlandComponent
           label="Location"
@@ -40,20 +40,13 @@ const Addland = () => {
         />
       </View>
 
-      <View style={{ flexDirection: 'row' }}>
+      <View style={styles.areaRow}>
         <Acre label="Area" placeholder="Enter your land area" />
         <AreaUnit label="Area Unit" placeholder="Acre" keyboardType="numeric" />
       </View>
 
       <View style={styles.status}>
-        <Text
-          style={{
-            fontFamily: Font.medium,
-            fontSize: 14,
-            color: '#646464',
-            marginTop: 10,
-          }}
-        >
+        <Text style={styles.statusText}>
           Upload Land Ownership Certification
         </Text>
       </View>
@@ -66,51 +59,61 @@ const Addland = () => {
     </SafeAreaView>
   );
 };
+
 export default Addland;
 
 const styles = StyleSheet.create({
-  header: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-
-    marginTop: 14,
-    marginLeft: 11,
-  },
-  heading: {
-    fontFamily: Font.bold,
-    fontSize: 15,
+  container: {
+    flex: 1,
+    backgroundColor: 'white',
   },
   box: {
-    width: '90%',
+    width: wp(90),
     backgroundColor: '#DBD8D8',
-    // marginHorizontal: 10,
-    marginLeft:20,
-    marginTop: 24,
+    marginLeft: wp(5),
+    marginTop: hp(3),
     alignItems: 'center',
     justifyContent: 'center',
-    height:'25%',
-    borderRadius: 8,
+    height: hp(25),
+    borderRadius: wp(2),
+  },
+  uploadIcon: {
+    width: wp(15),
+    height: hp(7),
   },
   textstyle: {
     fontFamily: Font.medium,
     color: '#464444',
-    marginTop: 22,
-    fontSize: 12,
+    marginTop: hp(2.5),
+    fontSize: wp(3),
+    textAlign: 'center',
   },
+
+  areaRow: {
+    flexDirection: 'row',
+  },
+
   status: {
-    marginLeft: 21,
+    marginLeft: wp(5),
+    marginTop: hp(1.5),
   },
+  statusText: {
+    fontFamily: Font.medium,
+    fontSize: wp(3.5),
+    color: '#646464',
+  },
+
   buttoncontainer: {
     backgroundColor: '#009245',
-    marginHorizontal: 19,
-    borderRadius: 8,
-    marginTop: 120,
-    paddingVertical: 10,
+    marginHorizontal: wp(5),
+    borderRadius: wp(2),
+    marginTop: hp(15),
+    paddingVertical: hp(1.5),
   },
   btntext: {
     color: 'white',
     textAlign: 'center',
     fontFamily: Font.medium,
+    fontSize: wp(3.2),
   },
 });
