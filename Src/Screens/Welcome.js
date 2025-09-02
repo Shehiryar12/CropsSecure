@@ -47,7 +47,7 @@ const Welcome = () => {
           style={styles.icon}
         />
         <Text style={styles.heading}>Welcome Back!</Text>
-        <View style={{ width: wp(10) }} />
+        <View style={{ width: wp(10) }} ></View>
       </View>
 
       <Text style={styles.signintext}>Sign In</Text>

@@ -1,7 +1,7 @@
 import { StyleSheet, Text, TextInput, View } from 'react-native';
 import React from 'react';
 import { Font } from '../Constant/Font';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 
 const PhoneCnicEmailInput = props => {
   return (
@@ -10,13 +10,12 @@ const PhoneCnicEmailInput = props => {
       <TextInput
         style={styles.input}
         placeholder={props?.placeholder}
-        // placeholderTextColor={props?.placeholder}
         maxLength={props?.maxLength}
-        fontSize={11}
+        fontSize={wp('3%')}
         keyboardType="numeric"
         placeholderTextColor={'#DBD8D8'}
-          value={props?.value}               // ✅ controlled input
-        onChangeText={props?.onChangeText} // ✅ updates state
+        value={props?.value}
+        onChangeText={props?.onChangeText}
       />
     </View>
   );
@@ -26,20 +25,20 @@ export default PhoneCnicEmailInput;
 
 const styles = StyleSheet.create({
   label: {
-    paddingHorizontal: 19,
-    marginTop: 22,
+    paddingHorizontal: wp('5%'), 
+    marginTop: hp('2.5%'),
     fontFamily: Font.medium,
-    fontSize: 13,
+    fontSize: wp('3.5%'), 
     color: '#646464',
   },
   input: {
-    height: 48,
-    marginHorizontal: 19,
+    height: hp('6%'),
+    marginHorizontal: wp('5%'), 
     borderWidth: 1,
     borderBottomWidth: 1,
     borderBottomColor: '#D9D9D9',
     fontFamily: Font.medium,
-    borderRadius: 8,
-    paddingHorizontal: 7,
+    borderRadius: wp('2%'), 
+    paddingHorizontal: wp('2%'), 
   },
 });

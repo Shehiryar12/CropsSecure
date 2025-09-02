@@ -8,6 +8,8 @@ import {
 import React, { useState } from 'react';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { Font } from '../Constant/Font';
+import { wp, hp } from '../Constant/Responsive';
+
 const PasswordContainer = props => {
   const [pass, setPass] = useState(true);
 
@@ -17,18 +19,17 @@ const PasswordContainer = props => {
       <View style={styles.passwordContainer}>
         <TextInput
           style={styles.password}
-          placeholder= {props?.placeholder}
-        //   placeholderTextColor={props?.placeholder}
+          placeholder={props?.placeholder}
           secureTextEntry={pass}
           placeholderTextColor={"#DBD8D8"}
-           value={props?.value}               // ✅ controlled input
-        onChangeText={props?.onChangeText} // ✅ updates state
+          value={props?.value}
+          onChangeText={props?.onChangeText}
         />
         <TouchableOpacity onPress={() => setPass(!pass)}>
           <MaterialIcons
             name={pass ? 'visibility' : 'visibility-off'}
             style={styles.passwordicon}
-            size={20}
+            size={wp('5%')}
           />
         </TouchableOpacity>
       </View>
@@ -42,27 +43,27 @@ const styles = StyleSheet.create({
   passwordContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginHorizontal: 19,
+    marginHorizontal: wp('5%'), 
     borderBottomColor: '#D9D9D9',
-    height: 48,
+    height: hp('6%'),          
     borderWidth: 1,
-    borderRadius: 8,
+    borderRadius: wp('2%'),    
     borderColor: '#D9D9D9',
-    paddingHorizontal: 5,
+    paddingHorizontal: wp('1.5%'), 
   },
   password: {
     flex: 1,
     fontFamily: Font.medium,
-    fontSize: 11,
+    fontSize: wp('3%'),          
   },
   passwordicon: {
     color: '#B4B4B4',
   },
   titletext: {
-    paddingHorizontal: 19,
-    marginTop: 22,
+    paddingHorizontal: wp('5%'),
+    marginTop: hp('2.5%'),      
     fontFamily: Font.medium,
-    fontSize: 13,
+    fontSize: wp('3.5%'),     
     color: '#646464',
   },
 });

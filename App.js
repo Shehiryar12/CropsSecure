@@ -36,9 +36,9 @@ import InsuranceClaim from './Src/Screens/InsuranceClaim';
 
 const App = () => {
   return( 
-  // <AppNavigator/>
+  <AppNavigator/>
   // <Addland/>
-  <InsuranceClaim/>
+  // <InsuranceClaim/>
   
   )
 }

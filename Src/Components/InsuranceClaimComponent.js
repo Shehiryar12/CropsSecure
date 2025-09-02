@@ -59,25 +59,25 @@ const styles = StyleSheet.create({
   },
   picbox: {
     backgroundColor: 'white',
-    width: wp('83%'),
+    width: wp('86%'),
     height: hp('24.5%'),
     borderRadius: wp('2%'),
     marginTop: hp('1.2%'),
     borderColor: '#DBD8D8',
     borderWidth: 1,
     flexDirection: 'row',
-    marginLeft: wp('3%'),
+    marginLeft: wp('1.5%'),
     flexWrap: 'wrap',
   },
   imagestyle: {
-    width: wp('25%'),
+    width: wp('26%'),
     height: hp('11%'),
     borderRadius: wp('2%'),
-    marginHorizontal: wp('1%'),
+    marginHorizontal: wp('1.2%'),
     marginTop: hp('0.7%'),
   },
   box: {
-    width: wp('25%'),
+    width: wp('26%'),
     height: hp('11%'),
     marginTop: hp('0.7%'),
     borderWidth: 1,
@@ -85,6 +85,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderColor: '#DBD8D8',
-    marginLeft:wp(0.5)
+    marginLeft:wp(0.7)
   },
 });
