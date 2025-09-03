@@ -2,13 +2,13 @@ import { StyleSheet, Text, View, Image, TextInput } from 'react-native';
 import React from 'react';
 import { Font } from '../Constant/Font';
 import { wp, hp } from '../Constant/Responsive';
+import EmailComponent from './EmailComponent';
+import SignHeaderComponent from './SignHeaderComponent';
 
 const PhoneComponent = props => {
   return (
     <View style={{ flex: 1 }}>
-      <View style={styles.signupcontainer}>
-        <Text style={styles.label}>{props?.label}</Text>
-      </View>
+      <SignHeaderComponent />
 
       <View style={styles.innerContainer}>
         <Text style={styles.setheading}>{props?.setAccount}</Text>
@@ -19,17 +19,15 @@ const PhoneComponent = props => {
           style={styles.firstphonestyle}
         />
 
-        <View style={styles.inputContainer}>
-          <Image
-            source={require('../Assets/Images/Vector.png')}
-            style={styles.vectorstyle}
-          />
-          <TextInput
-            placeholder={props?.placeholder}
-            placeholderTextColor={props?.placeholderTextColor}
-            style={styles.placeholderstyle}
-          />
-        </View>
+        <EmailComponent
+          placeholder="Name"
+          icon={require('../Assets/Images/person.png')}
+        />
+
+        <EmailComponent
+          placeholder="Email"
+          icon={require('../Assets/Images/Vector.png')}
+        />
       </View>
     </View>
   );
@@ -83,17 +81,22 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     borderWidth: 1,
-    borderColor: '#ccc',
-    borderRadius: wp(1),
+    borderColor: '#CBCBCB',
+    borderRadius: wp(1.8),
     marginHorizontal: wp(5.7),
   },
   vectorstyle: {
     marginLeft: wp(2.4),
+    width: wp(3.8),
+    height: hp(4.9),
+    resizeMode: 'contain',
+    alignSelf: 'flex-start',
   },
   placeholderstyle: {
     fontFamily: Font.medium,
-    fontSize:12,
-    marginTop:hp(0.3),
-    color:'black'
+    fontSize: wp(3.6),
+    color: 'black',
+    flex: 1,
+    marginLeft: wp(0.8),
   },
 });
