@@ -31,14 +31,15 @@
 import React from 'react';
 import AppNavigator from './Src/navigaton/AppNavigator';
 import Addland from './Src/Screens/Addland';
-import Insurance from './Src/Screens/Insurance';
-import InsuranceClaim from './Src/Screens/InsuranceClaim';
+import Phone from './Src/Screens/Phone';
+
 
 const App = () => {
   return( 
-  <AppNavigator/>
+  // <AppNavigator/>
   // <Addland/>
   // <InsuranceClaim/>
+  <Phone/>
   
   )
 }

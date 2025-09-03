@@ -1,7 +1,7 @@
 import { Image, SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 import Icon from 'react-native-vector-icons/Feather';
-import IconEntypo from 'react-native-vector-icons/Entypo';
+import Entypo from 'react-native-vector-icons/Entypo'; // Fixed import name
 import FarmerComponent from '../Components/FarmerComponent';
 import { Font } from '../Constant/Font';
 import { useNavigation } from '@react-navigation/native';
@@ -18,7 +18,7 @@ const FarmerRecord = () => {
           <View style={styles.dateContainer}>
             <Text style={styles.dateText}>04 APR 24</Text>
             <Text style={styles.dayText}>MONDAY</Text>
-            <IconEntypo name="calendar" color="black" size={16} />
+            <Entypo name="calendar" color="black" size={16} /> 
           </View>
         </View>
       </View>
@@ -60,6 +60,9 @@ const FarmerRecord = () => {
 export default FarmerRecord;
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
   innercontainer: {
     backgroundColor: '#F0F7F8',
     flex: 1,

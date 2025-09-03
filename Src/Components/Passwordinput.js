@@ -49,8 +49,8 @@ const styles = StyleSheet.create({
     marginBottom: hp('0.7%'),
     fontFamily: Font.medium,
     color: '#646464',
-    marginLeft: wp('5%'),
-    fontSize: wp('3.5%'),
+    marginLeft: wp('6.3%'),
+    fontSize: wp('3.7%'),
   },
   Box: {
     flexDirection: 'row',
@@ -58,13 +58,13 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: wp('2%'),
     borderColor: '#DBD8D8',
-    paddingHorizontal: wp('2%'),
-    marginHorizontal: wp('5%'),
+    paddingHorizontal: wp('1.5%'),
+    marginHorizontal: wp('6%'),
   },
   textinput: {
     flex: 1,
     fontFamily: Font.medium,
-    fontSize: wp('3%'),
-    paddingVertical: hp('1%'),
+    fontSize: wp('3.5%'),
+    paddingVertical: hp('1.4%'),
   },
 });

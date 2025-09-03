@@ -1,44 +1,39 @@
-import { StyleSheet, Text, TextInput, View } from 'react-native'
-import React from 'react'
-import { Font } from '../Constant/Font'
-import { useNavigation } from '@react-navigation/native';
+import { StyleSheet, Text, TextInput, View } from 'react-native';
+import React from 'react';
+import { Font } from '../Constant/Font';
+import { wp, hp } from '../Constant/Responsive';
 
 const AuthorizedAccount = props => {
-
-    // const navigation = useNavigation();  
   return (
-      <View style={styles.NameContainer}>
-          <Text style={styles.namestyle}>{props?.title}</Text>
-          <TextInput
-            style={styles.textinput}
-            placeholder={props?.placeholder}
-            placeholderTextColor={props?.placeholderTextColor}
-            borderColor={props?.borderColor}
-            maxLength={props?.maxLength}
-             value={props?.value}
+    <View style={styles.NameContainer}>
+      <Text style={styles.namestyle}>{props?.title}</Text>
+      <TextInput
+        style={styles.textinput}
+        placeholder={props?.placeholder}
+        placeholderTextColor={props?.placeholderTextColor}
+        borderColor={props?.borderColor}
+        maxLength={props?.maxLength}
+        value={props?.value}
         onChangeText={props?.onChangeText}
-            />
-    
-       
-      </View>
-  )
-}
+      />
+    </View>
+  );
+};
 
-export default AuthorizedAccount
+export default AuthorizedAccount;
 
 const styles = StyleSheet.create({
-      NameContainer: {
-        paddingHorizontal: 21,
-        marginTop: 18,
-        // marginHorizontal:10,
-      },
-      namestyle: {
-        fontFamily: Font.medium,
-       color:"#646464"
-      },
-      textinput: {
-        borderWidth: 1,
-        borderRadius: 8,
-        paddingHorizontal:8,
-      },
-})
+  NameContainer: {
+    paddingHorizontal: wp(5.8),
+    marginTop: hp(2.2),
+  },
+  namestyle: {
+    fontFamily: Font.medium,
+    color: '#646464',
+  },
+  textinput: {
+    borderWidth: 1,
+    borderRadius: wp(2.2),
+    paddingHorizontal: wp(2.2),
+  },
+});

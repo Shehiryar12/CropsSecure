@@ -18,10 +18,10 @@ import Header from '../Components/Header';
 const Addland = () => {
   return (
     <SafeAreaView style={styles.container}>
-      {/* Header */}
+  
       <Header />
 
-      {/* Upload Box */}
+      
       <View style={styles.box}>
         <Image
           source={require('../Assets/Images/upload-file-icon.png')}

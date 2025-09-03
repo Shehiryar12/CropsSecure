@@ -26,8 +26,8 @@ const Welcome = () => {
     if (emailOrPhone === '') {
       emailError = 'Plase enter valid email/phone/cnic';
     }
-    if (password.length < 6) {
-      passwordError = 'Password must be at least 6 characters';
+    if (password.length < 8) {
+      passwordError = 'Password must be at least 8 characters';
     }
 
     setError({ email: emailError, password: passwordError });

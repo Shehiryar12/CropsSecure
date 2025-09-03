@@ -10,6 +10,7 @@ const FarmerComponent = props => {
     <View style={styles.rowContainer}>
   
       <TouchableOpacity style={styles.boxone} onPress={props.Land}>
+        
         <Image
           source={require('../Assets/Images/landRecord.png')}
           style={styles.imageone}

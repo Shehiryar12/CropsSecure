@@ -2,17 +2,14 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React, { useState } from 'react';
 import { Font } from '../Constant/Font';
 import { useNavigation } from '@react-navigation/native';
-import CheckBox from '@react-native-community/checkbox';
+import { wp, hp } from '../Constant/Responsive';
 
 const Endtext = props => {
   const navigation = useNavigation();
-  const [isSelected, setSelection] = useState(false);
-
   return (
     <View>
       <Text style={styles.textstyle}>{props?.title}</Text>
 
-      {/* Sign up button works with props.onPress */}
       <TouchableOpacity style={styles.button} onPress={props.onPress}>
         <Text style={styles.buttontext}>{props?.buttontext}</Text>
       </TouchableOpacity>
@@ -25,7 +22,6 @@ const Endtext = props => {
       </View>
 
       <View style={styles.authWrap}>
-    
         <TouchableOpacity onPress={() => navigation.navigate('Authorized')}>
           <Text style={styles.authorized}>
             Register as an authorized dealer
@@ -40,53 +36,50 @@ export default Endtext;
 
 const styles = StyleSheet.create({
   textstyle: {
-    paddingHorizontal: 10,
-    marginTop: 18,
-    paddingLeft: 35,
-    fontSize: 9,
+    paddingHorizontal: wp(2.7),
+    marginTop: hp(2.2),
+    paddingLeft: wp(9.7),
+    fontSize: wp(2.4),
     fontFamily: Font.medium,
-    width:290,
+    width: wp(80.6),
   },
   button: {
     backgroundColor: '#009245',
-    marginHorizontal: 25,
-    borderRadius: 8,
-    marginTop: 34,
+    marginHorizontal: wp(6.9),
+    borderRadius: wp(2.2),
+    marginTop: hp(4.2),
   },
   buttontext: {
     textAlign: 'center',
-    paddingVertical: 13,
+    paddingVertical: hp(1.6),
     color: 'white',
   },
   accountWrap: {
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'row',
-    marginTop: 8,
+    marginTop: hp(1),
   },
   accountText: {
-    fontSize: 10,
+    fontSize: wp(2.8),
     fontFamily: Font.medium,
     textAlign: 'center',
   },
   loginText: {
-    fontSize: 10,
+    fontSize: wp(2.8),
     fontFamily: Font.bold,
     color: 'green',
     textAlign: 'center',
-    marginLeft: 1,
+    marginLeft: wp(0.3),
   },
   authWrap: {
-    // flexDirection: 'row',
     alignItems: 'center',
-    marginTop: 50,
-   
+    marginTop: hp(6.2),
   },
   authorized: {
-    fontSize: 12,
-    marginLeft: 5,
+    fontSize: wp(3.3),
+    marginLeft: wp(1.4),
     fontFamily: Font.medium,
-    color:'green',
-    
+    color: 'green',
   },
 });

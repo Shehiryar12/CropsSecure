@@ -1,7 +1,7 @@
 import { StyleSheet, Text, TextInput, View } from 'react-native';
 import React from 'react';
 import { Font } from '../Constant/Font';
-import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
+import { wp, hp } from '../Constant/Responsive';
 
 const PhoneCnicEmailInput = props => {
   return (
@@ -12,7 +12,6 @@ const PhoneCnicEmailInput = props => {
         placeholder={props?.placeholder}
         maxLength={props?.maxLength}
         fontSize={wp('3%')}
-        keyboardType="numeric"
         placeholderTextColor={'#DBD8D8'}
         value={props?.value}
         onChangeText={props?.onChangeText}
