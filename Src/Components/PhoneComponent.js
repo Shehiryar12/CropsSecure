@@ -1,17 +1,15 @@
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, TextInput } from 'react-native';
 import React from 'react';
 import { Font } from '../Constant/Font';
 import { wp, hp } from '../Constant/Responsive';
 
 const PhoneComponent = props => {
   return (
-    <View style={{flex: 1}}>
-      
+    <View style={{ flex: 1 }}>
       <View style={styles.signupcontainer}>
         <Text style={styles.label}>{props?.label}</Text>
       </View>
 
-    
       <View style={styles.innerContainer}>
         <Text style={styles.setheading}>{props?.setAccount}</Text>
         <Text style={styles.smalltext}>{props?.small}</Text>
@@ -20,6 +18,18 @@ const PhoneComponent = props => {
           source={require('../Assets/Images/Group.png')}
           style={styles.firstphonestyle}
         />
+
+        <View style={styles.inputContainer}>
+          <Image
+            source={require('../Assets/Images/Vector.png')}
+            style={styles.vectorstyle}
+          />
+          <TextInput
+            placeholder={props?.placeholder}
+            placeholderTextColor={props?.placeholderTextColor}
+            style={styles.placeholderstyle}
+          />
+        </View>
       </View>
     </View>
   );
@@ -39,7 +49,7 @@ const styles = StyleSheet.create({
     marginLeft: wp(5.6),
     color: '#FFFFFF',
     fontSize: wp(4.2),
-    paddingTop:36,
+    paddingTop: hp(4.9),
   },
 
   setheading: {
@@ -66,8 +76,24 @@ const styles = StyleSheet.create({
   innerContainer: {
     flex: 1,
     backgroundColor: 'white',
-    borderTopLeftRadius: wp(10),
-    borderTopRightRadius: wp(10),
-   
+    borderTopLeftRadius: wp(8),
+    borderTopRightRadius: wp(8),
+  },
+  inputContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: '#ccc',
+    borderRadius: wp(1),
+    marginHorizontal: wp(5.7),
+  },
+  vectorstyle: {
+    marginLeft: wp(2.4),
+  },
+  placeholderstyle: {
+    fontFamily: Font.medium,
+    fontSize:12,
+    marginTop:hp(0.3),
+    color:'black'
   },
 });

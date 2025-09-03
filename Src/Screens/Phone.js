@@ -10,6 +10,9 @@ const Phone = () => {
         label="Sign Up"
         setAccount="Set Up Your Account"
         small="Hello there, sign up to continue"
+        placeholder="Email"
+        placeholderTextColor="#CBCBCB"
+        color="green"
       />
     </SafeAreaView>
   );
@@ -21,7 +24,5 @@ const styles = StyleSheet.create({
   fullscreen: {
    flex:1,
    backgroundColor:'#4AB95A',
-    
-
-  },
+ },
 });
