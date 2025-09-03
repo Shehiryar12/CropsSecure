@@ -13,13 +13,20 @@ const CheckBoxComponent = props => {
         <TouchableOpacity onPress={() => setYes(!yes)}>
           <MaterialIcons
             name={yes ? 'check-box' : 'check-box-outline-blank'}
-            size={wp(4.5)}
+            size={wp(3.7)}
             color="green"
-            borderColor="lightgrey"
+            style={styles.checkboxstyle}
           />
         </TouchableOpacity>
-        <Text style={styles.remember}>Remember Me</Text>
+
+        <Text style={styles.remember}>
+          I agree to <Text style={styles.linkText}>Terms & Conditions</Text> and
+          the <Text style={styles.linkText}>Privacy Policy</Text>
+        </Text>
       </View>
+      <TouchableOpacity style={styles.signin}>
+        <Text style={styles.buttontext}>Sign Up</Text>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -29,13 +36,34 @@ export default CheckBoxComponent;
 const styles = StyleSheet.create({
   rememberContainer: {
     flexDirection: 'row',
-    alignItems: 'center',
-    marginTop: hp(3.5),
-    marginLeft: wp(5),
+    marginTop: hp(2.7),
+    marginLeft: wp(5.9),
   },
   remember: {
     fontFamily: Font.medium,
-    fontSize: wp(2.5),
-    marginLeft: wp(1.2),
+    fontSize: wp(3.0),
+    marginLeft: wp(0.5),
+
+    width: wp(59),
+  },
+  linkText: {
+    color: 'green',
+    fontFamily: Font.medium,
+  },
+  checkboxstyle: {
+    marginTop: 1,
+  },
+  signin: {
+    backgroundColor: '#4AB95A',
+    marginTop: hp(3.0),
+    marginHorizontal: wp(5),
+    paddingVertical: hp(2),
+    borderRadius: wp(2),
+  },
+  buttontext: {
+    textAlign: 'center',
+    color: '#FFFFFF',
+    fontSize: wp(3.5),
+    fontFamily: Font.medium,
   },
 });
