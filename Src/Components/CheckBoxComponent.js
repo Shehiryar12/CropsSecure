@@ -27,6 +27,10 @@ const CheckBoxComponent = props => {
       <TouchableOpacity style={styles.signin}>
         <Text style={styles.buttontext}>Sign Up</Text>
       </TouchableOpacity>
+
+      <Text style={styles.lowertext}>
+        If you have an account <Text style={styles.logintext}>Login Now</Text>
+      </Text>
     </View>
   );
 };
@@ -36,7 +40,7 @@ export default CheckBoxComponent;
 const styles = StyleSheet.create({
   rememberContainer: {
     flexDirection: 'row',
-    marginTop: hp(2.7),
+    marginTop: hp(2.3),
     marginLeft: wp(5.9),
   },
   remember: {
@@ -50,7 +54,7 @@ const styles = StyleSheet.create({
     fontFamily: Font.medium,
   },
   checkboxstyle: {
-    marginTop: 1,
+    marginTop: hp(0.12),
   },
   signin: {
     backgroundColor: '#4AB95A',
@@ -64,5 +68,14 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     fontSize: wp(3.5),
     fontFamily: Font.medium,
+  },
+  lowertext: {
+    textAlign: 'center',
+    fontSize: wp(2.7),
+    marginTop: hp(2.9),
+    fontFamily: Font.medium,
+  },
+  logintext: {
+    color: 'green',
   },
 });
