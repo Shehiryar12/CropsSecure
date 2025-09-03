@@ -9,12 +9,9 @@ import React, { useState } from 'react';
 import { Font } from '../Constant/Font';
 import { wp, hp } from '../Constant/Responsive';
 import Feather from 'react-native-vector-icons/Feather';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import { Text } from 'react-native';
 
 const InputComponent = props => {
   const [pass, setPass] = useState(true);
-  const [yes, setYes] = useState(false);
 
   return (
     <View style={styles.inputContainer}>
@@ -48,7 +45,7 @@ const styles = StyleSheet.create({
     borderColor: '#CBCBCB',
     borderRadius: wp(1.8),
     marginHorizontal: wp(5.7),
-    marginTop: 10,
+    marginTop: hp(1.8),
   },
   vectorstyle: {
     marginLeft: wp(2.6),
