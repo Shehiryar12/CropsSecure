@@ -19,7 +19,9 @@ export default Phone;
 
 const styles = StyleSheet.create({
   fullscreen: {
-    backgroundColor: 'white',
-    flex: 1,
+   flex:1,
+   backgroundColor:'#4AB95A',
+    
+
   },
 });
