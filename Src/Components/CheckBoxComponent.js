@@ -20,16 +20,19 @@ const CheckBoxComponent = props => {
         </TouchableOpacity>
 
         <Text style={styles.remember}>
-          I agree to <Text style={styles.linkText}>Terms & Conditions</Text> and
-          the <Text style={styles.linkText}>Privacy Policy</Text>
+          {props?.agreetext}
+          <Text style={styles.linkText}>{props?.condition}</Text>{' '}
+          {props?.andthe}{' '}
+          <Text style={styles.linkText}>{props?.policytext}</Text>
         </Text>
       </View>
       <TouchableOpacity style={styles.signin}>
-        <Text style={styles.buttontext}>Sign Up</Text>
+        <Text style={styles.buttontext}>{props?.buttontext}</Text>
       </TouchableOpacity>
 
       <Text style={styles.lowertext}>
-        If you have an account <Text style={styles.logintext}>Login Now</Text>
+        If you have an account{' '}
+        <Text style={styles.logintext}>{props?.logintext}</Text>
       </Text>
     </View>
   );
@@ -60,7 +63,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#4AB95A',
     marginTop: hp(2.85),
     marginHorizontal: wp(6),
-    paddingVertical: hp(2),
+    paddingVertical: hp(1.7),
     borderRadius: wp(2),
   },
   buttontext: {

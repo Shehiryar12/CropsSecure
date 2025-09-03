@@ -53,7 +53,14 @@ const PhoneComponent = props => {
           isPassword={true}
         />
 
-        <CheckBoxComponent />
+        <CheckBoxComponent
+          buttontext="Sign Up"
+          logintext="Login Now"
+          policytext="Privacy Policy"
+          agreetext=" I agree to "
+          condition="Terms & Conditions"
+          andthe="and the"
+        />
       </View>
     </View>
   );
