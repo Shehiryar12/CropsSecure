@@ -27,7 +27,7 @@ const InputComponent = props => {
           <Feather
             name={pass ? 'eye' : 'eye-off'}
             style={styles.passwordicon}
-            size={wp('5%')}
+            size={wp('3.9%')}
           />
         </TouchableOpacity>
       )}
