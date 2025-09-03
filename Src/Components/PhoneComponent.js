@@ -8,7 +8,7 @@ import SignHeaderComponent from './SignHeaderComponent';
 const PhoneComponent = props => {
   return (
     <View style={{ flex: 1 }}>
-      <SignHeaderComponent />
+      <SignHeaderComponent label="Sign Up" />
 
       <View style={styles.innerContainer}>
         <Text style={styles.setheading}>{props?.setAccount}</Text>
