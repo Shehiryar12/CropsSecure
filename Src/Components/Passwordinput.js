@@ -8,10 +8,8 @@ import {
 } from 'react-native';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { Font } from '../Constant/Font';
-import {
-  widthPercentageToDP as wp,
-  heightPercentageToDP as hp,
-} from 'react-native-responsive-screen';
+import { wp, hp } from '../Constant/Responsive';
+
 
 const PasswordInput = props => {
   const [show, setShow] = useState(true);
