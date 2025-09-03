@@ -58,6 +58,7 @@ const styles = StyleSheet.create({
   },
   checkboxstyle: {
     marginTop: hp(0.12),
+    marginLeft: wp(1),
   },
   signin: {
     backgroundColor: '#4AB95A',
