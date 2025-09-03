@@ -2,8 +2,10 @@ import { StyleSheet, Text, View, Image, TextInput } from 'react-native';
 import React from 'react';
 import { Font } from '../Constant/Font';
 import { wp, hp } from '../Constant/Responsive';
-import EmailComponent from './EmailComponent';
+import EmailComponent from './InputComponent';
 import SignHeaderComponent from './SignHeaderComponent';
+import InputComponent from './InputComponent';
+import IconInputComponent from './IconInputComponent';
 
 const PhoneComponent = props => {
   return (
@@ -22,11 +24,32 @@ const PhoneComponent = props => {
         <EmailComponent
           placeholder="Name"
           icon={require('../Assets/Images/person.png')}
+          placeholderTextColor="#9F9F9F"
         />
 
-        <EmailComponent
+        <InputComponent
           placeholder="Email"
-          icon={require('../Assets/Images/Vector.png')}
+          icon={require('../Assets/Images/Downarrow.png')}
+          placeholderTextColor="#9F9F9F"
+        />
+
+        <InputComponent
+          placeholder="Phone Number"
+          icon={require('../Assets/Images/Phone.png')}
+          placeholderTextColor="#9F9F9F"
+        />
+        <InputComponent
+          placeholder="Abc"
+          icon={require('../Assets/Images/abc.png')}
+          placeholderTextColor="#9F9F9F"
+          isPassword={true}
+        />
+
+        <InputComponent
+          placeholder="Confirm Password"
+          icon={require('../Assets/Images/abc.png')}
+          placeholderTextColor="#9F9F9F"
+          isPassword={true}
         />
       </View>
     </View>
@@ -68,7 +91,7 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
     alignSelf: 'center',
     marginRight: wp(1.1),
-    marginTop: hp(1.7),
+    marginTop: hp(0.7),
   },
 
   innerContainer: {

@@ -1,26 +1,41 @@
-import { Image, StyleSheet, Text, TextInput, View } from 'react-native';
-import React from 'react';
+import {
+  Image,
+  StyleSheet,
+  TextInput,
+  TouchableOpacity,
+  View,
+} from 'react-native';
+import React, { useState } from 'react';
 import { Font } from '../Constant/Font';
 import { wp, hp } from '../Constant/Responsive';
+import Feather from 'react-native-vector-icons/Feather';
 
-const EmailComponent = props => {
+const InputComponent = props => {
+  const [pass, setPass] = useState(true);
+
   return (
     <View style={styles.inputContainer}>
-      <Image
-        // source={require('../Assets/Images/Vector.png')}
-        style={styles.vectorstyle}
-        source={props?.icon}
-      />
+      <Image style={styles.vectorstyle} source={props?.icon} />
       <TextInput
         placeholder={props?.placeholder}
         placeholderTextColor={props?.placeholderTextColor}
         style={styles.placeholderstyle}
+        secureTextEntry={props?.isPassword ? pass : false}
       />
+      {props?.isPassword && (
+        <TouchableOpacity onPress={() => setPass(!pass)}>
+          <Feather
+            name={pass ? 'eye' : 'eye-off'}
+            style={styles.passwordicon}
+            size={wp('5%')}
+          />
+        </TouchableOpacity>
+      )}
     </View>
   );
 };
 
-export default EmailComponent;
+export default InputComponent;
 
 const styles = StyleSheet.create({
   inputContainer: {
@@ -45,5 +60,9 @@ const styles = StyleSheet.create({
     color: 'black',
     flex: 1,
     marginLeft: wp(0.8),
+  },
+  passwordicon: {
+    color: '#B4B4B4',
+    marginRight: wp(2),
   },
 });
