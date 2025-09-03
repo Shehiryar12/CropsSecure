@@ -6,6 +6,7 @@ import EmailComponent from './InputComponent';
 import SignHeaderComponent from './SignHeaderComponent';
 import InputComponent from './InputComponent';
 import IconInputComponent from './IconInputComponent';
+import CheckBoxComponent from './CheckBoxComponent';
 
 const PhoneComponent = props => {
   return (
@@ -51,6 +52,8 @@ const PhoneComponent = props => {
           placeholderTextColor="#9F9F9F"
           isPassword={true}
         />
+
+        <CheckBoxComponent />
       </View>
     </View>
   );
