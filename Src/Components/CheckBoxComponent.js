@@ -43,7 +43,6 @@ const styles = StyleSheet.create({
     fontFamily: Font.medium,
     fontSize: wp(3.0),
     marginLeft: wp(0.5),
-
     width: wp(59),
   },
   linkText: {
@@ -55,8 +54,8 @@ const styles = StyleSheet.create({
   },
   signin: {
     backgroundColor: '#4AB95A',
-    marginTop: hp(3.0),
-    marginHorizontal: wp(5),
+    marginTop: hp(2.85),
+    marginHorizontal: wp(6),
     paddingVertical: hp(2),
     borderRadius: wp(2),
   },
