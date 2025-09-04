@@ -66,6 +66,7 @@ const styles = StyleSheet.create({
     marginHorizontal: wp(6),
     paddingVertical: hp(1.7),
     borderRadius: wp(2),
+    marginBottom: hp(1.2),
   },
   buttontext: {
     textAlign: 'center',
@@ -76,7 +77,7 @@ const styles = StyleSheet.create({
   lowertext: {
     textAlign: 'center',
     fontSize: wp(2.7),
-    marginTop: hp(2.9),
+    marginTop: hp(2.96),
     fontFamily: Font.medium,
   },
   logintext: {

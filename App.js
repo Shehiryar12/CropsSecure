@@ -32,15 +32,15 @@ import React from 'react';
 import AppNavigator from './Src/navigaton/AppNavigator';
 import Addland from './Src/Screens/Addland';
 import Phone from './Src/Screens/Phone';
-
+import Login from './Src/Screens/Login';
 
 const App = () => {
-  return( 
-  // <AppNavigator/>
-  // <Addland/>
-  // <InsuranceClaim/>
-  <Phone/>
-  
-  )
-}
+  return (
+    // <AppNavigator/>
+    // <Addland/>
+    // <InsuranceClaim/>
+    // <Phone/>
+    <Login />
+  );
+};
 export default App;

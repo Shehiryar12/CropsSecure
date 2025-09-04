@@ -19,13 +19,15 @@ const InputComponent = props => {
       <TextInput
         placeholder={props?.placeholder}
         placeholderTextColor={props?.placeholderTextColor}
+        keyboardType={props?.keyboardType}
         style={styles.placeholderstyle}
         secureTextEntry={props?.isPassword ? pass : false}
       />
       {props?.isPassword && (
         <TouchableOpacity onPress={() => setPass(!pass)}>
           <Feather
-            name={pass ? 'eye' : 'eye-off'}
+            // name={pass ? 'eye' : 'eye-off'}
+            name={pass ? 'eye-off' : 'eye'}
             style={styles.passwordicon}
             size={wp('3.9%')}
           />

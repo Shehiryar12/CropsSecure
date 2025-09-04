@@ -7,28 +7,20 @@ import {
   View,
 } from 'react-native';
 import React from 'react';
-import PhoneComponent from '../Components/PhoneComponent';
+import LoginComponent from '../Components/LoginComponent';
 
-const Phone = () => {
+const Login = () => {
   return (
     <SafeAreaView style={styles.fullscreen}>
       <ScrollView>
         <StatusBar backgroundColor="#4AB95A" barStyle="light-content" />
-
-        <PhoneComponent
-          label="Sign Up"
-          setAccount="Set Up Your Account"
-          small="Hello there, sign up to continue"
-          placeholder="Name"
-          placeholderTextColor="#CBCBCB"
-          color="black"
-        />
+        <LoginComponent small="Hello there, sign in to continue" />
       </ScrollView>
     </SafeAreaView>
   );
 };
 
-export default Phone;
+export default Login;
 
 const styles = StyleSheet.create({
   fullscreen: {
